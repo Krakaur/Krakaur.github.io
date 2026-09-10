@@ -29,6 +29,8 @@
     "active_doctoral_programs": 1
   },
   "credentials_index": "https://krakaur.github.io/#formacion",
+  "digital_credentials_index": "https://krakaur.github.io/credenciales-digitales/",
+  "evidence_access_model": "https://krakaur.github.io/europass/",
   "doctoral_education": [
     {
       "program": "Doctorado en Administración",

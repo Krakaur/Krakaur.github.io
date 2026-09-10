@@ -13,12 +13,16 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── assets/
 │   ├── app.js              # Navegación, filtros y mejoras progresivas
 │   ├── styles.css          # Sistema visual adaptable e imprimible
+│   ├── badges/             # Imágenes gráficas sin metadatos personales
 │   ├── qr/                 # QR oficiales o de acceso al buscador SEP
 │   ├── favicon.svg
 │   └── dirk-hans-krakaur.jpg
 ├── data/profile.json       # Síntesis pública legible por máquinas
 ├── data/credentials.json   # Índice verificable de registros profesionales
+├── data/digital-credentials.json # Catálogo Credly y Coursera
 ├── credenciales/           # Doce fichas públicas de verificación
+├── credenciales-digitales/ # Nueve emisiones Credly y diecinueve constancias Coursera
+├── europass/               # Pasarela pública al modelo de acceso selectivo
 ├── scripts/generate_credentials.py
 ├── scripts/validate.mjs    # Validación de integridad y privacidad
 ├── manifest.webmanifest
@@ -39,6 +43,7 @@ Abra `http://127.0.0.1:4173/`. Para ejecutar la verificación automatizada:
 ```powershell
 node scripts/validate.mjs
 node --check assets/app.js
+node scripts/check_external.mjs
 ```
 
 ## Publicación
@@ -49,6 +54,8 @@ GitHub Pages publica la rama `main` desde la raíz. Cada actualización confirma
 
 La representación académica distingue cédulas profesionales registradas, estudios concluidos con titulación pendiente y programas activos en curso. Los números profesionales se publican deliberadamente porque son el dato necesario para la consulta oficial: tres registros cuentan con una ruta individual SEP y nueve utilizan el buscador institucional por número.
 
-El repositorio no contiene cédulas o títulos digitalizados, constancias consolidadas, CURP, firmas, teléfonos, domicilio ni expedientes probatorios. La arquitectura separa el escaparate público, la verificación registral en la SEP y un eventual archivo documental externo con controles propios de acceso y redacción.
+El repositorio no contiene cédulas o títulos digitalizados, constancias consolidadas, CURP, firmas, teléfonos, domicilio ni expedientes probatorios. La arquitectura separa el escaparate público; la verificación nativa en SEP, Credly y Coursera; el acceso selectivo y temporal en Europass; y el archivo maestro privado. La pasarela Europass no contiene identificadores internos ni enlaces personales permanentes.
+
+Las imágenes de insignias se obtuvieron de los recursos gráficos públicos indicados por Credly, se redimensionaron localmente y se eliminaron sus metadatos. Los PDF de certificados y los Open Badge personales no se alojan en el repositorio.
 
 La fotografía pertenece al titular del portafolio y se usa exclusivamente como imagen profesional de perfil.

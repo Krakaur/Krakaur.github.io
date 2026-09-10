@@ -37,14 +37,15 @@ for (const file of publicTextFiles) {
   const forbidden = [
     { name: "correo electrónico", pattern: /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i },
     { name: "parámetro CURP", pattern: /[?&](?:amp;)?curp=/i },
-    { name: "enlace telefónico", pattern: /(?:href=)?["']tel:/i }
+    { name: "enlace telefónico", pattern: /(?:href=)?["']tel:/i },
+    { name: "identificador o enlace personal de Europass", pattern: /europa\.eu\/europass\/(?:wallet\/|eportfolio\/shared\/)/i }
   ];
   for (const rule of forbidden) {
     if (rule.pattern.test(text)) errors.push(`${path} contiene ${rule.name}.`);
   }
 }
 
-for (const jsonPath of ["data/profile.json", "data/credentials.json", "manifest.webmanifest"]) {
+for (const jsonPath of ["data/profile.json", "data/credentials.json", "data/digital-credentials.json", "manifest.webmanifest"]) {
   try {
     JSON.parse(await readFile(join(root, jsonPath), "utf8"));
   } catch (error) {
@@ -109,6 +110,66 @@ for (const credential of credentials) {
 
 if (directCount !== 3 || searchCount !== 9) errors.push(`Distribución registral inesperada: ${directCount} directas y ${searchCount} por búsqueda.`);
 
+let digitalCredentials;
+try {
+  digitalCredentials = JSON.parse(await readFile(join(root, "data", "digital-credentials.json"), "utf8"));
+} catch {
+  digitalCredentials = null;
+}
+
+if (digitalCredentials) {
+  const credly = Array.isArray(digitalCredentials.credly) ? digitalCredentials.credly : [];
+  const groups = Array.isArray(digitalCredentials.coursera_groups) ? digitalCredentials.coursera_groups : [];
+  const coursera = groups.flatMap((group) => Array.isArray(group.items) ? group.items : []);
+  if (credly.length !== 9) errors.push(`El catálogo debe contener 9 emisiones Credly; contiene ${credly.length}.`);
+  if (coursera.length !== 19) errors.push(`El catálogo debe contener 19 certificados Coursera; contiene ${coursera.length}.`);
+  if (groups.length !== 4) errors.push(`El catálogo Coursera debe conservar 4 grupos; contiene ${groups.length}.`);
+  if (digitalCredentials.summary?.total !== 28 || digitalCredentials.summary?.credly !== 9 || digitalCredentials.summary?.coursera !== 19) {
+    errors.push("El resumen de credenciales digitales no coincide con la colección 9 + 19.");
+  }
+
+  const seenDigitalUrls = new Set();
+  for (const item of credly) {
+    try {
+      const url = new URL(item.verification_url);
+      if (url.protocol !== "https:" || url.hostname !== "www.credly.com" || !/^\/badges\/[0-9a-f-]{36}\/public_url$/.test(url.pathname)) {
+        errors.push(`${item.title} no utiliza una página pública válida de Credly.`);
+      }
+      if (seenDigitalUrls.has(url.href)) errors.push(`URL digital duplicada: ${url.href}.`);
+      seenDigitalUrls.add(url.href);
+    } catch {
+      errors.push(`${item.title ?? "Credencial Credly"} contiene una URL inválida.`);
+    }
+    if (!/^\/assets\/badges\/[a-z0-9-]+\.png$/.test(item.image ?? "")) {
+      errors.push(`${item.title} no utiliza una imagen local saneada.`);
+    } else {
+      try {
+        await stat(join(root, item.image.slice(1)));
+      } catch {
+        errors.push(`${item.title} referencia una imagen de insignia inexistente.`);
+      }
+    }
+  }
+
+  const seenAccomplishmentIds = new Set();
+  for (const item of coursera) {
+    if (!/^[A-Z0-9]{12}$/.test(item.accomplishment_id ?? "")) errors.push(`Identificador Coursera inválido en ${item.title}.`);
+    if (seenAccomplishmentIds.has(item.accomplishment_id)) errors.push(`Identificador Coursera duplicado: ${item.accomplishment_id}.`);
+    seenAccomplishmentIds.add(item.accomplishment_id);
+    try {
+      const url = new URL(item.verification_url);
+      const expectedPath = `/account/accomplishments/verify/${item.accomplishment_id}`;
+      if (url.protocol !== "https:" || url.hostname !== "www.coursera.org" || url.pathname !== expectedPath || url.search) {
+        errors.push(`${item.title} no utiliza una página de verificación válida de Coursera.`);
+      }
+      if (seenDigitalUrls.has(url.href)) errors.push(`URL digital duplicada: ${url.href}.`);
+      seenDigitalUrls.add(url.href);
+    } catch {
+      errors.push(`${item.title ?? "Certificado Coursera"} contiene una URL inválida.`);
+    }
+  }
+}
+
 const htmlFiles = allFiles.filter((file) => extname(file) === ".html");
 for (const htmlFile of htmlFiles) {
   const htmlText = await readFile(htmlFile, "utf8");
@@ -134,6 +195,12 @@ for (const htmlFile of htmlFiles) {
 }
 
 const html = await readFile(join(root, "index.html"), "utf8");
+const digitalHtml = await readFile(join(root, "credenciales-digitales", "index.html"), "utf8");
+const credlyLinksInPage = [...digitalHtml.matchAll(/href="https:\/\/www\.credly\.com\/badges\//g)].length;
+const courseraLinksInPage = [...digitalHtml.matchAll(/href="https:\/\/www\.coursera\.org\/account\/accomplishments\/verify\//g)].length;
+if (credlyLinksInPage !== 9 || courseraLinksInPage !== 19) {
+  errors.push(`La página digital expone ${credlyLinksInPage} enlaces Credly y ${courseraLinksInPage} enlaces Coursera; se esperaban 9 y 19.`);
+}
 
 for (const required of [
   "<main id=\"contenido\">",
