@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "updated": "2026-09-10",
+  "language": "es-MX",
+  "person": {
+    "name": "Dirk Hans Krakaur Floranes",
+    "location": "La Paz, Baja California Sur, México",
+    "headline": "Docencia universitaria · TIC · Informática y sistemas · Gestión y administración",
+    "profiles": {
+      "github": "https://github.com/Krakaur",
+      "orcid": "https://orcid.org/0000-0002-6465-034X"
+    }
+  },
+  "professional_domains": [
+    "Docencia universitaria y educación en línea",
+    "Informática, sistemas y soporte técnico",
+    "Redes, seguridad y automatización",
+    "Programación y desarrollo web",
+    "Análisis de datos e inteligencia artificial",
+    "Gestión de proyectos e innovación",
+    "Edición y comunicación científica"
+  ],
+  "credentials_summary": {
+    "professional_licenses": 12,
+    "doctorate_with_registered_license": 1,
+    "masters_with_registered_license": 5,
+    "undergraduate_degrees_with_registered_license": 6,
+    "completed_doctoral_programs_pending_degree": 2,
+    "active_doctoral_programs": 1
+  },
+  "doctoral_education": [
+    {
+      "program": "Doctorado en Administración",
+      "institution": "Universidad IEXPRO",
+      "status": "Cédula profesional registrada; examen de grado aprobado; título en trámite",
+      "grade": "10"
+    },
+    {
+      "program": "Doctorado en Sistemas y Ambientes Educativos",
+      "institution": "Universidad de Guadalajara",
+      "status": "Activo y en curso en 2026-B; 100 de 164 créditos",
+      "grade": "99.71/100"
+    },
+    {
+      "program": "Doctorado en Ingeniería",
+      "institution": "Colegio de Estudios e Investigación del Totonacapan",
+      "status": "Estudios concluidos; titulación pendiente",
+      "grade": "10"
+    },
+    {
+      "program": "Doctorado Internacional en Ciencias Políticas y Sociales",
+      "institution": "Universidad Mundial",
+      "status": "Estudios concluidos; titulación pendiente",
+      "grade": "9.7"
+    }
+  ],
+  "masters_with_registered_license": [
+    "Maestría en Sistemas Computacionales",
+    "Maestría en Educación con Enfoque en Educación en Línea",
+    "Maestría en Ciencias Sociales: Desarrollo Sustentable y Globalización",
+    "Maestría en Desarrollo Humano y Social",
+    "Maestría en Liderazgo Educativo"
+  ],
+  "undergraduate_degrees_with_registered_license": [
+    "Licenciatura en Tecnologías de Información y Comunicación Aplicadas a la Educación",
+    "Ingeniería Industrial",
+    "Ingeniería en Energías Renovables",
+    "Ingeniería en Sistemas Computacionales",
+    "Ingeniería en Gestión de Tecnologías de Información",
+    "Licenciatura en Psicología"
+  ],
+  "selected_publications": [
+    {
+      "title": "Manual de Prácticas: Taller de Investigación II",
+      "year": 2025,
+      "isbn": "978-970-96814-2-0",
+      "doi": "https://doi.org/10.64784/003"
+    },
+    {
+      "title": "Manual de Prácticas: Taller de Investigación I",
+      "year": 2025,
+      "isbn": "978-970-96814-1-3"
+    },
+    {
+      "title": "Forja Científica Editorial: TheSci",
+      "year": 2025,
+      "doi": "https://doi.org/10.64784/004"
+    },
+    {
+      "title": "Aportes y legado de Napoleón Bonaparte a la modernidad",
+      "year": 2020,
+      "publication": "Tamma Dalama, Universidad Mundial, año 1, número 3, páginas 59-64"
+    }
+  ],
+  "privacy": {
+    "publicly_omitted": [
+      "Números de cédula profesional",
+      "Teléfonos",
+      "Domicilio",
+      "Identificadores personales",
+      "Documentos probatorios no redactados"
+    ]
+  }
+}

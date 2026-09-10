@@ -1,0 +1,28 @@
+name: Calidad del e-portafolio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Validar estructura, referencias y privacidad
+        run: node scripts/validate.mjs
+
+      - name: Verificar sintaxis de JavaScript
+        run: node --check assets/app.js

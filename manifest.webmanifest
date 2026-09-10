@@ -1,0 +1,17 @@
+{
+  "name": "E-portafolio de Dirk Hans Krakaur Floranes",
+  "short_name": "Dirk Krakaur",
+  "description": "Docencia universitaria, TIC, informática, sistemas, soporte técnico, datos, IA y gestión.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e7",
+  "theme_color": "#0d2831",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
