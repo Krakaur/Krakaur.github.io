@@ -28,6 +28,7 @@
     "completed_doctoral_programs_pending_degree": 2,
     "active_doctoral_programs": 1
   },
+  "credentials_index": "https://krakaur.github.io/#formacion",
   "doctoral_education": [
     {
       "program": "Doctorado en Administración",
@@ -93,11 +94,12 @@
     }
   ],
   "privacy": {
+    "public_verification": "Los números de cédula se publican exclusivamente para facilitar la consulta en el Registro Nacional de Profesionistas.",
     "publicly_omitted": [
-      "Números de cédula profesional",
       "Teléfonos",
       "Domicilio",
-      "Identificadores personales",
+      "CURP y otros identificadores personales no requeridos para la consulta registral",
+      "Firmas",
       "Documentos probatorios no redactados"
     ]
   }

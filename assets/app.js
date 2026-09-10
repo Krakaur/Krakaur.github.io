@@ -82,6 +82,19 @@
     }
   });
 
+  document.querySelectorAll("[data-copy-value]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const value = button.dataset.copyValue ?? "";
+      const feedback = button.parentElement?.querySelector("[data-copy-feedback]");
+      try {
+        await navigator.clipboard.writeText(value);
+        if (feedback) feedback.textContent = "Número copiado al portapapeles.";
+      } catch {
+        if (feedback) feedback.textContent = `Número para copiar: ${value}`;
+      }
+    });
+  });
+
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
