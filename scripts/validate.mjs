@@ -202,6 +202,66 @@ if (credlyLinksInPage !== 9 || courseraLinksInPage !== 19) {
   errors.push(`La página digital expone ${credlyLinksInPage} enlaces Credly y ${courseraLinksInPage} enlaces Coursera; se esperaban 9 y 19.`);
 }
 
+// Keep a single bibliographic record per DOI and compare the public representations.
+try {
+  const profile = JSON.parse(await readFile(join(root, "data", "profile.json"), "utf8"));
+  const publications = profile.selected_publications ?? [];
+  const seenDois = new Set();
+
+  for (const publication of publications) {
+    if (!publication.doi) continue;
+    const doiUrl = new URL(publication.doi);
+    const doi = decodeURIComponent(doiUrl.pathname.slice(1)).trim().toLowerCase();
+    if (doiUrl.protocol !== "https:" || doiUrl.hostname !== "doi.org" || !/^10\.\d{4,9}\/\S+$/.test(doi)) {
+      errors.push(`${publication.title} no utiliza un DOI canónico válido.`);
+    }
+    if (seenDois.has(doi)) errors.push(`DOI duplicado en selected_publications: ${doi}.`);
+    seenDois.add(doi);
+
+    if (!publication.url?.startsWith("https://krakaur.github.io/publicaciones/")) continue;
+    const publicationPath = new URL(publication.url).pathname.slice(1);
+    const publicationHtml = await readFile(join(root, publicationPath, "index.html"), "utf8");
+    const structuredMatch = publicationHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    if (!structuredMatch) throw new Error(`${publication.title} carece de datos estructurados.`);
+    const structured = JSON.parse(structuredMatch[1]);
+    const citationMeta = (name) => [...publicationHtml.matchAll(/<meta name="([^"]+)" content="([^"]*)">/g)]
+      .filter((match) => match[1] === name).map((match) => match[2]);
+    const expectedAuthors = publication.authors ?? [];
+    const actualAuthors = structured.author?.map((author) => author.name) ?? [];
+
+    for (const [label, actual, expected] of [
+      ["título estructurado", structured.name, publication.title],
+      ["título bibliográfico", citationMeta("citation_title")[0], publication.title],
+      ["DOI", citationMeta("citation_doi")[0], doi],
+      ["identificador estructurado", structured.identifier, doi],
+      ["fecha estructurada", structured.datePublished, publication.publication_date],
+      ["fecha bibliográfica", citationMeta("citation_publication_date")[0], publication.publication_date?.replaceAll("-", "/")],
+      ["enlace PDF", citationMeta("citation_pdf_url")[0], publication.published_pdf_url],
+      ["licencia", structured.license, publication.license],
+      ["URL canónica", structured.url, publication.url],
+      ["fuente editorial", structured.sameAs, publication.publisher_url]
+    ]) {
+      if (!expected || actual !== expected) errors.push(`${publication.title}: ${label} no coincide entre la ficha y el perfil.`);
+    }
+    if (JSON.stringify(actualAuthors) !== JSON.stringify(expectedAuthors) ||
+        JSON.stringify(citationMeta("citation_author")) !== JSON.stringify(expectedAuthors)) {
+      errors.push(`${publication.title}: autoría u orden de autores inconsistentes.`);
+    }
+    if (structured["@type"] !== "ScholarlyArticle" || publication.type !== "journal-article") {
+      errors.push(`${publication.title}: tipo de publicación inconsistente.`);
+    }
+    if (String(publication.year) !== publication.publication_date?.slice(0, 4)) {
+      errors.push(`${publication.title}: año y fecha de publicación inconsistentes.`);
+    }
+    if (!html.includes(`href="/${publicationPath}"`)) errors.push(`${publication.title} no está enlazado desde la portada.`);
+    for (const publicUrl of [publication.publisher_url, publication.published_pdf_url, publication.license]) {
+      if (new URL(publicUrl).protocol !== "https:") errors.push(`${publication.title}: enlace público no HTTPS.`);
+    }
+  }
+} catch (error) {
+  errors.push(`No se pudo validar el catálogo de publicaciones: ${error.message}`);
+}
+
 for (const required of [
   "<main id=\"contenido\">",
   "application/ld+json",

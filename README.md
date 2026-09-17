@@ -22,6 +22,7 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── data/digital-credentials.json # Catálogo Credly y Coursera
 ├── credenciales/           # Doce fichas públicas de verificación
 ├── credenciales-digitales/ # Nueve emisiones Credly y diecinueve constancias Coursera
+├── publicaciones/         # Fichas bibliográficas y enlaces a las fuentes editoriales
 ├── europass/               # Pasarela pública al modelo de acceso selectivo
 ├── scripts/generate_credentials.py
 ├── scripts/validate.mjs    # Validación de integridad y privacidad
@@ -59,3 +60,9 @@ El repositorio no contiene cédulas o títulos digitalizados, constancias consol
 Las imágenes de insignias se obtuvieron de los recursos gráficos públicos indicados por Credly, se redimensionaron localmente y se eliminaron sus metadatos. Los PDF de certificados y los Open Badge personales no se alojan en el repositorio.
 
 La fotografía pertenece al titular del portafolio y se usa exclusivamente como imagen profesional de perfil.
+
+## Publicaciones científicas
+
+La ficha de [Optimización de Procesos en una Planta Cerámica](https://krakaur.github.io/publicaciones/optimizacion-procesos-planta-ceramica/) conserva el DOI editorial `10.64784/320`, la fecha de publicación, el orden de los cuatro autores y el alcance del estudio. Contiene metadatos bibliográficos y enlaces al artículo y al PDF publicados por la revista bajo CC BY 4.0. No aloja cartas administrativas, copias del expediente ni correos personales; los originales se conservan en el respaldo privado.
+
+La presencia del artículo en un perfil o repositorio no se presenta como una nueva publicación ni como prueba de indexación selectiva. Las fichas y el perfil JSON deben conservar un único registro por DOI, y la validación compara título, autoría, fechas, licencia y enlaces entre ambas representaciones.

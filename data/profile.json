@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "updated": "2026-09-10",
+  "updated": "2026-09-17",
   "language": "es-MX",
   "person": {
     "name": "Dirk Hans Krakaur Floranes",
@@ -73,6 +73,26 @@
     "Licenciatura en Psicología"
   ],
   "selected_publications": [
+    {
+      "title": "Optimización de Procesos en una Planta Cerámica",
+      "year": 2026,
+      "publication": "IECCMEXICO, volumen 5, número 2",
+      "publication_date": "2026-09-17",
+      "type": "journal-article",
+      "authors": [
+        "Juana Isabel Campuzano Ramírez",
+        "Vicente M. Diaz de León Santiago",
+        "Alfredo Gutiérrez García",
+        "Dirk Hans Krakaur Floranes"
+      ],
+      "contribution": "Coautor; cuarto de cuatro autores",
+      "doi": "https://doi.org/10.64784/320",
+      "url": "https://krakaur.github.io/publicaciones/optimizacion-procesos-planta-ceramica/",
+      "publisher_url": "https://ieccmexicojournal.com/index.php/publishing/article/view/237",
+      "published_pdf_url": "https://ieccmexicojournal.com/index.php/publishing/article/download/237/239",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Análisis de distribución de planta, flujo de materiales y simulación de una alternativa de redistribución; no acredita mejoras productivas implementadas."
+    },
     {
       "title": "Manual de Prácticas: Taller de Investigación II",
       "year": 2025,
