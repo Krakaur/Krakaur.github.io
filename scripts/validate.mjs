@@ -272,6 +272,35 @@ for (const required of [
   if (!html.includes(required)) errors.push(`index.html no contiene ${required}.`);
 }
 
+try {
+  const awards = JSON.parse(await readFile(join(root, "data", "academic-awards.json"), "utf8")).awards;
+  const award = awards["doctorado-administracion"];
+  const administration = credentials.find((item) => item.slug === "doctorado-administracion");
+  const profile = JSON.parse(await readFile(join(root, "data", "profile.json"), "utf8"));
+  const doctoral = profile.doctoral_education.find((item) => item.institution === "Universidad IEXPRO");
+  const detail = await readFile(join(root, "credenciales", "doctorado-administracion", "index.html"), "utf8");
+  if (!award || JSON.stringify(administration?.academic_award) !== JSON.stringify(award)) {
+    errors.push("El título IEXPRO no coincide entre academic-awards.json y credentials.json.");
+  }
+  for (const [key, expected] of Object.entries({title_issued_on: "2026-08-31", study_start: "2024-05-04", study_end: "2025-08-30", degree_exam_on: "2026-03-01"})) {
+    if (award?.[key] !== expected || doctoral?.[key] !== expected) errors.push(`Fecha IEXPRO inconsistente: ${key}.`);
+  }
+  if (/título\s+(?:en trámite|(?:electrónico\s+)?pendiente)/iu.test(doctoral?.status ?? "")) {
+    errors.push("El perfil IEXPRO conserva un título pendiente ya expedido.");
+  }
+  if (profile.credentials_summary.professional_licenses !== 12 ||
+      profile.credentials_summary.completed_doctoral_programs_pending_degree !== 2 ||
+      profile.credentials_summary.active_doctoral_programs !== 1) errors.push("El resumen doctoral no conserva doce cédulas, dos programas pendientes y uno en curso.");
+  if (!detail.includes(award?.description ?? "TITULO_AUSENTE") || !detail.includes(award?.title_folio ?? "FOLIO_AUSENTE")) {
+    errors.push("La ficha IEXPRO no contiene el título expedido y su folio.");
+  }
+  if (!html.includes("Universidad IEXPRO · título profesional electrónico expedido el 31 de agosto de 2026")) {
+    errors.push("La portada no presenta el título IEXPRO expedido.");
+  }
+} catch (error) {
+  errors.push(`No se pudo validar el título IEXPRO: ${error.message}`);
+}
+
 if (errors.length) {
   console.error("Validación fallida:\n" + errors.map((error) => `- ${error}`).join("\n"));
   process.exit(1);

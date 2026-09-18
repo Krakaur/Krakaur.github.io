@@ -48,6 +48,9 @@ def credential_json_ld(record: dict[str, object]) -> str:
         "url": f"{SITE}/credenciales/{record['slug']}/",
         "sameAs": record["verification_url"],
     }
+    award = record.get("academic_award")
+    if award:
+        data["description"] = award["description"]
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
@@ -69,6 +72,17 @@ def render_detail(record: dict[str, object]) -> str:
     action = "Abrir verificación directa" if direct else "Abrir consulta oficial"
     qr_label = "QR de verificación directa SEP" if direct else "QR del portal oficial de consulta"
     areas = "".join(f"<li>{html.escape(area)}</li>" for area in record["areas"])
+    award = record.get("academic_award")
+    award_html = ""
+    if award:
+        award_html = (
+            '<section class="evidence-boundary" aria-label="Título profesional electrónico">'
+            '<h2>Título profesional electrónico</h2>'
+            f'<p>{html.escape(str(award["description"]))}</p>'
+            f'<p>Folio {html.escape(str(award["title_folio"]))}. '
+            f'Autoridad: {html.escape(str(award["title_authority"]))}.</p>'
+            '</section>'
+        )
 
     return f"""<!doctype html>
 <html lang="es">
@@ -142,6 +156,7 @@ def render_detail(record: dict[str, object]) -> str:
             <p class="section-index">Ámbito profesional</p>
             <p>{relevance}</p>
             <ul class="tag-list">{areas}</ul>
+            {award_html}
             <div class="evidence-boundary">
               <h2>Límite documental</h2>
               <p>Esta ficha no aloja la cédula, el título ni expedientes personales. La verificación sale del escaparate y se realiza en infraestructura oficial de la SEP.</p>
@@ -178,6 +193,8 @@ def main() -> None:
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     audit = json.loads(args.audit.read_text(encoding="utf-8"))
     audit_by_file = {item["source_file"]: item for item in audit}
+    awards_path = args.root / "data" / "academic-awards.json"
+    awards = json.loads(awards_path.read_text(encoding="utf-8"))["awards"] if awards_path.exists() else {}
     output_records = []
 
     for record in sorted(catalog, key=lambda item: item["order"]):
@@ -186,6 +203,10 @@ def main() -> None:
         direct = verification.get("host") == SEP_HOST and verification.get("http_status") == 200
         public_record = {key: value for key, value in record.items() if key != "source_file"}
         public_record["status"] = "Cédula profesional registrada"
+        award = awards.get(record["slug"])
+        if award:
+            public_record["academic_award"] = award
+            public_record["status"] = award["status"]
         public_record["verified_at"] = VERIFIED_AT
         public_record["verification_mode"] = "direct" if direct else "search"
         public_record["verification_url"] = verification.get("url") if direct else SEP_SEARCH

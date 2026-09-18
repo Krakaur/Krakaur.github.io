@@ -61,6 +61,12 @@ Las imágenes de insignias se obtuvieron de los recursos gráficos públicos ind
 
 La fotografía pertenece al titular del portafolio y se usa exclusivamente como imagen profesional de perfil.
 
+## Actualización del Doctorado en Administración
+
+El Doctorado en Administración de Universidad IEXPRO cuenta con título profesional electrónico expedido el 31 de agosto de 2026 y cédula profesional 15870296. La fecha de conclusión de estudios, 30 de agosto de 2025, permanece diferenciada de la fecha del examen y de expedición del título. El total continúa siendo doce cédulas; CEIT y Universidad Mundial conservan estudios doctorales concluidos con titulación pendiente, y el DSAE UdG continúa en curso.
+
+`data/academic-awards.json` preserva la información del título para la regeneración de la ficha pública. La verificación registral SEP conserva su fecha independiente; el documento oficial íntegro permanece fuera del sitio público y pertenece al archivo privado.
+
 ## Publicaciones científicas
 
 La ficha de [Optimización de Procesos en una Planta Cerámica](https://krakaur.github.io/publicaciones/optimizacion-procesos-planta-ceramica/) conserva el DOI editorial `10.64784/320`, la fecha de publicación, el orden de los cuatro autores y el alcance del estudio. Contiene metadatos bibliográficos y enlaces al artículo y al PDF publicados por la revista bajo CC BY 4.0. No aloja cartas administrativas, copias del expediente ni correos personales; los originales se conservan en el respaldo privado.
