@@ -72,3 +72,11 @@ El Doctorado en Administración de Universidad IEXPRO cuenta con título profesi
 La ficha de [Optimización de Procesos en una Planta Cerámica](https://krakaur.github.io/publicaciones/optimizacion-procesos-planta-ceramica/) conserva el DOI editorial `10.64784/320`, la fecha de publicación, el orden de los cuatro autores y el alcance del estudio. Contiene metadatos bibliográficos y enlaces al artículo y al PDF publicados por la revista bajo CC BY 4.0. No aloja cartas administrativas, copias del expediente ni correos personales; los originales se conservan en el respaldo privado.
 
 La presencia del artículo en un perfil o repositorio no se presenta como una nueva publicación ni como prueba de indexación selectiva. Las fichas y el perfil JSON deben conservar un único registro por DOI, y la validación compara título, autoría, fechas, licencia y enlaces entre ambas representaciones.
+
+## Ampliación del perfil — 18 de septiembre de 2026
+
+La actualización incorpora administración y ciencias sociales, formación académica en calidad y Lean Six Sigma, y práctica declarada de IA generativa, ingeniería de prompts, agentes y ciclos de verificación humana. No convierte asignaturas en certificaciones Belt ni herramientas aplicadas en certificaciones externas.
+
+La producción incluye el DOI registrado de Taller de Investigación I (`10.64784/talleri`), enlaces editoriales y textos completos de Tamma Dalama, el artículo de divulgación coescrito **Pobreza: conceptos, fuentes y medición**, y la tesis UABCS cuya versión documental indica enero de 2019. El servicio AAPE/EPAA acredita una dictaminación en 2025, reconocida en 2026. COMIE conserva la aprobación como Asociado Candidato sin atribuir una formalización posterior; CISCIG se presenta como constancia histórica vencida en marzo de 2026.
+
+`data/coursera-certificates.json` y `/formacion-coursera/` reúnen los 48 certificados originales respaldados: cuatro programas y 44 cursos. La selección de 19 certificados de `/credenciales-digitales/` está contenida en ese catálogo, no se suma a él. Antes de generar el catálogo completo se cotejaron los 48 SHA-256 originales y la presencia textual del titular y del identificador en cada PDF; no se afirma una nueva revisión visual de las 48 páginas ni una comprobación remota de cada enlace.

@@ -301,6 +301,38 @@ try {
   errors.push(`No se pudo validar el título IEXPRO: ${error.message}`);
 }
 
+// Prevent regression of the broader, evidence-bounded professional profile.
+try {
+  const profile = JSON.parse(await readFile(join(root, "data", "profile.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(join(root, "data", "coursera-certificates.json"), "utf8"));
+  const catalogHtml = await readFile(join(root, "formacion-coursera", "index.html"), "utf8");
+  const identifiers = new Set();
+  for (const item of catalog.items) {
+    if (identifiers.has(item.id)) errors.push(`Certificado Coursera duplicado: ${item.id}.`);
+    identifiers.add(item.id);
+    if (!item.verification_url.endsWith(item.id) || !catalogHtml.includes(item.verification_url)) errors.push(`Referencia Coursera inconsistente: ${item.id}.`);
+  }
+  if (catalog.items.length !== 48 || catalog.items.filter(item => item.type === "Certificado profesional").length !== 4) errors.push("El catálogo Coursera debe contener cuatro programas y 44 cursos.");
+  for (const group of JSON.parse(await readFile(join(root, "data", "digital-credentials.json"), "utf8")).coursera_groups) {
+    for (const item of group.items) {
+      const id = new URL(item.verification_url).pathname.split("/").filter(Boolean).at(-1);
+      if (!identifiers.has(id)) errors.push(`La selección Coursera contiene un certificado ausente del catálogo completo: ${id}.`);
+    }
+  }
+  const poverty = profile.selected_publications.find(item => item.title === "Pobreza: conceptos, fuentes y medición");
+  if (JSON.stringify(poverty?.authors) !== JSON.stringify(["Omar González Ortiz", "Dirk Hans Krakaur Floranes"]) || poverty?.type !== "academic-dissemination-article") errors.push("Pobreza debe conservar dos autores y la categoría divulgación académica.");
+  const manual = profile.selected_publications.find(item => item.title === "Manual de Prácticas: Taller de Investigación I");
+  if (manual?.doi !== "https://doi.org/10.64784/talleri" || !html.includes(manual.doi)) errors.push("Falta el DOI registrado de Taller de Investigación I.");
+  const thesis = profile.selected_publications.find(item => item.type === "masters-thesis");
+  if (thesis?.year !== 2019 || thesis.published_pdf_url !== "https://biblio.uabcs.mx/tesis/tesis/te4240.pdf" || !html.includes(thesis.published_pdf_url)) errors.push("Falta la tesis, su versión de 2019 o su PDF institucional.");
+  for (const work of [poverty, profile.selected_publications.find(item => item.title.startsWith("Aportes y legado"))]) {
+    if (!work?.publisher_url || !work.published_pdf_url || !html.includes(work.publisher_url) || !html.includes(work.published_pdf_url)) errors.push("Una publicación de Tamma Dalama carece de fuente editorial o acceso completo.");
+  }
+  if (html.includes('"Docente universitario"') || !html.includes('"Académico interdisciplinario"')) errors.push("Los metadatos deben presentar académico interdisciplinario, no un puesto docente actual.");
+  if (profile.academic_participation.find(item => item.organization.startsWith("Colegio"))?.document_valid_until !== "2026-03-30") errors.push("No se conserva la vigencia histórica CISCIG.");
+  if (profile.complementary_credentials.conocer_standards.length !== 3) errors.push("Deben conservarse los tres estándares CONOCER.");
+} catch (error) { errors.push(`No se pudo validar la ampliación integral: ${error.message}`); }
+
 if (errors.length) {
   console.error("Validación fallida:\n" + errors.map((error) => `- ${error}`).join("\n"));
   process.exit(1);

@@ -5,10 +5,11 @@
   "person": {
     "name": "Dirk Hans Krakaur Floranes",
     "location": "La Paz, Baja California Sur, México",
-    "headline": "Docencia universitaria · TIC · Informática y sistemas · Gestión y administración",
+    "headline": "Académico interdisciplinario · Ingeniería y sistemas · Educación · Administración y ciencias sociales",
     "profiles": {
       "github": "https://github.com/Krakaur",
-      "orcid": "https://orcid.org/0000-0002-6465-034X"
+      "orcid": "https://orcid.org/0000-0002-6465-034X",
+      "researchgate": "https://www.researchgate.net/profile/Hans-Krakaur"
     }
   },
   "professional_domains": [
@@ -17,6 +18,8 @@
     "Redes, seguridad y automatización",
     "Programación y desarrollo web",
     "Análisis de datos e inteligencia artificial",
+    "Formación en ingeniería industrial, calidad y Lean Six Sigma",
+    "Administración, desarrollo organizacional y ciencias sociales",
     "Gestión de proyectos e innovación",
     "Edición y comunicación científica"
   ],
@@ -30,6 +33,7 @@
   },
   "credentials_index": "https://krakaur.github.io/#formacion",
   "digital_credentials_index": "https://krakaur.github.io/credenciales-digitales/",
+  "coursera_certificates_index": "https://krakaur.github.io/formacion-coursera/",
   "evidence_access_model": "https://krakaur.github.io/europass/",
   "doctoral_education": [
     {
@@ -100,13 +104,16 @@
     {
       "title": "Manual de Prácticas: Taller de Investigación II",
       "year": 2025,
+      "type": "edited-book",
       "isbn": "978-970-96814-2-0",
       "doi": "https://doi.org/10.64784/003"
     },
     {
       "title": "Manual de Prácticas: Taller de Investigación I",
       "year": 2025,
-      "isbn": "978-970-96814-1-3"
+      "type": "edited-book",
+      "isbn": "978-970-96814-1-3",
+      "doi": "https://doi.org/10.64784/talleri"
     },
     {
       "title": "Forja Científica Editorial: TheSci",
@@ -116,9 +123,67 @@
     {
       "title": "Aportes y legado de Napoleón Bonaparte a la modernidad",
       "year": 2020,
-      "publication": "Tamma Dalama, Universidad Mundial, año 1, número 3, páginas 59-64"
+      "authors": ["Dirk Hans Krakaur Floranes"],
+      "publication": "Tamma Dalama, Universidad Mundial, año 1, número 3, páginas 59-64",
+      "publisher_url": "https://universidadmundial.edu.mx/tamma-dalama/aportes-y-legado-de-napoleon-bonaparte-a-la-modernidad/",
+      "published_pdf_url": "https://universidadmundial.edu.mx/wp-content/uploads/2020/08/Aportes-y-legado-de-Napole%C3%B3n-Bonaparte-a-la-modernidad.pdf"
+    },
+    {
+      "title": "Pobreza: conceptos, fuentes y medición",
+      "year": 2020,
+      "type": "academic-dissemination-article",
+      "authors": ["Omar González Ortiz", "Dirk Hans Krakaur Floranes"],
+      "contribution": "Coautor; segundo de dos autores",
+      "publication": "Tamma Dalama, Universidad Mundial, año 1, número 3, septiembre-diciembre de 2020; sección Divulgación Académica",
+      "publisher_url": "https://universidadmundial.edu.mx/tamma-dalama/pobreza-conceptos-fuentes-y-medicion/",
+      "published_pdf_url": "https://universidadmundial.edu.mx/wp-content/uploads/2020/08/Pobreza-conceptos-fuentes-y-medici%C3%B3n.pdf",
+      "scope": "Divulgación académica sobre conceptos y medición de la pobreza; no se atribuye arbitraje ni indexación selectiva."
+    },
+    {
+      "title": "La seguridad alimentaria de La Paz, Baja California Sur a la luz del cambio climático",
+      "year": 2019,
+      "type": "masters-thesis",
+      "authors": ["Dirk Hans Krakaur Floranes"],
+      "institution": "Universidad Autónoma de Baja California Sur",
+      "advisor": "Antonina Ivanova Boncheva",
+      "version_date": "2019-01",
+      "scope": "La portada del documento indica enero de 2019; la investigación corresponde a estudios de maestría realizados en 2016–2018. No se confunde la fecha de la versión con la fecha de obtención del grado.",
+      "published_pdf_url": "https://biblio.uabcs.mx/tesis/tesis/te4240.pdf",
+      "researchgate_url": "https://www.researchgate.net/publication/414471793_La_seguridad_alimentaria_de_La_Paz_Baja_California_Sur_a_la_luz_del_cambio_climatico"
     }
   ],
+  "professional_experience": [
+    {"role": "Consultor técnico especializado", "organization": "IECCMéxico", "start": "2020", "nature": "Colaboración voluntaria y autónoma", "scope": "Sistemas, infraestructura tecnológica, plataformas digitales y apoyo formativo"},
+    {"role": "Dirección y colaboración editorial", "start": "2025", "nature": "Servicio honorífico", "organizations": ["Editorial IECCMéxico", "TheSci", "Revista IECCMéxico"]},
+    {"role": "Docente frente a grupo", "organization": "Tecnológico Nacional de México — Instituto Tecnológico de La Paz", "start": "2018-08", "end": "2018-12", "nature": "Docencia formal; un semestre"}
+  ],
+  "applied_experience": [
+    {"project": "Estadía profesional y servicio social — Academia Adorarte", "institution": "Universidad Virtual del Estado de Guanajuato", "year": 2021, "hours": 480, "modality": "Remota", "scope": "Diagnóstico organizacional y tecnológico; entornos virtuales, materiales, capacitación y soporte"},
+    {"project": "Residencia profesional — Fundación Emanuel México A. C.", "institution": "Instituto Tecnológico de Aguascalientes", "start": "2022", "end": "2023", "hours": 500, "project_assessment": "97/100", "scope": "Investigación de mercado y diseño de cursos en línea apoyados en TIC"},
+    {"project": "Conversión de energía térmica oceánica para Baja California Sur", "institution": "Universidad Abierta y a Distancia de México", "program": "Ingeniería en Energías Renovables", "year": 2023, "status": "Proyecto terminal concluido; presentación final documentada", "assessment": "95/100"}
+  ],
+  "academic_service": [
+    {"role": "Director editorial", "organization": "Editorial IECCMéxico", "year": 2025, "nature": "Honorífico"},
+    {"role": "Cofundador y coeditor", "organization": "International Science Journal TheSci", "year": 2025, "nature": "Reconocimiento honorífico"},
+    {"role": "Coeditor", "organization": "Revista IECCMéxico", "year": 2025, "nature": "Reconocimiento honorífico"},
+    {"role": "Dictaminador de un manuscrito", "organization": "Archivos Analíticos de Políticas Educativas / Education Policy Analysis Archives", "review_year": 2025, "recognition_date": "2026-03-18", "scope": "La constancia acredita una dictaminación; no pertenencia al comité editorial ni una colaboración permanente"}
+  ],
+  "academic_participation": [
+    {"organization": "AMECIP", "year": 2025, "activity": "Coautor de producto analítico y cartel del Semillero Acceso a la información: derechos, organizaciones y garantías", "status": "Aceptación documentada", "scope": "No se afirma asistencia al congreso ni membresía en AMECIP"},
+    {"organization": "Consejo Mexicano de Investigación Educativa (COMIE)", "year": 2025, "status": "Ingreso aprobado como Asociado Candidato", "scope": "La carta no acredita formalización posterior ni vigencia actual"},
+    {"organization": "Colegio de Ingenieros en Sistemas Computacionales para la Seguridad de la Información, Control Interno y Gobernanza, A. C. (CISCIG)", "status": "Constancia de asociado con vigencia histórica", "document_valid_until": "2026-03-30", "scope": "No se presenta como membresía vigente"}
+  ],
+  "applied_skills": [
+    {"area": "IA generativa y programación asistida", "capabilities": ["Ingeniería de prompts", "Orquestación de agentes", "Gestión de contexto", "Harnesses de ejecución y evaluación", "Ciclos iterativos de prueba, revisión y verificación humana"], "evidence_level": "Práctica profesional declarada; no certificación externa específica"},
+    {"area": "Ingeniería industrial y calidad", "capabilities": ["Manufactura esbelta", "Seis Sigma", "Control estadístico de la calidad", "Investigación de operaciones", "Administración de operaciones", "Simulación"], "evidence_level": "Formación académica respaldada por certificado del Instituto Tecnológico de Aguascalientes; no certificación Belt", "course_grades": {"Manufactura esbelta": 99, "Seis Sigma": 100}}
+  ],
+  "complementary_credentials": {
+    "conocer_standards": ["EC0217.01", "EC0772", "EC0076"],
+    "public_verification_catalog": {"credly": 9, "coursera": 19, "scope": "Selección pública con enlaces de verificación; no inventario completo del respaldo privado"},
+    "complete_coursera_catalog": {"certificates": 48, "professional_programs": 4, "individual_courses": 44, "scope": "Catálogo complementario de certificados; los 19 registros seleccionados están contenidos en estos 48, no se suman"},
+    "cisco_scope": "Tres cursos Networking Academy: ITN, SRWE y ENSA; no certificación profesional CCNA",
+    "english_scope": "TOEFL ITP 620 puntos; resultado histórico, no prueba de vigencia actual"
+  },
   "privacy": {
     "public_verification": "Los números de cédula se publican exclusivamente para facilitar la consulta en el Registro Nacional de Profesionistas.",
     "publicly_omitted": [
