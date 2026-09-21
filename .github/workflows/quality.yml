@@ -28,3 +28,5 @@ jobs:
         run: |
           node --check assets/app.js
           node --check assets/six-sigma-lean.js
+          node --check assets/six-sigma-games.js
+          node --check assets/six-sigma-economics.js

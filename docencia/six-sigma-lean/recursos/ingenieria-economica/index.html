@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a3038">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Guía interactiva y original de ingeniería económica para construir y evaluar el caso de negocio de proyectos Lean Six Sigma.">
+    <meta name="author" content="Dirk Hans Krakaur Floranes">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/assets/six-sigma-lean.css">
+    <link rel="stylesheet" href="/assets/six-sigma-economics.css">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:url" content="https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/">
+    <meta property="og:title" content="Ingeniería económica para proyectos DMAIC">
+    <meta property="og:description" content="Conceptos, calculadoras y problemas para traducir una mejora Lean Six Sigma en una decisión económica trazable.">
+    <meta name="twitter:card" content="summary">
+    <title>Ingeniería económica para DMAIC | Aula abierta</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Ingeniería económica para proyectos DMAIC",
+        "description": "Recurso didáctico original con conceptos, calculadoras y evaluación formativa para construir el caso económico de proyectos Lean Six Sigma.",
+        "url": "https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/",
+        "inLanguage": "es-MX",
+        "learningResourceType": ["guía didáctica", "calculadora interactiva", "autoevaluación"],
+        "educationalLevel": "educación superior",
+        "teaches": ["flujos incrementales", "valor presente", "valor futuro", "valor presente neto", "recuperación", "costo de mala calidad", "sensibilidad"],
+        "isPartOf": "https://krakaur.github.io/docencia/six-sigma-lean/",
+        "author": {
+          "@type": "Person",
+          "name": "Dirk Hans Krakaur Floranes",
+          "url": "https://krakaur.github.io/"
+        },
+        "dateModified": "2026-09-20"
+      }
+    </script>
+  </head>
+  <body class="resource-page course-page economics-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner shell">
+        <a class="brand" href="/" aria-label="Volver al e-portafolio">
+          <span class="brand-mark" aria-hidden="true">DK</span>
+          <span class="brand-copy"><strong>Dirk Hans Krakaur</strong><small>Aula abierta</small></span>
+        </a>
+        <a class="detail-back" href="/docencia/six-sigma-lean/">← Volver a Lean Six Sigma</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="economics-hero" aria-labelledby="page-title">
+        <div class="shell">
+          <nav class="breadcrumbs breadcrumbs-inverse" aria-label="Migas de pan"><a href="/">Inicio</a><span>/</span><a href="/docencia/six-sigma-lean/">Lean Six Sigma</a><span>/</span><span aria-current="page">Ingeniería económica</span></nav>
+          <div class="economics-hero-grid">
+            <div class="economics-hero-copy">
+              <p class="eyebrow">Recurso complementario · decisión económica</p>
+              <h1 id="page-title">De la mejora al <em>caso de negocio.</em></h1>
+              <p class="economics-lead">Una guía para convertir cambios de defectos, tiempo e inventario en flujos de efectivo comparables. Incluye criterios, calculadoras, problemas y preguntas para defender una inversión DMAIC sin confundir una mejora operativa con dinero realizado.</p>
+              <div class="economics-actions" role="group" aria-label="Acciones principales">
+                <a class="button button-primary" href="#conceptos">Estudiar conceptos <span aria-hidden="true">↓</span></a>
+                <a class="button button-ghost" href="#calculadoras">Abrir calculadoras</a>
+                <a class="button button-ghost" href="#caso">Construir caso DMAIC</a>
+              </div>
+              <p class="economics-scope"><strong>Alcance.</strong> El recurso es original y autocontenido. Sus casos y cifras son simulados; no reproduce el libro comercial citado por el programa ni sustituye una evaluación financiera profesional.</p>
+            </div>
+
+            <div class="cashflow-visual" role="img" aria-label="Línea de tiempo con una inversión inicial y beneficios futuros descontados">
+              <div class="visual-label"><span>Caso DMAIC</span><strong>¿La mejora crea valor?</strong></div>
+              <div class="cashflow-line" aria-hidden="true">
+                <span class="timeline"></span>
+                <span class="flow flow-out"><i>−</i><b>Inversión</b><small>t = 0</small></span>
+                <span class="flow flow-in flow-one"><i>+</i><b>Ahorro</b><small>t = 1</small></span>
+                <span class="flow flow-in flow-two"><i>+</i><b>Ahorro</b><small>t = 2</small></span>
+                <span class="flow flow-in flow-three"><i>+</i><b>Ahorro</b><small>t = n</small></span>
+              </div>
+              <div class="decision-equation"><span>VPN</span><strong>=</strong><span>beneficios descontados</span><strong>−</strong><span>costos descontados</span></div>
+              <p>La decisión depende del flujo incremental, el momento de cada efecto y los supuestos que pueden cambiarlo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="economics-dock">
+        <div class="shell economics-dock-inner">
+          <nav aria-label="Navegación de la guía"><a href="#ruta">Ruta</a><a href="#conceptos">Conceptos</a><a href="#calculadoras">Calculadoras</a><a href="#caso">Caso DMAIC</a><a href="#problemas">Problemas</a><a href="#cuestionario">Cuestionario</a><a href="#fuentes">Fuentes</a></nav>
+          <span class="dock-formula" aria-hidden="true">valor = evidencia + tiempo + alternativa</span>
+        </div>
+      </div>
+
+      <section class="section economics-route" id="ruta" aria-labelledby="route-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Ruta de decisión</p><h2 id="route-title">Seis preguntas antes de aceptar una cifra.</h2></div>
+            <p>El análisis económico empieza con el escenario de comparación. Un resultado preciso no corrige flujos irrelevantes, ahorros imposibles de realizar o periodos incompatibles.</p>
+          </div>
+          <ol class="decision-route">
+            <li><span>01</span><div><strong>Alternativa</strong><p>¿Qué ocurriría con el proyecto y qué ocurriría sin él?</p></div></li>
+            <li><span>02</span><div><strong>Incremento</strong><p>¿Qué cobros y pagos cambian realmente entre ambos escenarios?</p></div></li>
+            <li><span>03</span><div><strong>Calendario</strong><p>¿Cuándo ocurre cada flujo y con qué unidad de tiempo?</p></div></li>
+            <li><span>04</span><div><strong>Equivalencia</strong><p>¿La tasa y el método vuelven comparables esos momentos?</p></div></li>
+            <li><span>05</span><div><strong>Incertidumbre</strong><p>¿Qué supuestos dominan el resultado y qué rango es plausible?</p></div></li>
+            <li><span>06</span><div><strong>Decisión</strong><p>¿El valor económico y la evidencia operativa justifican actuar?</p></div></li>
+          </ol>
+          <aside class="evidence-rule" role="note"><strong>Regla de traducción.</strong><span>Menos defectos, minutos o inventario son resultados operativos. Se convierten en flujo de efectivo sólo cuando se identifica el mecanismo: compra evitada, capacidad utilizada, horas extraordinarias reducidas, reclamación prevenida o capital liberado.</span></aside>
+        </div>
+      </section>
+
+      <section class="section economics-concepts" id="conceptos" aria-labelledby="concept-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Núcleo conceptual</p><h2 id="concept-title">Comparar alternativas en una misma escala temporal.</h2></div>
+            <p>Abre cada concepto, reconstruye el razonamiento y usa el criterio de aplicación. Las fórmulas son herramientas de comparación, no decisiones automáticas.</p>
+          </div>
+
+          <div class="concept-stack">
+            <details class="economics-concept" open>
+              <summary><span class="concept-number">01</span><span class="concept-summary-copy"><strong>Flujo incremental</strong><small>Con proyecto menos sin proyecto</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Idea</h3><p>Un flujo es incremental si cambia como consecuencia de elegir la alternativa. Incluye inversión, operación, mantenimiento, capital de trabajo, valor de rescate y efectos fiscales cuando corresponda. Los costos hundidos ya ocurridos no cambian entre alternativas y se excluyen de la decisión.</p></div>
+                <div><h3>Aplicación DMAIC</h3><p>Un tiempo de ciclo menor no es por sí mismo un ingreso. Puede producir flujo si evita turnos extra, aplaza una compra o permite atender demanda con margen positivo. Registra por separado el efecto físico, el mecanismo económico y la fecha del flujo.</p></div>
+                <p class="concept-test"><strong>Prueba:</strong> si el proyecto se cancela hoy, ¿esa entrada o salida cambia? Si no cambia, probablemente no es incremental.</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">02</span><span class="concept-summary-copy"><strong>Valor temporal: VP y VF</strong><small>Mover un flujo entre periodos</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Equivalencia</h3><p><span class="formula">VF = VP(1 + i)<sup>n</sup></span> capitaliza un valor presente; <span class="formula">VP = VF/(1 + i)<sup>n</sup></span> descuenta un valor futuro. La tasa <em>i</em> debe corresponder al mismo periodo que <em>n</em>.</p></div>
+                <div><h3>Interpretación</h3><p>La tasa representa el rendimiento mínimo requerido y el costo de oportunidad, de acuerdo con la política de la organización. No debe elegirse sólo para hacer aceptable el proyecto.</p></div>
+                <p class="concept-test"><strong>Control:</strong> especifica si la tasa es efectiva por mes o año y si los flujos ocurren al inicio o al final del periodo.</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">03</span><span class="concept-summary-copy"><strong>VPN y anualidad equivalente</strong><small>Valor creado y comparación anual</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Valor presente neto</h3><p><span class="formula">VPN = Σ CF<sub>t</sub>/(1 + i)<sup>t</sup></span>. Con una tasa apropiada, VPN &gt; 0 indica que la alternativa supera el rendimiento mínimo; VPN = 0 señala equivalencia financiera bajo los supuestos.</p></div>
+                <div><h3>Anualidad equivalente</h3><p><span class="formula">AE = VP · [i(1 + i)<sup>n</sup>/((1 + i)<sup>n</sup> − 1)]</span>. Convierte un valor presente en una serie anual uniforme. Ayuda a comparar vidas distintas sólo si la repetición o el horizonte común son defendibles.</p></div>
+                <p class="concept-test"><strong>Límite:</strong> un VPN favorable no compensa datos operativos débiles, riesgos no modelados ni restricciones legales o de seguridad.</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">04</span><span class="concept-summary-copy"><strong>Recuperación simple y descontada</strong><small>Tiempo para recuperar la inversión</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Lectura</h3><p>La recuperación simple acumula flujos sin ajustar su momento. La descontada acumula sus valores presentes. Si el flujo del periodo de cruce es uniforme, puede estimarse una fracción: saldo pendiente dividido entre el flujo del periodo.</p></div>
+                <div><h3>Uso</h3><p>Sirve como indicador de liquidez y exposición. No mide por sí mismo la rentabilidad: omite los flujos posteriores al corte y la versión simple ignora el valor temporal.</p></div>
+                <p class="concept-test"><strong>Decisión:</strong> reporta el criterio máximo aceptable y acompáñalo con VPN u otra medida de valor.</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">05</span><span class="concept-summary-copy"><strong>Análisis incremental entre alternativas</strong><small>Evaluar la diferencia, no promedios aislados</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Método</h3><p>Ordena alternativas mutuamente excluyentes por inversión. Calcula los flujos de la alternativa de mayor inversión menos los de la menor y evalúa esa diferencia a la tasa requerida. Se justifica el incremento sólo si genera valor adicional.</p></div>
+                <div><h3>Evitar</h3><p>No selecciones proyectos mutuamente excluyentes comparando únicamente tasas de retorno individuales: escala, calendario y reinversión pueden producir una clasificación distinta a la del valor creado.</p></div>
+                <p class="concept-test"><strong>Pregunta:</strong> ¿qué pago adicional se hace y qué beneficio adicional se recibe al pasar de A a B?</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">06</span><span class="concept-summary-copy"><strong>Costo de mala calidad</strong><small>Prevenir, evaluar y fallar</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Mapa de costos</h3><p>El costo de calidad puede organizarse en prevención, evaluación, fallas internas y fallas externas. En DMAIC, el costo de mala calidad suele concentrarse en retrabajo, desperdicio, inspección adicional, garantías, devoluciones, urgencias y pérdida atribuible de clientes.</p></div>
+                <div><h3>Realización</h3><p>Separa costo contable, capacidad liberada y ahorro de efectivo. Cien horas liberadas crean valor si permiten reducir gasto, evitar contratación o producir algo útil; no equivalen automáticamente a cien horas pagadas menos.</p></div>
+                <p class="concept-test"><strong>Trazabilidad:</strong> volumen × tasa de defecto × costo por evento debe vincularse con registros, periodo y definición estable de defecto.</p>
+              </div>
+            </details>
+
+            <details class="economics-concept">
+              <summary><span class="concept-number">07</span><span class="concept-summary-copy"><strong>Sensibilidad e incertidumbre</strong><small>Encontrar el supuesto que cambia la decisión</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="concept-body">
+                <div><h3>Sensibilidad</h3><p>Cambia un supuesto a la vez dentro de un rango justificable: efecto alcanzado, adopción, volumen, costo por defecto, inversión, vida o tasa. Calcula el punto de equilibrio donde VPN = 0 y jerarquiza variables por impacto.</p></div>
+                <div><h3>Incertidumbre</h3><p>Los escenarios combinan supuestos coherentes —conservador, base y favorable—. Si existen datos suficientes, las distribuciones y la simulación pueden estimar un rango de resultados; no eliminan el sesgo de los supuestos.</p></div>
+                <p class="concept-test"><strong>Comunicación:</strong> presenta el resultado base, el rango, el supuesto dominante y la acción de control que generará información nueva.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section calculators-section" id="calculadoras" aria-labelledby="calculators-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Laboratorio numérico</p><h2 id="calculators-title">Calcular, interpretar y declarar límites.</h2></div>
+            <p>Introduce cifras sin separador de miles y usa punto o coma decimal. Todos los cálculos ocurren en este navegador; ningún dato se envía o conserva.</p>
+          </div>
+
+          <div class="calculator-grid">
+            <article class="calculator-card" id="calculadora-vp-vf">
+              <header><span>Calculadora 01</span><h3>Valor presente y valor futuro</h3><p>Mueve un flujo único entre periodos con interés compuesto.</p></header>
+              <form data-calculator="time-value" novalidate>
+                <label>Operación<select name="operation"><option value="present">Calcular valor presente</option><option value="future">Calcular valor futuro</option></select></label>
+                <label>Monto conocido <span>(unidades monetarias)</span><input type="text" name="amount" inputmode="decimal" autocomplete="off" value="150000" required></label>
+                <div class="input-pair"><label>Tasa por periodo <span>(%)</span><input type="text" name="rate" inputmode="decimal" autocomplete="off" value="12" required></label><label>Número de periodos<input type="text" name="periods" inputmode="numeric" autocomplete="off" value="3" required></label></div>
+                <button class="button button-primary" type="submit">Calcular equivalencia</button>
+                <p class="field-error" data-error role="alert"></p>
+                <div class="calculator-result" data-result aria-live="polite"><p>Resultado pendiente.</p></div>
+              </form>
+              <aside role="note"><strong>Supuesto:</strong> tasa efectiva constante y capitalización al cierre de cada periodo.</aside>
+            </article>
+
+            <article class="calculator-card" id="calculadora-vpn">
+              <header><span>Calculadora 02</span><h3>Valor presente neto</h3><p>Descuenta una inversión y una serie de flujos netos.</p></header>
+              <form data-calculator="npv" novalidate>
+                <label>Inversión inicial <span>(salida positiva en MXN)</span><input type="text" name="investment" inputmode="decimal" autocomplete="off" value="240000" required></label>
+                <label>Tasa por periodo <span>(%)</span><input type="text" name="rate" inputmode="decimal" autocomplete="off" value="14" required></label>
+                <label>Flujos netos de t = 1 a n <span>(separa con coma; si usas coma decimal, separa periodos con punto y coma o salto)</span><textarea name="cashflows" rows="3" required>95000, 110000, 125000</textarea></label>
+                <button class="button button-primary" type="submit">Calcular VPN</button>
+                <p class="field-error" data-error role="alert"></p>
+                <div class="calculator-result" data-result aria-live="polite"><p>Resultado pendiente.</p></div>
+                <div class="table-wrap" data-table></div>
+              </form>
+              <aside role="note"><strong>Interpretación:</strong> VPN positivo significa valor sobre la tasa ingresada, sujeto a que los flujos y el riesgo estén bien representados.</aside>
+            </article>
+
+            <article class="calculator-card" id="calculadora-recuperacion">
+              <header><span>Calculadora 03</span><h3>Recuperación simple y descontada</h3><p>Compara liquidez sin y con valor temporal.</p></header>
+              <form data-calculator="payback" novalidate>
+                <label>Inversión inicial <span>(MXN)</span><input type="text" name="investment" inputmode="decimal" autocomplete="off" value="180000" required></label>
+                <label>Tasa por periodo <span>(%)</span><input type="text" name="rate" inputmode="decimal" autocomplete="off" value="12" required></label>
+                <label>Flujos netos de t = 1 a n <span>(separa con coma; si usas coma decimal, separa periodos con punto y coma o salto)</span><textarea name="cashflows" rows="3" required>60000, 75000, 90000, 90000</textarea></label>
+                <button class="button button-primary" type="submit">Estimar recuperación</button>
+                <p class="field-error" data-error role="alert"></p>
+                <div class="calculator-result result-pair" data-result aria-live="polite"><p>Resultado pendiente.</p></div>
+              </form>
+              <aside role="note"><strong>Límite:</strong> la fracción supone que el flujo llega uniformemente durante el periodo de cruce y se reporta sólo si la inversión se recupera dentro del horizonte.</aside>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dmaic-case-section" id="caso" aria-labelledby="case-title">
+        <div class="shell">
+          <div class="case-layout">
+            <div class="case-copy">
+              <p class="section-index">Calculadora 04 · caso integrado</p>
+              <h2 id="case-title">Traducir el costo de mala calidad a un caso DMAIC.</h2>
+              <p>El modelo estima el costo anual de fallas y el ahorro atribuible a una reducción de defectos. Después descuenta los beneficios netos frente a la inversión de implementación.</p>
+              <ol>
+                <li><span aria-hidden="true">1</span><p><strong>Línea base:</strong> unidades, proporción defectuosa y costo por evento.</p></li>
+                <li><span aria-hidden="true">2</span><p><strong>Efecto:</strong> reducción relativa de defectos respaldada por piloto o evidencia.</p></li>
+                <li><span aria-hidden="true">3</span><p><strong>Realización:</strong> costos de sostener y mecanismo que convierte la mejora en efectivo.</p></li>
+                <li><span aria-hidden="true">4</span><p><strong>Riesgo:</strong> horizonte y tasa coherentes con la política de inversión.</p></li>
+              </ol>
+              <aside role="note"><strong>No dupliques beneficios.</strong> Si el costo por defecto ya incluye retrabajo y devolución, no vuelvas a sumar esas partidas.</aside>
+            </div>
+
+            <article class="business-case-card">
+              <form data-calculator="business-case" novalidate>
+                <div class="business-input-grid">
+                  <label>Unidades por año<input type="text" name="units" inputmode="numeric" autocomplete="off" value="40000" required></label>
+                  <label>Tasa defectuosa actual <span>(%)</span><input type="text" name="defectRate" inputmode="decimal" autocomplete="off" value="4.5" required></label>
+                  <label>Costo medio por defecto <span>(MXN)</span><input type="text" name="defectCost" inputmode="decimal" autocomplete="off" value="480" required></label>
+                  <label>Reducción esperada de defectos <span>(%)</span><input type="text" name="reduction" inputmode="decimal" autocomplete="off" value="55" required></label>
+                  <label>Inversión de implementación <span>(MXN)</span><input type="text" name="implementation" inputmode="decimal" autocomplete="off" value="280000" required></label>
+                  <label>Costo anual de sostener <span>(MXN)</span><input type="text" name="sustain" inputmode="decimal" autocomplete="off" value="70000" required></label>
+                  <label>Horizonte <span>(años)</span><input type="text" name="years" inputmode="numeric" autocomplete="off" value="4" required></label>
+                  <label>Tasa anual <span>(%)</span><input type="text" name="rate" inputmode="decimal" autocomplete="off" value="13" required></label>
+                </div>
+                <label class="realization-check"><input type="checkbox" name="realized" required><span>Confirmo que documenté cómo la mejora operativa se convertirá en ahorro o margen realizado.</span></label>
+                <button class="button button-primary" type="submit">Construir caso base</button>
+                <p class="field-error" data-error role="alert"></p>
+                <div class="business-results" data-result aria-live="polite"><p>Completa el modelo y confirma el mecanismo de realización.</p></div>
+                <div class="sensitivity-panel" data-sensitivity hidden></div>
+              </form>
+              <aside class="case-model-limit" role="note"><strong>Alcance del modelo.</strong> Supone volumen, costo unitario, efecto y ahorro anual constantes, con flujos al final de cada año. No incorpora impuestos, inflación, depreciación, capital de trabajo ni valor terminal; intégralos si son materiales para una decisión real.</aside>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problems-section" id="problemas" aria-labelledby="problems-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Práctica graduada</p><h2 id="problems-title">Resolver antes de abrir la orientación.</h2></div>
+            <p>Registra fórmula, sustitución, unidad, decisión y un supuesto que podría cambiarla. La respuesta numérica aislada no basta.</p>
+          </div>
+          <div class="problem-grid">
+            <article class="problem-card level-one"><span>Nivel 1 · equivalencia</span><h3>Compra evitada</h3><p>Una mejora permitirá aplazar tres años una compra de equipo de $820,000. Con una tasa anual de 11%, ¿cuál es hoy el valor de esa compra evitada?</p><details><summary>Orientación y resultado</summary><p>VP = 820,000/(1.11)<sup>3</sup> = <strong>$599,576.93</strong>. Es un beneficio presente sólo si el aplazamiento es atribuible al proyecto y la capacidad será suficiente durante los tres años.</p></details></article>
+            <article class="problem-card level-two"><span>Nivel 2 · flujo incremental</span><h3>Inspección o prevención</h3><p>La alternativa A cuesta $90,000 y evita $42,000 al final de cada año durante tres años. La B cuesta $145,000 y evita $65,000 por año. Con 12%, ¿se justifica pagar el incremento B − A?</p><details><summary>Orientación y resultado</summary><p>Flujo incremental: −$55,000 en t=0 y +$23,000 en cada uno de tres años. VPN incremental ≈ <strong>+$242.12</strong>. B apenas supera la tasa; la decisión es sensible a costos, vida y efecto. Conviene calcular el punto de equilibrio y considerar riesgo de estimación.</p></details></article>
+            <article class="problem-card level-three"><span>Nivel 3 · incertidumbre</span><h3>Caso de calidad</h3><p>Hay 18,000 entregas anuales, 3.2% con reclamación y costo medio de $1,150. Un proyecto de $260,000 busca reducir 60% las reclamaciones y cuesta $45,000 anuales de sostener durante cuatro años. Con 14%, construye escenarios de efecto de 35%, 60% y 75%.</p><details><summary>Orientación metodológica</summary><p>Costo base = 18,000 × 0.032 × 1,150 = $662,400/año. Para cada escenario calcula ahorro bruto, resta $45,000, descuenta cuatro anualidades y resta $260,000. Compara VPN y recuperación; después identifica la reducción mínima que hace VPN = 0.</p></details></article>
+          </div>
+          <div class="reflection-lab">
+            <div><p class="section-index">Reflexión de transferencia</p><h3>Auditar la lógica antes de presentar el proyecto.</h3></div>
+            <div class="reflection-questions">
+              <p><span>01</span>¿Qué parte del beneficio es efectivo, capacidad liberada o costo evitado?</p>
+              <p><span>02</span>¿Qué cifra proviene de registros y cuál sigue siendo un supuesto?</p>
+              <p><span>03</span>¿Qué variable puede volver negativo el VPN y cómo se vigilará?</p>
+              <p><span>04</span>¿Qué efecto operativo adverso podría quedar oculto por un VPN favorable?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section economics-quiz-section" id="cuestionario" aria-labelledby="quiz-title">
+        <div class="shell quiz-shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Comprobación conceptual</p><h2 id="quiz-title">Ocho decisiones, con explicación.</h2></div>
+            <p>Selecciona una respuesta por reactivo. La revisión muestra el criterio específico; puedes corregir y volver a evaluar.</p>
+          </div>
+          <form class="economics-quiz" data-economics-quiz>
+            <fieldset data-answer="b"><legend><span>01</span> ¿Qué flujo pertenece al análisis de una mejora?</legend><label><input type="radio" name="eq1" value="a"> El costo de un estudio pagado el año pasado.</label><label><input type="radio" name="eq1" value="b"> El mantenimiento adicional que ocurrirá sólo si se instala la solución.</label><label><input type="radio" name="eq1" value="c"> La depreciación histórica de un equipo que se conserve en ambos escenarios.</label><p data-feedback>El mantenimiento cambia con la elección; los costos hundidos o comunes no son incrementales.</p></fieldset>
+            <fieldset data-answer="c"><legend><span>02</span> Una reducción de 800 horas de retrabajo representa ahorro de efectivo cuando:</legend><label><input type="radio" name="eq2" value="a"> se multiplica automáticamente por la tarifa salarial.</label><label><input type="radio" name="eq2" value="b"> aparece en una presentación ejecutiva.</label><label><input type="radio" name="eq2" value="c"> evita gasto, contratación o permite producción con margen verificable.</label><p data-feedback>Capacidad liberada y efectivo son categorías distintas; hace falta un mecanismo de realización.</p></fieldset>
+            <fieldset data-answer="a"><legend><span>03</span> Para descontar flujos mensuales, una tasa anual debe:</legend><label><input type="radio" name="eq3" value="a"> convertirse a una tasa mensual coherente con su definición.</label><label><input type="radio" name="eq3" value="b"> dividirse entre 100 y usarse sin conversión.</label><label><input type="radio" name="eq3" value="c"> aplicarse sólo al flujo final.</label><p data-feedback>La tasa y la periodicidad de los flujos deben usar la misma unidad temporal.</p></fieldset>
+            <fieldset data-answer="b"><legend><span>04</span> Un VPN positivo indica que:</legend><label><input type="radio" name="eq4" value="a"> el proyecto no tiene riesgo.</label><label><input type="radio" name="eq4" value="b"> los flujos estimados superan la tasa requerida bajo los supuestos.</label><label><input type="radio" name="eq4" value="c"> la recuperación ocurre en el primer periodo.</label><p data-feedback>El VPN depende de flujos, tasa y supuestos; no garantiza ausencia de riesgo ni recuperación inmediata.</p></fieldset>
+            <fieldset data-answer="c"><legend><span>05</span> La recuperación simple puede ser engañosa porque:</legend><label><input type="radio" name="eq5" value="a"> incluye todos los flujos posteriores.</label><label><input type="radio" name="eq5" value="b"> siempre produce el mismo resultado que el VPN.</label><label><input type="radio" name="eq5" value="c"> ignora el valor temporal y los flujos después del corte.</label><p data-feedback>La recuperación informa liquidez, pero no mide todo el valor creado.</p></fieldset>
+            <fieldset data-answer="a"><legend><span>06</span> Al comparar A y B mutuamente excluyentes, el análisis incremental evalúa:</legend><label><input type="radio" name="eq6" value="a"> los costos y beneficios adicionales de pasar de una a otra.</label><label><input type="radio" name="eq6" value="b"> sólo el promedio de sus inversiones.</label><label><input type="radio" name="eq6" value="c"> únicamente la alternativa con menor costo inicial.</label><p data-feedback>La pregunta es si la inversión adicional produce beneficios adicionales suficientes.</p></fieldset>
+            <fieldset data-answer="b"><legend><span>07</span> ¿Cuál es el mejor uso de un escenario conservador?</legend><label><input type="radio" name="eq7" value="a"> reemplazar los datos observados por cifras pesimistas arbitrarias.</label><label><input type="radio" name="eq7" value="b"> combinar supuestos desfavorables pero plausibles y examinar la decisión.</label><label><input type="radio" name="eq7" value="c"> asegurar que todos los proyectos se rechacen.</label><p data-feedback>Un escenario útil es coherente, trazable y plausible; muestra la robustez de la decisión.</p></fieldset>
+            <fieldset data-answer="c"><legend><span>08</span> ¿Qué fortalece un caso DMAIC?</legend><label><input type="radio" name="eq8" value="a"> Presentar sólo el ahorro acumulado sin tasa.</label><label><input type="radio" name="eq8" value="b"> Tratar la mejoría piloto como permanente.</label><label><input type="radio" name="eq8" value="c"> Vincular efecto, mecanismo económico, fecha, incertidumbre y plan de control.</label><p data-feedback>La cadena completa permite revisar qué se observó, cómo se monetiza y qué sostendrá el resultado.</p></fieldset>
+            <div class="quiz-actions"><button class="button button-primary" type="submit">Revisar respuestas</button><button class="button button-secondary" type="reset">Limpiar</button><p data-quiz-result role="status" aria-live="polite">Responde los ocho reactivos.</p></div>
+          </form>
+          <noscript><p class="noscript-note">Las calculadoras y la retroalimentación requieren JavaScript. Los conceptos, problemas y respuestas orientativas permanecen disponibles.</p></noscript>
+        </div>
+      </section>
+
+      <section class="section bibliography-section" id="fuentes" aria-labelledby="sources-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Trazabilidad bibliográfica</p><h2 id="sources-title">Confirmar la referencia sin redistribuir la obra.</h2></div>
+            <p>Una cita en el programa confirma pertinencia bibliográfica; no concede permiso para copiar o publicar el texto completo.</p>
+          </div>
+          <div class="bibliography-grid">
+            <article class="source-audit-card">
+              <span class="audit-status">Coincidencia de obra confirmada</span>
+              <h3>Lo que especifica el programa</h3>
+              <p>En la página 9, sección 11, ítem 1, el programa <em>Lean Six Sigma</em> LEG-2503 registra: “Baca Urbina, Gabriel, <em>Fundamentos de Ingeniería Económica</em>, Ed. McGraw Hill”.</p>
+              <h3>Lo que identifica el ejemplar auditado</h3>
+              <dl><div><dt>Autor</dt><dd>Gabriel Baca Urbina</dd></div><div><dt>Edición</dt><dd>4.ª edición, 2007</dd></div><div><dt>ISBN</dt><dd>978-970-10-6113-8</dd></div><div><dt>Editorial</dt><dd>McGraw-Hill Interamericana</dd></div></dl>
+              <p class="audit-limit"><strong>Límite de la confirmación.</strong> El programa no indica edición ni ISBN. Por tanto, se confirma que corresponde a la obra citada, pero no que la cuarta edición sea la única edición prevista.</p>
+            </article>
+            <article class="rights-card">
+              <span class="rights-mark" aria-hidden="true">©</span>
+              <div><p class="section-index">Acceso responsable</p><h3>El libro no se aloja en este sitio.</h3><p>La obra está protegida por derechos de autor. Este recurso no copia capítulos, figuras ni ejercicios del libro. Para localizar una edición legal, consulta el registro bibliográfico o los servicios de tu biblioteca.</p>
+                <div class="source-links"><a class="button button-primary" href="https://search.worldcat.org/title/Fundamentos-de-ingenieria-economica/oclc/165337656" target="_blank" rel="noopener">Consultar WorldCat</a><a class="button button-secondary" href="https://losreyes.tecnm.mx/CarrerasTec/pdf/IIND/SEMESTRE%209/9.1%20Lean%20Six%20Sigma.pdf" target="_blank" rel="noopener">Ver programa oficial</a><a class="button button-secondary" href="/docencia/six-sigma-lean/recursos/ingenieria-economica/guia-drive.html" target="_blank">Abrir guía imprimible</a></div>
+              </div>
+            </article>
+          </div>
+          <aside class="method-note" role="note"><p><strong>Autoría y datos.</strong> Texto, problemas, ejemplos y calculadoras elaborados para esta aula abierta. Todas las cifras son simuladas y deben sustituirse por datos validados antes de una decisión real.</p><p>Última revisión: <time datetime="2026-09-20">20 de septiembre de 2026</time>.</p></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell detail-footer"><p>Dirk Hans Krakaur Floranes · Aula abierta · La Paz, Baja California Sur, México</p><a href="/docencia/six-sigma-lean/">Volver al curso Lean Six Sigma</a></div>
+    </footer>
+    <script src="/assets/app.js" defer></script>
+    <script src="/assets/six-sigma-economics.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guía imprimible original de ingeniería económica aplicada a proyectos DMAIC.">
+    <title>Guía didáctica: ingeniería económica para proyectos DMAIC</title>
+    <style>
+      body { max-width: 18cm; margin: 2cm auto; color: #000; font: 12pt Arial, sans-serif; line-height: 1.45; }
+      h1, h2, h3 { color: #000; font: bold 12pt Arial, sans-serif; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 0.3cm; vertical-align: top; border: 1px solid #000; }
+      th { font-weight: bold; text-align: left; }
+      .note { padding: 0.3cm; border: 1px solid #000; }
+      a { color: #000; overflow-wrap: anywhere; }
+      @media (max-width: 700px) {
+        body { margin: 1rem; }
+        table { display: block; overflow-x: auto; }
+      }
+      @media print {
+        body { max-width: none; margin: 1.5cm; }
+        h2, h3, table, .note { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guía didáctica: ingeniería económica para proyectos DMAIC</h1>
+    <p><strong>Asignatura de referencia:</strong> Lean Six Sigma, LEG-2503, Ingeniería Industrial.</p>
+    <p><strong>Autor del recurso:</strong> Dirk Hans Krakaur Floranes.</p>
+    <p><strong>Tipo de material:</strong> guía original de estudio y aplicación. Los casos, cifras, ejercicios y explicaciones fueron elaborados para esta actividad; no reproducen capítulos, figuras o problemas del libro comercial citado por el programa.</p>
+
+    <h2>1. Propósito</h2>
+    <p>Al terminar la secuencia, el estudiante podrá convertir resultados operativos de un proyecto Lean Six Sigma en flujos incrementales, hacer equivalentes flujos que ocurren en momentos distintos, calcular e interpretar valor presente neto y recuperación, estimar el costo de mala calidad y examinar la sensibilidad de una decisión ante supuestos inciertos.</p>
+    <p>La idea central es distinguir tres niveles: el efecto físico —por ejemplo, defectos evitados u horas liberadas—; el mecanismo económico —gasto evitado, capacidad utilizada o margen adicional—; y el flujo de efectivo, con fecha y unidad monetaria. Una mejora operativa no equivale automáticamente a dinero realizado.</p>
+
+    <h2>2. Secuencia didáctica sugerida</h2>
+    <table>
+      <thead><tr><th>Momento</th><th>Actividad</th><th>Producto observable</th></tr></thead>
+      <tbody>
+        <tr><td>1. Activación</td><td>Presentar una reducción de tiempo o defectos y preguntar en qué condiciones se convierte en beneficio financiero.</td><td>Hipótesis inicial con mecanismo económico.</td></tr>
+        <tr><td>2. Modelado</td><td>Construir los escenarios “con proyecto” y “sin proyecto”; identificar sólo los flujos que cambian.</td><td>Línea de tiempo de flujos incrementales.</td></tr>
+        <tr><td>3. Equivalencia</td><td>Aplicar VP, VF y VPN con tasa y periodo coherentes. Comparar recuperación simple y descontada.</td><td>Cálculo con fórmula, sustitución, unidad e interpretación.</td></tr>
+        <tr><td>4. Decisión</td><td>Resolver el caso DMAIC de esta guía y contrastar el resultado con un criterio de aceptación.</td><td>Recomendación condicionada por supuestos.</td></tr>
+        <tr><td>5. Sensibilidad</td><td>Variar el efecto esperado y localizar el punto de equilibrio del proyecto.</td><td>Escenario conservador, base y favorable.</td></tr>
+        <tr><td>6. Reflexión</td><td>Identificar qué dato nuevo podría cambiar la decisión y cómo se obtendrá durante Controlar.</td><td>Plan breve de verificación y seguimiento.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. Fórmulas, significado y supuestos</h2>
+    <table>
+      <thead><tr><th>Concepto</th><th>Expresión</th><th>Uso y supuesto principal</th></tr></thead>
+      <tbody>
+        <tr><td>Valor futuro</td><td>VF = VP(1 + i)<sup>n</sup></td><td>Capitaliza un flujo. La tasa i corresponde al mismo periodo que n.</td></tr>
+        <tr><td>Valor presente</td><td>VP = VF/(1 + i)<sup>n</sup></td><td>Descuenta un flujo futuro. Se conoce su momento y la tasa refleja el rendimiento mínimo requerido.</td></tr>
+        <tr><td>Valor presente neto</td><td>VPN = Σ CF<sub>t</sub>/(1 + i)<sup>t</sup></td><td>Compara beneficios y costos en t = 0. Un VPN positivo supera la tasa ingresada bajo los flujos estimados.</td></tr>
+        <tr><td>Anualidad equivalente</td><td>AE = VP[i(1 + i)<sup>n</sup>/((1 + i)<sup>n</sup> − 1)]</td><td>Convierte un valor presente en una serie uniforme. La comparación de vidas distintas requiere un horizonte común o repetición defendible.</td></tr>
+        <tr><td>Recuperación simple</td><td>Primer t donde −I<sub>0</sub> + Σ CF<sub>t</sub> ≥ 0</td><td>Informa liquidez; no descuenta ni considera flujos posteriores al corte.</td></tr>
+        <tr><td>Recuperación descontada</td><td>Primer t donde −I<sub>0</sub> + Σ CF<sub>t</sub>/(1 + i)<sup>t</sup> ≥ 0</td><td>Incluye el valor temporal, pero todavía omite el valor que ocurre después de recuperarse.</td></tr>
+        <tr><td>Costo anual de fallas</td><td>Volumen × proporción defectuosa × costo por defecto</td><td>Las tres definiciones deben ser estables, corresponder al mismo periodo y evitar partidas duplicadas.</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note"><strong>Convenciones.</strong> CF<sub>t</sub> es el flujo neto al final del periodo t; I<sub>0</sub> es la inversión inicial; i es la tasa efectiva por periodo; n es el número de periodos. Si los flujos son mensuales, la tasa debe ser mensual. Los costos hundidos y los flujos comunes a ambas alternativas se excluyen del análisis incremental.</p>
+
+    <h2>4. Caso DMAIC resuelto: errores de surtido</h2>
+    <h3>4.1 Situación y supuestos</h3>
+    <p>Un centro de distribución procesa 30,000 pedidos al año. El 4% presenta un error de surtido y cada error cuesta, en promedio, $650 MXN entre retrabajo, transporte y gestión de reclamación. El proyecto requiere $250,000 MXN en t = 0 y $55,000 MXN anuales para sostener el nuevo estándar. El piloto sustenta una reducción relativa de 50% en errores. Se usa un horizonte de cuatro años y una tasa anual de 12%. El área financiera confirmó que las partidas incluidas corresponden a gasto evitable y no duplican horas ya registradas en el costo por error.</p>
+
+    <h3>4.2 Línea base</h3>
+    <p>Errores esperados por año = 30,000 × 0.04 = 1,200.</p>
+    <p>Costo anual de mala calidad = 1,200 × $650 = <strong>$780,000 MXN</strong>.</p>
+
+    <h3>4.3 Efecto y beneficio anual</h3>
+    <p>Errores evitados = 1,200 × 0.50 = 600 por año.</p>
+    <p>Ahorro bruto = $780,000 × 0.50 = $390,000 por año.</p>
+    <p>Beneficio neto = $390,000 − $55,000 = <strong>$335,000 MXN por año</strong>.</p>
+
+    <h3>4.4 Valor presente neto</h3>
+    <p>El factor presente de una serie anual uniforme a 12% durante cuatro años es 3.037349.</p>
+    <p>VPN = −$250,000 + $335,000(3.037349) = <strong>$767,512.03 MXN</strong>.</p>
+    <p>Bajo los supuestos del caso base, el proyecto supera el rendimiento requerido. Esta conclusión no prueba que el efecto se mantendrá; requiere medir errores, costo por evento, adopción del estándar y efectos adversos durante Controlar.</p>
+
+    <h3>4.5 Recuperación y sensibilidad</h3>
+    <p>Recuperación simple = $250,000/$335,000 = <strong>0.75 años</strong>. La recuperación descontada, suponiendo flujo uniforme dentro del primer año, es aproximadamente <strong>0.84 años</strong>.</p>
+    <p>El punto de equilibrio es una reducción aproximada de <strong>17.60%</strong>: por debajo de ese efecto, el VPN sería negativo si los demás supuestos permanecieran iguales. Con una reducción de 35%, el VPN sería $412,142.16; con 65%, sería $1,122,881.90.</p>
+
+    <h3>4.6 Recomendación condicionada</h3>
+    <p>Aprobar el despliegue por etapas si la medición confirma que el costo por error es evitable, el piloto representa la mezcla de pedidos y la organización puede sostener el estándar. Definir un punto de revisión si la reducción observada se acerca a 17.60%, si el costo de sostener supera lo previsto o si aparece deterioro en tiempo de entrega.</p>
+
+    <h2>5. Ejercicios</h2>
+    <h3>Ejercicio 1. Compra evitada</h3>
+    <p>Una mejora permitirá aplazar tres años una compra de equipo de $820,000. Con una tasa anual de 11%, calcula el valor presente de la compra evitada y explica cuándo puede tratarse como beneficio del proyecto.</p>
+
+    <h3>Ejercicio 2. Análisis incremental</h3>
+    <p>La alternativa A cuesta $90,000 y evita $42,000 al final de cada año durante tres años. La alternativa B cuesta $145,000 y evita $65,000 por año. Con una tasa de 12%, evalúa el incremento B − A.</p>
+
+    <h3>Ejercicio 3. Recuperación</h3>
+    <p>Una solución requiere $180,000. Sus flujos netos esperados al final de los siguientes cuatro años son $60,000, $75,000, $90,000 y $90,000. Con 12%, calcula la recuperación simple y la descontada.</p>
+
+    <h3>Ejercicio 4. Costo de mala calidad</h3>
+    <p>Una operación realiza 18,000 entregas al año; 3.2% genera una reclamación de costo medio $1,150. Un proyecto de $260,000 busca reducir 60% las reclamaciones y cuesta $45,000 anuales de sostener durante cuatro años. Con una tasa de 14%, calcula el caso base y compara reducciones de 35%, 60% y 75%.</p>
+
+    <h2>6. Claves orientativas</h2>
+    <p><strong>Ejercicio 1.</strong> VP = $820,000/(1.11)<sup>3</sup> = <strong>$599,576.93</strong>. Se reconoce como beneficio sólo si el proyecto causa el aplazamiento y la capacidad seguirá siendo suficiente.</p>
+    <p><strong>Ejercicio 2.</strong> Flujo incremental: −$55,000 en t = 0 y +$23,000 al final de cada uno de tres años. VPN incremental = <strong>+$242.12</strong>. La ventaja de B es mínima; debe revisarse la sensibilidad.</p>
+    <p><strong>Ejercicio 3.</strong> Recuperación simple = <strong>2.50 años</strong>. Recuperación descontada ≈ <strong>3.05 años</strong>, bajo interpolación uniforme dentro del periodo de cruce.</p>
+    <p><strong>Ejercicio 4.</strong> Primero calcula el costo base: 18,000 × 0.032 × $1,150 = $662,400 por año. Para cada escenario, multiplica ese costo por la reducción, resta $45,000, descuenta cuatro anualidades a 14% y resta $260,000. Reporta también el punto de equilibrio y el supuesto con mayor influencia.</p>
+
+    <h2>7. Preguntas de reflexión</h2>
+    <ol>
+      <li>¿Qué parte del beneficio estimado es efectivo, capacidad liberada o costo evitado?</li>
+      <li>¿Qué cifra proviene de registros y cuál sigue siendo una hipótesis?</li>
+      <li>¿Qué variable puede volver negativo el VPN y cómo se observará durante Controlar?</li>
+      <li>¿Qué consecuencia operativa, social o de seguridad podría quedar oculta por un VPN favorable?</li>
+      <li>¿Qué evidencia nueva justificaría detener, adaptar o ampliar el proyecto?</li>
+    </ol>
+
+    <h2>8. Trazabilidad bibliográfica y acceso responsable</h2>
+    <p>El programa oficial <em>Lean Six Sigma</em> LEG-2503 registra en la página 9, sección 11, ítem 1: Baca Urbina, Gabriel, <em>Fundamentos de Ingeniería Económica</em>, Ed. McGraw Hill. El ejemplar auditado corresponde a Gabriel Baca Urbina, <em>Fundamentos de ingeniería económica</em>, 4.ª edición, 2007, McGraw-Hill Interamericana, ISBN 978-970-10-6113-8. El programa no especifica edición ni ISBN; se confirma la coincidencia de la obra, no que la cuarta edición sea la única prevista.</p>
+    <p>La obra está protegida por derechos de autor y no se aloja ni reproduce en este recurso. Puede localizarse mediante el registro bibliográfico de WorldCat: <a href="https://search.worldcat.org/title/Fundamentos-de-ingenieria-economica/oclc/165337656">https://search.worldcat.org/title/Fundamentos-de-ingenieria-economica/oclc/165337656</a>.</p>
+    <p>Programa oficial TecNM: <a href="https://losreyes.tecnm.mx/CarrerasTec/pdf/IIND/SEMESTRE%209/9.1%20Lean%20Six%20Sigma.pdf">https://losreyes.tecnm.mx/CarrerasTec/pdf/IIND/SEMESTRE%209/9.1%20Lean%20Six%20Sigma.pdf</a>.</p>
+    <p>Página interactiva con calculadoras y cuestionario: <a href="https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/">https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/</a>.</p>
+
+    <p><strong>Última revisión:</strong> 20 de septiembre de 2026.</p>
+  </body>
+</html>

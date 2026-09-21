@@ -564,6 +564,93 @@
 
 .course-page .study-contract strong { color: #fff; }
 
+/* Launchpad for the companion learning games */
+
+.course-page .game-launch-section {
+  position: relative;
+  padding: 0 0 clamp(4.5rem, 8vw, 7rem);
+  background: var(--course-paper);
+}
+
+.course-page .game-launch-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 5vw, 4.25rem);
+  overflow: hidden;
+  color: #fff;
+  border-radius: var(--course-radius);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(216, 229, 122, 0.2), transparent 18rem),
+    linear-gradient(125deg, var(--course-deep), #0b4748);
+  box-shadow: var(--course-shadow);
+}
+
+.course-page .game-launch-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: repeating-linear-gradient(135deg, transparent 0 42px, rgba(255, 255, 255, 0.025) 42px 43px);
+}
+
+.course-page .game-launch-copy,
+.course-page .game-launch-facts {
+  position: relative;
+  z-index: 1;
+}
+
+.course-page .game-launch-copy .section-index { color: var(--course-lime); }
+
+.course-page .game-launch-copy h2 {
+  max-width: 17ch;
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.course-page .game-launch-copy > p:not(.section-index) {
+  max-width: 58ch;
+  margin: 0 0 1.75rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.course-page .game-launch-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.course-page .game-launch-facts div {
+  padding: 1.4rem 1rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.course-page .game-launch-facts div:last-child { border-right: 0; }
+
+.course-page .game-launch-facts dt {
+  color: var(--course-lime);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 800;
+}
+
+.course-page .game-launch-facts dd {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* Units and topics */
 
 .course-page .unit-section {
@@ -2017,6 +2104,60 @@
   line-height: 1.6;
 }
 
+.course-page .economic-source-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.5fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  margin: 1rem 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(205, 221, 88, 0.18), transparent 15rem),
+    linear-gradient(135deg, var(--course-navy), #0c4a50);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--course-radius);
+  box-shadow: var(--course-shadow);
+}
+
+.course-page .economic-source-card .source-label {
+  color: var(--course-lime);
+}
+
+.course-page .economic-source-card h3 {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.course-page .economic-source-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.65;
+}
+
+.course-page .economic-source-card .rights-note {
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.course-page .economic-source-card strong {
+  color: #fff;
+}
+
+.course-page .economic-source-actions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.course-page .economic-source-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
 .course-page .source-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2082,6 +2223,8 @@
 @media (max-width: 900px) {
   .course-page .course-hero { min-height: auto; }
 
+  .course-page .game-launch-card { grid-template-columns: 1fr; }
+
   .course-page .course-hero-grid {
     grid-template-columns: 1fr;
   }
@@ -2106,6 +2249,10 @@
 
   .course-page .instruction-grid,
   .course-page .source-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .course-page .economic-source-card {
     grid-template-columns: 1fr;
   }
 
@@ -2153,6 +2300,10 @@
   .course-page .course-facts {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .course-page .game-launch-facts { grid-template-columns: 1fr; }
+  .course-page .game-launch-facts div { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+  .course-page .game-launch-facts div:last-child { border-bottom: 0; }
 
   .course-page .course-facts div:nth-child(2) { border-right: 0; }
   .course-page .course-facts div:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.12); }
@@ -2320,6 +2471,7 @@
   }
 
   .course-page .course-hero,
+  .course-page .game-launch-card,
   .course-page .lab-section,
   .course-page .quiz-section,
   .course-page .activities-section,
@@ -2338,6 +2490,10 @@
   }
 
   .course-page .course-hero-grid { grid-template-columns: 1fr; }
+  .course-page .game-launch-card { display: block; padding: .5cm 0; box-shadow: none; }
+  .course-page .game-launch-facts { display: none; }
+  .course-page .game-launch-copy > p:not(.section-index),
+  .course-page .game-launch-copy h2 { color: #000 !important; }
   .course-page .course-hero h1,
   .course-page .course-hero h1 em,
   .course-page .resource-lead,
@@ -2384,11 +2540,15 @@
     display: block !important;
   }
 
-  .course-page :is(.topic-card, .activity-card, .practice, .worked-example, .project-support article, .rubric-wrap, .reflection-panel, .mastery-panel > div, .source-note, .method-note) {
+  .course-page :is(.topic-card, .activity-card, .practice, .worked-example, .project-support article, .rubric-wrap, .reflection-panel, .mastery-panel > div, .source-note, .economic-source-card, .method-note) {
     color: #000 !important;
     background: #fff !important;
     box-shadow: none !important;
     break-inside: avoid;
+  }
+
+  .course-page .economic-source-card :is(h3, p, strong, .source-label) {
+    color: #000 !important;
   }
 
   .course-page :is(.evidence-audit, .rubric-key, .defense-rule) {

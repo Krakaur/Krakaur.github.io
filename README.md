@@ -13,8 +13,12 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── assets/
 │   ├── app.js              # Navegación, filtros y mejoras progresivas
 │   ├── six-sigma-lean.js   # Laboratorios y evaluación formativa del aula abierta
+│   ├── six-sigma-games.js  # Motor local de las cinco aplicaciones gamificadas
+│   ├── six-sigma-economics.js # Calculadoras de ingeniería económica y cuestionario
 │   ├── styles.css          # Sistema visual adaptable e imprimible
 │   ├── six-sigma-lean.css  # Sistema visual específico del recurso didáctico
+│   ├── six-sigma-games.css # Interfaz del centro de misiones
+│   ├── six-sigma-economics.css # Interfaz de la guía económica
 │   ├── badges/             # Imágenes gráficas sin metadatos personales
 │   ├── qr/                 # QR oficiales o de acceso al buscador SEP
 │   ├── favicon.svg
@@ -25,7 +29,7 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── credenciales/           # Doce fichas públicas de verificación
 ├── credenciales-digitales/ # Nueve emisiones Credly y diecinueve constancias Coursera
 ├── docencia/
-│   └── six-sigma-lean/     # Aula abierta, actividades, plantillas y datos simulados
+│   └── six-sigma-lean/     # Aula, centro de misiones, plantillas y datos simulados
 ├── publicaciones/         # Fichas bibliográficas y enlaces a las fuentes editoriales
 ├── europass/               # Pasarela pública al modelo de acceso selectivo
 ├── scripts/generate_credentials.py
@@ -49,6 +53,8 @@ Abra `http://127.0.0.1:4173/`. Para ejecutar la verificación automatizada:
 node scripts/validate.mjs
 node --check assets/app.js
 node --check assets/six-sigma-lean.js
+node --check assets/six-sigma-games.js
+node --check assets/six-sigma-economics.js
 node scripts/check_external.mjs
 ```
 
@@ -68,7 +74,7 @@ La fotografía pertenece al titular del portafolio y se usa exclusivamente como 
 
 ## Recursos docentes abiertos
 
-La subsección [Lean Six Sigma: del problema al control](https://krakaur.github.io/docencia/six-sigma-lean/) desarrolla los 28 temas y subtemas del programa LEG-2503 mediante conceptos, problemas, diez actividades conectadas, cinco laboratorios locales, cuestionario formativo, rúbrica y un proyecto DMAIC. El recurso declara la procedencia de las consignas históricas y distingue las adaptaciones didácticas; los datos descargables son simulados y no contienen información de empresas o estudiantes.
+La subsección [Lean Six Sigma: del problema al control](https://krakaur.github.io/docencia/six-sigma-lean/) desarrolla los 28 temas y subtemas del programa LEG-2503 mediante conceptos, problemas, diez actividades conectadas, cinco laboratorios locales, cuestionario formativo, rúbrica y un proyecto DMAIC. Su [centro de misiones](https://krakaur.github.io/docencia/six-sigma-lean/apps/) incorpora cinco miniaplicaciones cualitativas y cuantitativas con progreso local, retroalimentación explicativa y medición diferencial. La [guía de ingeniería económica](https://krakaur.github.io/docencia/six-sigma-lean/recursos/ingenieria-economica/) conecta el caso de negocio DMAIC con valor temporal, VPN, recuperación y sensibilidad mediante calculadoras locales. El recurso declara la procedencia de las consignas históricas y distingue las adaptaciones didácticas; los datos descargables son simulados y no contienen información de empresas o estudiantes.
 
 ## Actualización del Doctorado en Administración
 
