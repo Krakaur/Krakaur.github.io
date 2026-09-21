@@ -25,4 +25,6 @@ jobs:
         run: node scripts/validate.mjs
 
       - name: Verificar sintaxis de JavaScript
-        run: node --check assets/app.js
+        run: |
+          node --check assets/app.js
+          node --check assets/six-sigma-lean.js

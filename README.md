@@ -12,7 +12,9 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── 404.html                # Página de error propia
 ├── assets/
 │   ├── app.js              # Navegación, filtros y mejoras progresivas
+│   ├── six-sigma-lean.js   # Laboratorios y evaluación formativa del aula abierta
 │   ├── styles.css          # Sistema visual adaptable e imprimible
+│   ├── six-sigma-lean.css  # Sistema visual específico del recurso didáctico
 │   ├── badges/             # Imágenes gráficas sin metadatos personales
 │   ├── qr/                 # QR oficiales o de acceso al buscador SEP
 │   ├── favicon.svg
@@ -22,6 +24,8 @@ El sitio usa HTML, CSS y JavaScript nativos, sin bibliotecas de ejecución ni se
 ├── data/digital-credentials.json # Catálogo Credly y Coursera
 ├── credenciales/           # Doce fichas públicas de verificación
 ├── credenciales-digitales/ # Nueve emisiones Credly y diecinueve constancias Coursera
+├── docencia/
+│   └── six-sigma-lean/     # Aula abierta, actividades, plantillas y datos simulados
 ├── publicaciones/         # Fichas bibliográficas y enlaces a las fuentes editoriales
 ├── europass/               # Pasarela pública al modelo de acceso selectivo
 ├── scripts/generate_credentials.py
@@ -44,6 +48,7 @@ Abra `http://127.0.0.1:4173/`. Para ejecutar la verificación automatizada:
 ```powershell
 node scripts/validate.mjs
 node --check assets/app.js
+node --check assets/six-sigma-lean.js
 node scripts/check_external.mjs
 ```
 
@@ -60,6 +65,10 @@ El repositorio no contiene cédulas o títulos digitalizados, constancias consol
 Las imágenes de insignias se obtuvieron de los recursos gráficos públicos indicados por Credly, se redimensionaron localmente y se eliminaron sus metadatos. Los PDF de certificados y los Open Badge personales no se alojan en el repositorio.
 
 La fotografía pertenece al titular del portafolio y se usa exclusivamente como imagen profesional de perfil.
+
+## Recursos docentes abiertos
+
+La subsección [Lean Six Sigma: del problema al control](https://krakaur.github.io/docencia/six-sigma-lean/) desarrolla los 28 temas y subtemas del programa LEG-2503 mediante conceptos, problemas, diez actividades conectadas, cinco laboratorios locales, cuestionario formativo, rúbrica y un proyecto DMAIC. El recurso declara la procedencia de las consignas históricas y distingue las adaptaciones didácticas; los datos descargables son simulados y no contienen información de empresas o estudiantes.
 
 ## Actualización del Doctorado en Administración
 

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d2831">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Aula abierta de Lean Six Sigma: 28 temas del programa TecNM LEG-2503, problemas logísticos, laboratorios estadísticos, proyecto DMAIC, cuestionario y bibliografía.">
+    <meta name="author" content="Dirk Hans Krakaur Floranes">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krakaur.github.io/docencia/six-sigma-lean/">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/assets/six-sigma-lean.css">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:url" content="https://krakaur.github.io/docencia/six-sigma-lean/">
+    <meta property="og:title" content="Lean Six Sigma | Aula abierta">
+    <meta property="og:description" content="Ruta didáctica completa para estudiar Lean Six Sigma en procesos logísticos con práctica, datos y evaluación formativa.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lean Six Sigma | Aula abierta">
+    <meta name="twitter:description" content="Conceptos, problemas, laboratorios, proyecto DMAIC y cuestionario de autoevaluación.">
+    <title>Lean Six Sigma | Aula abierta de Dirk Hans Krakaur</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Lean Six Sigma: aula abierta para procesos logísticos",
+        "description": "Recurso didáctico independiente alineado con los 28 subtemas y subsubtemas del programa TecNM LEG-2503.",
+        "url": "https://krakaur.github.io/docencia/six-sigma-lean/",
+        "inLanguage": "es-MX",
+        "learningResourceType": ["curso abierto", "autoevaluación", "laboratorio interactivo"],
+        "educationalLevel": "educación superior",
+        "teaches": ["Lean", "Six Sigma", "DMAIC", "estadística aplicada", "logística", "mejora continua"],
+        "author": {
+          "@type": "Person",
+          "name": "Dirk Hans Krakaur Floranes",
+          "url": "https://krakaur.github.io/"
+        },
+        "isBasedOn": "https://losreyes.tecnm.mx/CarrerasTec/pdf/IIND/SEMESTRE%209/9.1%20Lean%20Six%20Sigma.pdf",
+        "dateModified": "2026-09-20"
+      }
+    </script>
+  </head>
+  <body class="resource-page course-page">
+    <a class="skip-link" href="#curso">Saltar al contenido del curso</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner shell">
+        <a class="brand" href="/" aria-label="Volver al e-portafolio">
+          <span class="brand-mark" aria-hidden="true">DK</span>
+          <span class="brand-copy"><strong>Dirk Hans Krakaur</strong><small>Aula abierta</small></span>
+        </a>
+        <a class="detail-back" href="/#recursos-docentes">← Recursos docentes</a>
+      </div>
+    </header>
+
+    <main id="curso">
+      <section class="resource-hero course-hero" aria-labelledby="course-title">
+        <div class="shell">
+          <nav class="breadcrumbs breadcrumbs-inverse" aria-label="Migas de pan"><a href="/">Inicio</a><span>/</span><a href="/#recursos-docentes">Recursos docentes</a><span>/</span><span aria-current="page">Lean Six Sigma</span></nav>
+          <div class="course-hero-grid">
+            <div class="course-hero-copy">
+              <p class="eyebrow">Ingeniería Industrial · aula abierta</p>
+              <h1 id="course-title">Lean Six Sigma.<br><em>De los datos a la mejora.</em></h1>
+              <p class="resource-lead">Una ruta completa para diagnosticar, medir y mejorar procesos logísticos. Reúne conceptos, decisiones metodológicas, problemas aplicados, laboratorios, proyecto integrador y evaluación formativa.</p>
+              <div class="course-actions" role="group" aria-label="Acciones principales del curso">
+                <a class="button button-primary" href="#ruta">Comenzar la ruta <span aria-hidden="true">↓</span></a>
+                <a class="button button-ghost" href="#proyecto">Ver proyecto DMAIC</a>
+                <button class="button button-ghost" type="button" data-print>Imprimir guía</button>
+              </div>
+              <p class="course-source-note"><strong>Alcance curricular.</strong> Recurso didáctico independiente, alineado con Lean Six Sigma LEG-2503 (TecNM, diseño interinstitucional 2024). La convocatoria 51 del Instituto Tecnológico de La Paz nombra la asignatura “Six Sigma Lean”; el programa específico de ese plantel no se encontró en publicación abierta. Por ello, esta página no se presenta como contenido oficial del ITLP ni como equivalencia administrativa.</p>
+            </div>
+
+            <div class="dmaic-visual" role="group" aria-label="Ciclo DMAIC: definir, medir, analizar, mejorar y controlar">
+              <svg viewBox="0 0 520 520" role="img" aria-labelledby="dmaic-title dmaic-desc">
+                <title id="dmaic-title">Ciclo DMAIC</title>
+                <desc id="dmaic-desc">Las fases definir, medir, analizar, mejorar y controlar forman un ciclo continuo alrededor del propósito de aprender con evidencia.</desc>
+                <circle class="orbit orbit-outer" cx="260" cy="260" r="188"/>
+                <circle class="orbit orbit-inner" cx="260" cy="260" r="112"/>
+                <path class="orbit-arrow" d="M260 72a188 188 0 0 1 177 125"/>
+                <g class="phase phase-d"><circle cx="260" cy="72" r="48"/><text x="260" y="68">D</text><text class="phase-label" x="260" y="90">Definir</text></g>
+                <g class="phase phase-m"><circle cx="439" cy="202" r="48"/><text x="439" y="198">M</text><text class="phase-label" x="439" y="220">Medir</text></g>
+                <g class="phase phase-a"><circle cx="370" cy="414" r="48"/><text x="370" y="410">A</text><text class="phase-label" x="370" y="432">Analizar</text></g>
+                <g class="phase phase-i"><circle cx="150" cy="414" r="48"/><text x="150" y="410">M</text><text class="phase-label" x="150" y="432">Mejorar</text></g>
+                <g class="phase phase-c"><circle cx="81" cy="202" r="48"/><text x="81" y="198">C</text><text class="phase-label" x="81" y="220">Controlar</text></g>
+                <text class="cycle-core" x="260" y="248">APRENDER</text>
+                <text class="cycle-core cycle-core-small" x="260" y="277">CON EVIDENCIA</text>
+              </svg>
+              <dl class="course-facts">
+                <div><dt>4</dt><dd>unidades</dd></div>
+                <div><dt>28</dt><dd>temas trazables</dd></div>
+                <div><dt>20</dt><dd>reactivos teóricos</dd></div>
+                <div><dt>5</dt><dd>laboratorios</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="course-dock" data-course-dock>
+        <div class="shell course-dock-inner">
+          <nav aria-label="Navegación del curso">
+            <a href="#ruta">Ruta</a><a href="#unidad-1">U1</a><a href="#unidad-2">U2</a><a href="#unidad-3">U3</a><a href="#unidad-4">U4</a><a href="#laboratorio">Laboratorio</a><a href="#actividades">Actividades</a><a href="#proyecto">Proyecto</a><a href="#aprendizaje">Progreso</a><a href="#cuestionario">Cuestionario</a><a href="#bibliografia">Fuentes</a>
+          </nav>
+          <div class="progress-cluster">
+            <span><strong data-progress-count>0</strong>/28 estudiados</span>
+            <progress class="progress-track" aria-label="Avance de estudio" max="28" value="0" data-progress-bar>0 de 28</progress>
+          </div>
+        </div>
+      </div>
+
+      <section class="course-intro section" id="ruta" aria-labelledby="ruta-title">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="section-index">Ruta de aprendizaje</p><h2 id="ruta-title">Comprender, practicar, comprobar y transferir.</h2></div>
+            <p>Trabaja cada unidad en orden. Lee el concepto, resuelve el problema sin abrir la orientación, contrasta tu decisión y marca el tema. El avance se conserva únicamente en este navegador.</p>
+          </div>
+
+          <div class="route-grid">
+            <a class="route-card route-card-1" href="#unidad-1"><span>01</span><p>Fundamentos de Lean y cultura organizacional</p><small>15 elementos · observar el sistema</small></a>
+            <a class="route-card route-card-2" href="#unidad-2"><span>02</span><p>Fundamentos de Six Sigma y estadística</p><small>3 temas · describir la variación</small></a>
+            <a class="route-card route-card-3" href="#unidad-3"><span>03</span><p>Medición y análisis estadístico</p><small>6 temas · decidir con datos</small></a>
+            <a class="route-card route-card-4" href="#unidad-4"><span>04</span><p>Integración en proyectos logísticos</p><small>4 temas · sostener y comunicar</small></a>
+          </div>
+
+          <aside class="study-contract" aria-label="Contrato de estudio">
+            <div><span aria-hidden="true">01</span><p><strong>Antes:</strong> formula una hipótesis propia.</p></div>
+            <div><span aria-hidden="true">02</span><p><strong>Durante:</strong> registra datos y supuestos.</p></div>
+            <div><span aria-hidden="true">03</span><p><strong>Después:</strong> explica qué evidencia cambiaría tu conclusión.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="unit-section unit-one" id="unidad-1" aria-labelledby="unidad-1-title">
+        <div class="shell">
+          <header class="unit-heading">
+            <div class="unit-number">01</div>
+            <div><p class="eyebrow">Unidad 1 · observar el sistema</p><h2 id="unidad-1-title">Fundamentos de Lean y cultura organizacional</h2><p>Lean busca flujo, aprendizaje y valor para el cliente. La eliminación de desperdicio sólo es sostenible cuando las personas pueden hacer visible el problema y mejorar el sistema sin ocultar errores.</p></div>
+          </header>
+
+          <div class="topic-stack">
+            <details class="topic-card" id="tema-1-1" data-topic="1.1" open>
+              <summary><span>1.1</span><span class="summary-copy"><strong>Introducción a DMAIC con enfoque Lean Six Sigma</strong><small>Conectar flujo y variación en una secuencia verificable.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body">
+                <div class="concept-grid"><div><h3>Concepto</h3><p><strong>DMAIC</strong> organiza mejoras de procesos existentes: <em>Definir</em> traduce la necesidad en un problema; <em>Medir</em> establece datos confiables y línea base; <em>Analizar</em> prueba causas; <em>Mejorar</em> ensaya soluciones; <em>Controlar</em> sostiene el resultado. Lean aporta la mirada sobre valor, flujo y desperdicio; Six Sigma aporta disciplina para comprender y reducir variación.</p></div><div><h3>Criterio de uso</h3><p>Conviene cuando existe una brecha de desempeño repetible cuyo proceso puede observarse y medirse. Si todavía se diseña un proceso nuevo, DMADV puede ser más pertinente. No debe saltarse de una queja a una solución preferida.</p></div></div>
+                <div class="worked-example"><span>Ejemplo guiado</span><p>Un almacén promete surtir en 45 minutos, pero la mediana es 52 y el percentil 90 llega a 88. El proyecto define como CTQ el tiempo desde liberación de orden hasta área de embarque; primero valida marcas de tiempo y estratifica por turno antes de culpar al personal.</p></div>
+                <div class="practice"><h3>Problema práctico</h3><p>La tasa de entregas completas y a tiempo cayó de 94% a 86% en tres meses. Redacta un enunciado que incluya métrica, brecha, periodo, proceso y efecto, sin atribuir todavía una causa.</p><details><summary>Orientación de resolución</summary><p>Una formulación defendible sería: “Entre junio y agosto, el porcentaje de pedidos nacionales entregados completos y a tiempo descendió de 94% a 86%, ocho puntos por debajo de la meta, lo que incrementó reclamaciones y fletes urgentes”. La causa queda abierta para la fase Analizar.</p></details></div>
+                <button class="complete-button" type="button" data-complete>Marcar 1.1 como estudiado</button>
+              </div>
+            </details>
+
+            <details class="topic-card" id="tema-1-2" data-topic="1.2">
+              <summary><span>1.2</span><span class="summary-copy"><strong>Cultura, gestión del cambio y liderazgo</strong><small>Crear condiciones para aprender del proceso.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body">
+                <div class="concept-grid"><div><h3>Concepto</h3><p>La cultura se expresa en conductas reforzadas: qué problemas se reportan, qué decisiones reciben recursos y qué ocurre cuando aparece un error. El liderazgo de mejora fija propósito, retira obstáculos y pregunta por evidencia. La gestión del cambio identifica personas afectadas, anticipa pérdidas percibidas y construye participación, capacidad y retroalimentación.</p></div><div><h3>Método</h3><p>Mapea actores por influencia e impacto; define la conducta observable que debe cambiar; escucha objeciones; prueba la nueva práctica; forma en el puesto; mide adopción y resultado por separado. Una capacitación impartida no prueba adopción.</p></div></div>
+                <div class="worked-example"><span>Ejemplo guiado</span><p>Para introducir escaneo en surtido, el equipo piloto incluye a operarios, sistemas y calidad. Se mide uso correcto del escáner y errores por pedido. Los fallos se tratan como información del diseño y no como razón automática para sancionar.</p></div>
+                <div class="practice"><h3>Problema práctico</h3><p>Un supervisor impone 5S y fotografía estaciones “perfectas” cada viernes, pero el desorden reaparece. Propón dos cambios de liderazgo y una medida de adopción.</p><details><summary>Orientación de resolución</summary><p>Involucrar a quienes usan la estación para definir ubicaciones según frecuencia y ergonomía; reservar tiempo para corregir causas del desorden. Medir, por ejemplo, porcentaje de artículos encontrados en menos de 30 segundos durante observaciones aleatorias, no sólo apariencia semanal.</p></details></div>
+                <button class="complete-button" type="button" data-complete>Marcar 1.2 como estudiado</button>
+              </div>
+            </details>
+
+            <details class="topic-card" id="tema-1-3" data-topic="1.3">
+              <summary><span>1.3</span><span class="summary-copy"><strong>Identificación y eliminación de desperdicios logísticos</strong><small>Distinguir actividad, espera y valor.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body">
+                <div class="concept-grid"><div><h3>Los ocho desperdicios</h3><p>Defectos, sobreproducción, esperas, talento no utilizado, transporte, inventario, movimiento y sobreprocesamiento. En logística pueden aparecer como reempaque, colas en muelle, traslados dobles, búsquedas, captura repetida o inventario sin rotación.</p></div><div><h3>Principio analítico</h3><p>Una actividad agrega valor cuando transforma lo que recibe el cliente, se hace bien a la primera y el cliente reconoce esa transformación. Las tareas necesarias por regulación o infraestructura se distinguen del valor, aunque todavía no puedan eliminarse.</p></div></div>
+                <div class="worked-example"><span>Ejemplo guiado</span><p>En 64 minutos de surtido, sólo 18 corresponden a tomar y verificar producto; 21 son caminata, 15 espera por reposición y 10 corrección. El primer objetivo no es “trabajar más rápido”, sino rediseñar ubicación y reposición.</p></div>
+                <div class="practice"><h3>Problema práctico</h3><p>Observa o simula diez ciclos de preparación de pedidos. Registra duración, distancia, esperas y retrabajo; clasifica cada intervalo y calcula el porcentaje de tiempo sin valor agregado.</p><details><summary>Orientación de resolución</summary><p>Usa una hoja por ciclo y reglas de clasificación fijadas antes de observar. Reporta mediana y rango además del promedio; separa espera de movimiento porque requieren contramedidas distintas.</p></details></div>
+                <button class="complete-button" type="button" data-complete>Marcar 1.3 como estudiado</button>
+              </div>
+            </details>
+
+            <article class="toolkit-intro" id="tema-1-4" data-topic="1.4">
+              <div><p class="topic-kicker">1.4 · Herramientas Lean para proyectos de mejora</p><h3>Elegir la herramienta por la pregunta, no por costumbre.</h3><p>Una herramienta estructura observaciones; no sustituye datos ni razonamiento causal. El conjunto siguiente cubre los diez subsubtemas del programa y muestra qué produce cada uno.</p></div>
+              <button class="complete-button" type="button" data-complete>Marcar panorama 1.4</button>
+            </article>
+
+            <div class="tool-grid">
+              <article class="lean-tool" id="tema-1-4-1" data-topic="1.4.1"><header><span>1.4.1</span><h3>Ishikawa</h3></header><p><strong>Qué hace.</strong> Organiza causas candidatas de un efecto en familias como método, mano de obra, máquina, material, medición y ambiente. No demuestra causalidad.</p><p><strong>Microcaso.</strong> “Pedidos incompletos” se abre en disponibilidad, instrucciones, escaneo, ubicación, entrenamiento y criterios de conteo.</p><div class="mini-problem"><strong>Reto:</strong> formula doce causas candidatas y señala qué dato comprobaría cada una.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-2" data-topic="1.4.2"><header><span>1.4.2</span><h3>5 porqués</h3></header><p><strong>Qué hace.</strong> Encadena preguntas causales desde un evento hasta una condición controlable del sistema. Cinco es una guía, no una cuota.</p><p><strong>Microcaso.</strong> El pedido salió tarde → faltó etiqueta → la impresora quedó sin consumible → no había punto de reposición.</p><div class="mini-problem"><strong>Reto:</strong> construye dos ramas para la misma demora y evita terminar en “falta de atención”.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-3" data-topic="1.4.3"><header><span>1.4.3</span><h3>5W2H</h3></header><p><strong>Qué hace.</strong> Convierte una propuesta en acción: qué, por qué, dónde, cuándo, quién, cómo y cuánto.</p><p><strong>Microcaso.</strong> Reubicar SKU A en zona dorada, turno nocturno, responsable de almacén, piloto de dos semanas, costo acotado.</p><div class="mini-problem"><strong>Reto:</strong> redacta un 5W2H para reducir 20% la caminata sin interrumpir embarques.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-4" data-topic="1.4.4"><header><span>1.4.4</span><h3>5S</h3></header><p><strong>Qué hace.</strong> Separar, ordenar, limpiar, estandarizar y sostener para hacer anomalías visibles y reducir búsqueda, riesgo y deterioro.</p><p><strong>Microcaso.</strong> Las ubicaciones de fleje se definen por uso, se marcan mínimos y se auditan causas de incumplimiento.</p><div class="mini-problem"><strong>Reto:</strong> diseña una auditoría de cinco ítems que mida función y seguridad, no decoración.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-5" data-topic="1.4.5"><header><span>1.4.5</span><h3>A3</h3></header><p><strong>Qué hace.</strong> Narra en una hoja el contexto, condición actual, meta, análisis, contramedidas, plan y seguimiento. Es un proceso de pensamiento y diálogo.</p><p><strong>Microcaso.</strong> El A3 de devoluciones conecta Pareto, causa validada, piloto de verificación y gráfico semanal.</p><div class="mini-problem"><strong>Reto:</strong> resume un problema en 120 palabras y acompáñalo con una gráfica necesaria.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-6" data-topic="1.4.6"><header><span>1.4.6</span><h3>VSM</h3></header><p><strong>Qué hace.</strong> El mapa de flujo de valor conecta material e información desde solicitud hasta entrega y distingue tiempo de proceso de tiempo total.</p><p><strong>Microcaso.</strong> Cuatro procesos suman 38 minutos de trabajo dentro de 2.4 días de recorrido total.</p><div class="mini-problem"><strong>Reto:</strong> dibuja estado actual y futuro; calcula proporción de tiempo con valor y fija un marcapasos.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-7" data-topic="1.4.7"><header><span>1.4.7</span><h3>AMEF</h3></header><p><strong>Qué hace.</strong> Anticipa modos de falla, efectos, causas y controles. Prioriza acción con severidad, ocurrencia y detección, sin reducir la decisión al producto de tres números.</p><p><strong>Microcaso.</strong> “Etiqueta de destino errónea” tiene efecto alto y control tardío; se propone validación en origen.</p><div class="mini-problem"><strong>Reto:</strong> evalúa tres fallas de embarque y justifica cuál atender primero.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-8" data-topic="1.4.8"><header><span>1.4.8</span><h3>Andon y gestión visual</h3></header><p><strong>Qué hace.</strong> Comunica estado y anormalidad en el lugar y momento de trabajo, con regla clara de respuesta.</p><p><strong>Microcaso.</strong> Una luz ámbar indica reposición próxima; roja detiene liberación por discrepancia y asigna responsable.</p><div class="mini-problem"><strong>Reto:</strong> define tres señales, umbrales, propietario y tiempo máximo de respuesta.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-9" data-topic="1.4.9"><header><span>1.4.9</span><h3>Kanban, poka-yoke y kaizen</h3></header><p><strong>Qué hacen.</strong> Kanban autoriza reposición por consumo; poka-yoke previene o detecta el error en origen; kaizen organiza mejora incremental con quienes realizan el trabajo.</p><p><strong>Microcaso.</strong> Dos contenedores regulan etiquetas, una plantilla impide invertirlas y el equipo revisa semanalmente incidencias.</p><div class="mini-problem"><strong>Reto:</strong> combina las tres técnicas para evitar faltantes y confusión de empaques.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+              <article class="lean-tool" id="tema-1-4-10" data-topic="1.4.10"><header><span>1.4.10</span><h3>Mapas de procesos</h3></header><p><strong>Qué hacen.</strong> Delimitan entradas, actividades, decisiones, salidas y responsables. SIPOC da alcance; un diagrama detallado muestra secuencia y retornos.</p><p><strong>Microcaso.</strong> SIPOC sitúa surtido entre orden liberada y pedido listo; el mapa revela doble autorización.</p><div class="mini-problem"><strong>Reto:</strong> construye SIPOC y diagrama del mismo proceso; explica qué pregunta responde cada uno.</div><button class="complete-button" type="button" data-complete>Estudiado</button></article>
+            </div>
+
+            <details class="topic-card" id="tema-1-5" data-topic="1.5">
+              <summary><span>1.5</span><span class="summary-copy"><strong>Casos de éxito de Lean en logística</strong><small>Aprender del caso sin confundir relato con evidencia.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body">
+                <div class="concept-grid"><div><h3>Lectura crítica</h3><p>Un caso útil identifica contexto, unidad de análisis, línea base, intervención, periodo, resultado y mecanismo plausible. Debe distinguir coincidencia temporal de atribución causal y mostrar efectos secundarios: inventario, servicio, ergonomía o carga laboral.</p></div><div><h3>Matriz de transferencia</h3><p>Compara demanda, variedad, tecnología, regulación, capacidad y cultura entre el caso y tu organización. Una práctica exitosa no se copia de forma automática; se convierte en una hipótesis a probar localmente.</p></div></div>
+                <div class="practice"><h3>Problema práctico</h3><p>Un proveedor afirma que “Kanban redujo 40% el inventario” sin indicar periodo, nivel de servicio ni demanda. Escribe cinco preguntas para evaluar la solidez y transferibilidad de la afirmación.</p><details><summary>Orientación de resolución</summary><p>Pregunta por definición y cálculo del inventario, línea base y duración, cambios simultáneos, comportamiento de la demanda, faltantes y servicio, alcance de productos y fuente de los datos.</p></details></div>
+                <button class="complete-button" type="button" data-complete>Marcar 1.5 como estudiado</button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="unit-section unit-two" id="unidad-2" aria-labelledby="unidad-2-title">
+        <div class="shell">
+          <header class="unit-heading"><div class="unit-number">02</div><div><p class="eyebrow">Unidad 2 · describir la variación</p><h2 id="unidad-2-title">Fundamentos de Six Sigma y estadística</h2><p>La variación no es un defecto moral ni un ruido que deba ocultarse: es una propiedad del proceso que debe describirse con definiciones operacionales, datos pertinentes e incertidumbre explícita.</p></div></header>
+          <div class="topic-stack">
+            <details class="topic-card" id="tema-2-1" data-topic="2.1" open>
+              <summary><span>2.1</span><span class="summary-copy"><strong>Historia y evolución de Six Sigma</strong><small>De la reducción de defectos a la gestión de proyectos.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Trayectoria</h3><p>Six Sigma se consolidó en Motorola durante la década de 1980 como enfoque para reducir defectos y variación; después se difundió mediante AlliedSignal y General Electric. Lean proviene de una genealogía distinta vinculada al Sistema de Producción Toyota. Su integración combina velocidad y flujo con análisis de variación.</p></div><div><h3>Lectura responsable</h3><p>“Seis sigma” puede nombrar una meta de desempeño, un conjunto estadístico o un sistema de gestión. La conversión entre defectos por millón y “nivel sigma” depende de supuestos, incluida la controvertida traslación de 1.5 sigma; siempre debe declararse el método.</p></div></div><div class="practice"><h3>Problema práctico</h3><p>Construye una línea del tiempo de cinco hitos y, para cada uno, anota qué cambió: objetivo de calidad, método, estructura organizacional o alcance.</p><details><summary>Orientación de resolución</summary><p>Distingue TPS/Lean de Six Sigma y sitúa su integración como evolución posterior. Evita atribuir toda herramienta de calidad a una sola empresa.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 2.1 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-2-2" data-topic="2.2">
+              <summary><span>2.2</span><span class="summary-copy"><strong>Principios y beneficios en la mejora de calidad</strong><small>Traducir voz del cliente en requisitos medibles.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Principios</h3><p>Orientación al cliente, decisiones basadas en datos, enfoque de proceso, prevención, colaboración y control sostenido. La voz del cliente se traduce en características críticas para la calidad (CTQ) con unidad, método de medición, especificación y responsable.</p></div><div><h3>Beneficios y límites</h3><p>Puede reducir defectos, tiempos y costos de mala calidad, y mejorar previsibilidad. El beneficio debe medirse frente a una línea base y costo total. Una media dentro de especificación no garantiza capacidad: también importan dispersión, estabilidad y forma de la distribución.</p></div></div><div class="worked-example"><span>Ejemplo guiado</span><p>“Entrega rápida” se operacionaliza como: 95% de pedidos listos en ≤45 minutos, medidos desde liberación en WMS hasta escaneo en embarque, excluyendo sólo cancelaciones documentadas.</p></div><div class="practice"><h3>Problema práctico</h3><p>Convierte “los pedidos deben llegar bien” en tres CTQ. Define numerador, denominador, fuente y meta de cada uno.</p><details><summary>Orientación de resolución</summary><p>Ejemplos: pedido completo, pedido sin daño y entrega puntual. Cada indicador requiere regla de inclusión y momento de registro para evitar que dos personas lo calculen distinto.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 2.2 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-2-3" data-topic="2.3">
+              <summary><span>2.3</span><span class="summary-copy"><strong>Variables, tendencia central y desviación</strong><small>Describir nivel, dispersión y forma antes de inferir.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Tipos de variable</h3><p>Categóricas nominales (transportista), ordinales (prioridad) y cuantitativas discretas (errores) o continuas (tiempo, peso). El tipo determina visualización y análisis posibles. La unidad y la resolución forman parte de la variable.</p></div><div><h3>Resumen descriptivo</h3><p>La media utiliza todos los valores y es sensible a extremos; la mediana divide el orden y resiste asimetría. Rango, recorrido intercuartílico, varianza y desviación estándar describen dispersión. Ninguna cifra sustituye la gráfica ni la estratificación.</p></div></div><div class="worked-example"><span>Ejemplo guiado</span><p>Para 18, 19, 20, 21 y 52 minutos, la media es 26 y la mediana 20. Reportar sólo la media oculta un ciclo atípico que requiere explicación.</p></div><div class="practice"><h3>Problema práctico</h3><p>Usa el laboratorio descriptivo con 24 tiempos de picking. Compara media y mediana, identifica valores extremos y propone una estratificación antes de eliminarlos.</p><details><summary>Orientación de resolución</summary><p>Los extremos pueden pertenecer a pedidos grandes, una zona o un turno. Excluirlos sin regla y causa documentada altera la pregunta. Primero verifica la medición y analiza el contexto.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 2.3 como estudiado</button></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="unit-section unit-three" id="unidad-3" aria-labelledby="unidad-3-title">
+        <div class="shell">
+          <header class="unit-heading"><div class="unit-number">03</div><div><p class="eyebrow">Unidad 3 · decidir con datos</p><h2 id="unidad-3-title">Medición de procesos y análisis estadístico</h2><p>Esta unidad transforma una situación operativa en una pregunta medible. Las divisiones internas de cada tema son apoyos didácticos; los numerales oficiales llegan de 3.1 a 3.6.</p></div></header>
+          <div class="topic-stack">
+            <details class="topic-card" id="tema-3-1" data-topic="3.1" open>
+              <summary><span>3.1</span><span class="summary-copy"><strong>Definición del problema y establecimiento de objetivos</strong><small>Describir la brecha sin inventar la causa.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Problema</h3><p>Distingue síntoma, brecha y causa. Un enunciado robusto indica qué ocurre, dónde, desde cuándo, con qué magnitud y qué efecto produce. No contiene soluciones ni atribuciones aún no demostradas.</p></div><div><h3>Objetivo</h3><p>Una meta SMART fija métrica, cambio, plazo y restricciones. El acta del proyecto incorpora cliente, CTQ, línea base, alcance, exclusiones, equipo, hitos y riesgos. La relación Y=f(X) recuerda que el resultado Y puede depender de varias entradas X.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Un almacén registra 13.2 min de picking promedio y 23% de órdenes por encima de 15 min. Meta: “Reducir el promedio a 10.5 min y la fracción superior a 15 min a 10% antes del cierre del semestre, sin elevar el error de surtido por encima de 1%”.</p></div><div class="practice"><h3>Problema práctico</h3><p>Explica por qué “los operarios trabajan lentamente” es un enunciado deficiente y reescríbelo a partir de los datos del ejemplo.</p><details><summary>Orientación de resolución</summary><p>La frase culpa, no cuantifica, no delimita y mezcla problema con causa supuesta. Usa el periodo, área, métricas de 13.2 y 23%, referencia esperada y efecto operacional.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.1 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-3-2" data-topic="3.2">
+              <summary><span>3.2</span><span class="summary-copy"><strong>Recolección de datos: tipos y muestreo</strong><small>Diseñar antes de medir para controlar sesgo y trazabilidad.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Plan de datos</h3><p>Especifica variable, definición operacional, unidad, instrumento, resolución, momento, responsable y regla para datos faltantes. Distingue población, marco muestral y muestra; también error de medición y error de muestreo.</p></div><div><h3>Técnicas</h3><p>El muestreo aleatorio simple da oportunidad conocida a cada unidad; el sistemático selecciona cada k-ésima unidad tras un inicio aleatorio; el estratificado representa grupos relevantes; el de conglomerados elige grupos completos. Una muestra grande de conveniencia puede conservar un sesgo grave.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Para 180 órdenes en 20 días y tres turnos se eligen al azar tres órdenes por turno y día. “Tiempo de picking” se define desde primer escaneo hasta confirmación final; se registran líneas, distancia, familia, turno y error.</p></div><div class="practice"><h3>Problema práctico</h3><p>Diseña un plan para estimar la puntualidad de cinco rutas con volúmenes muy distintos. Justifica si usarías estratos, cómo elegirías órdenes y qué variable contextual conservarías.</p><details><summary>Orientación de resolución</summary><p>Estratificar por ruta evita que la de mayor volumen o la más fácil domine la muestra. La asignación puede ser proporcional o reforzar rutas pequeñas si se requieren estimaciones separadas; registra día, turno, carga y transportista.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.2 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-3-3" data-topic="3.3">
+              <summary><span>3.3</span><span class="summary-copy"><strong>Software estadístico y visualización</strong><small>Hacer visibles distribución, tiempo y calidad del dato.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Elegir la gráfica</h3><p>Histograma: forma y dispersión de una variable continua. Caja: comparación robusta entre grupos. Pareto: frecuencia por categoría. Dispersión: relación entre dos variables. Serie temporal: secuencia. Toda gráfica necesita unidad, periodo, población y fuente.</p></div><div><h3>Control estadístico</h3><p>Una gráfica de control ordena datos en el tiempo y compara la variación con límites derivados del proceso. Los límites de control expresan comportamiento estadístico; los límites de especificación expresan requisitos. Un proceso puede ser estable e incapaz, o inestable aunque muchos puntos cumplan especificación.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>En 20 tiempos cercanos a 10 min aparece 14.8. Una gráfica individual preliminar lo sitúa fuera del patrón; se investiga la orden, el equipo y el registro. No se elimina sólo porque incomoda al análisis.</p></div><div class="practice"><h3>Problema práctico</h3><p>Para el archivo de picking disponible abajo, produce histograma, serie por orden y caja por turno. Anota qué pregunta responde cada gráfica y qué no puede demostrar.</p><details><summary>Orientación de resolución</summary><p>El histograma no conserva secuencia; la serie no explica por sí sola el mecanismo; la caja compara turnos pero puede ocultar cambios dentro de cada turno. Usa varias vistas y conserva el dato fuente.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.3 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-3-4" data-topic="3.4">
+              <summary><span>3.4</span><span class="summary-copy"><strong>Correlación y regresión lineal</strong><small>Cuantificar asociación y examinar el modelo.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Modelo</h3><p>La correlación de Pearson <em>r</em> resume dirección y fuerza lineal. La regresión estima ŷ=b₀+b₁x: b₁ es el cambio esperado de Y por unidad de X y R² la fracción de variación observada explicada por el ajuste. Correlación no establece causalidad.</p></div><div><h3>Diagnóstico</h3><p>Inspecciona dispersión y residuos para linealidad, varianza aproximadamente constante, independencia y puntos influyentes. Reporta incertidumbre y evita extrapolar fuera del rango observado. Un R² alto no valida medición, causalidad ni utilidad.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Para distancias de 5 a 30 km y tiempos de 18 a 67 min, el laboratorio obtiene aproximadamente ŷ=9.443+1.943x, r=0.9989 y R²=0.9978. El ajuste no demuestra que distancia sea la única causa.</p></div><div class="practice"><h3>Problema práctico</h3><p>Calcula el modelo con el laboratorio. Interpreta la pendiente y predice 27 km. Después enumera dos variables omitidas que podrían explicar diferencias.</p><details><summary>Orientación de resolución</summary><p>La pendiente representa cerca de 1.94 minutos adicionales por km dentro de este rango; la predicción es 61.9 min. Tráfico, paradas, tipo de vehículo o carga pueden confundir la relación.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.4 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-3-5" data-topic="3.5">
+              <summary><span>3.5</span><span class="summary-copy"><strong>Pruebas de hipótesis y ANOVA</strong><small>Separar compatibilidad estadística de importancia práctica.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Prueba</h3><p>Se fija H₀, Hₐ, α y método antes de examinar el resultado. El valor p mide cuán incompatibles son los datos con H₀ bajo los supuestos; no es la probabilidad de que H₀ sea verdadera ni el tamaño del efecto. Complementa con intervalo, magnitud y potencia.</p></div><div><h3>ANOVA</h3><p>Contrasta si todas las medias poblacionales pueden considerarse iguales frente a que al menos una difiere. Requiere independencia y diagnóstico de residuos; si se rechaza H₀, comparaciones ajustadas localizan diferencias. Varias pruebas t inflan el riesgo de falso positivo.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Métodos A, B y C tienen medias 12.4, 9.8 y 7.8 min. Un ANOVA produce F≈29.56 y p≈0.000023. Esto apoya diferencias en estas condiciones; no identifica por sí solo los pares ni demuestra sostenimiento.</p></div><div class="practice"><h3>Problema práctico</h3><p>Decide qué evidencia adicional exigirías antes de recomendar C: supuestos, comparación posterior, error de surtido, ergonomía, tamaño de efecto y repetición temporal.</p><details><summary>Orientación de resolución</summary><p>Revisa asignación de pedidos, independencia, residuos y comparaciones múltiples; estima intervalos y efecto. Una reducción de tiempo que aumenta errores o riesgo no es mejora integral.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.5 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-3-6" data-topic="3.6">
+              <summary><span>3.6</span><span class="summary-copy"><strong>Implementación de mejoras basadas en resultados</strong><small>Pasar del hallazgo al piloto y al control.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Decisión</h3><p>Traduce causas verificadas en contramedidas, y prioriza impacto, costo, riesgo y reversibilidad. Define de antemano criterio de éxito, indicadores de protección y diseño de comparación. Significación estadística y valor operacional responden preguntas distintas.</p></div><div><h3>Sostenimiento</h3><p>Un piloto acotado reduce riesgo y descubre efectos no previstos. Tras confirmar el resultado se actualiza trabajo estándar, formación, propietario, frecuencia de monitoreo, límite o disparador y plan de reacción. Auditar el proceso no equivale a vigilar personas.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Diez ciclos pareados bajan de 13.2 a 10.4 min en promedio: 21.2%. La diferencia es prometedora, pero se requieren estabilidad temporal, control de cambios concurrentes y métricas de exactitud y seguridad.</p></div><div class="practice"><h3>Problema práctico</h3><p>Diseña un piloto de dos semanas para una nueva ruta de picking. Define unidad experimental, criterio de éxito, indicador de protección, registro de incidencias y regla para ampliar, ajustar o detener.</p><details><summary>Orientación de resolución</summary><p>Compara pedidos semejantes y, si es posible, asigna el método sin sesgo. Evalúa tiempo y exactitud, documenta desviaciones, e incluye un umbral de seguridad que detenga el piloto.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 3.6 como estudiado</button></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="unit-section unit-four" id="unidad-4" aria-labelledby="unidad-4-title">
+        <div class="shell">
+          <header class="unit-heading"><div class="unit-number">04</div><div><p class="eyebrow">Unidad 4 · sostener y comunicar</p><h2 id="unidad-4-title">Integración de Lean en proyectos logísticos</h2><p>La integración exige coherencia entre problema, flujo, datos, método, decisión y control. Ciencia de datos significa usar datos con un propósito decisional; no obliga a aplicar aprendizaje automático.</p></div></header>
+          <div class="topic-stack">
+            <details class="topic-card" id="tema-4-1" data-topic="4.1" open>
+              <summary><span>4.1</span><span class="summary-copy"><strong>Datos para identificar desperdicios y oportunidades</strong><small>Priorizar la mejora del sistema completo.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Integración</h3><p>Combina VSM, Pareto, segmentación y métricas de flujo: tiempo total, tiempo con valor, trabajo en proceso, productividad, exactitud y nivel de servicio. Localiza cuello de botella y restricciones para no acelerar una etapa que sólo acumula inventario después.</p></div><div><h3>Priorización</h3><p>Una oportunidad defendible enlaza magnitud, cliente, causa plausible, capacidad de intervención y efecto sistémico. La eficiencia de ciclo se calcula como tiempo con valor dividido entre tiempo total, usando la misma unidad y frontera.</p></div></div><div class="worked-example"><span>Ejemplo simulado</span><p>Un proceso suma 174 min; picking y empaque aportan 20 min de valor: eficiencia 11.5%. Hay 130 min de espera, por lo que optimizar sólo los 12 min de picking difícilmente cambiará el lead time.</p></div><div class="practice"><h3>Problema práctico</h3><p>Dibuja el estado actual, clasifica los 154 min restantes y propone datos para distinguir si la espera proviene de liberación, capacidad o programación.</p><details><summary>Orientación de resolución</summary><p>Registra llegada y salida de cada cola, trabajo en proceso, recursos disponibles y patrón de liberación. Una fotografía agregada no identifica la dinámica del cuello de botella.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 4.1 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-4-2" data-topic="4.2">
+              <summary><span>4.2</span><span class="summary-copy"><strong>Documentación y comunicación de mejoras</strong><small>Hacer trazable la relación entre evidencia y decisión.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Documento</h3><p>Un A3 o informe DMAIC presenta contexto, problema, alcance, línea base, método, análisis causal, contramedidas, piloto, resultado, límites y plan de control. Cada cifra debe remitir a periodo, unidad, fuente y versión del análisis.</p></div><div><h3>Comunicación</h3><p>Adapta detalle y lenguaje a quien decide, ejecuta o audita. Diferencia hecho, inferencia y recomendación; conserva resultados desfavorables y cambios al plan. Una contramedida especifica responsable, fecha, recurso y criterio de cierre.</p></div></div><div class="practice"><h3>Problema práctico</h3><p>Convierte el ejercicio 3.6 en un A3 de una página. Comprueba que cada contramedida responde a una causa sustentada y que el gráfico puede interpretarse sin explicación oral.</p><details><summary>Orientación de resolución</summary><p>Usa títulos que expresen hallazgos, unidades visibles y notas de alcance. Si el vínculo causal sigue incierto, presenta la acción como experimento y no como solución confirmada.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 4.2 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-4-3" data-topic="4.3">
+              <summary><span>4.3</span><span class="summary-copy"><strong>Evaluación de proyectos Lean, datos y logística</strong><small>Valorar validez, utilidad, viabilidad y control.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Criterios</h3><p>Evalúa coherencia problema–métrica–datos–método–conclusión; procedencia y calidad del dato; diagnóstico Lean; validación analítica; efecto práctico; costo y riesgo; reproducibilidad, ética, sostenimiento y aprendizaje obtenido.</p></div><div><h3>Complejidad pertinente</h3><p>Un modelo sofisticado no compensa fuga de datos ni ausencia de decisión operativa. Compara siempre con una regla base. El mejor proyecto puede ser un método sencillo validado en un periodo posterior, integrado al flujo y con responsable de respuesta.</p></div></div><div class="worked-example"><span>Contraste</span><p>Proyecto A declara 94% de exactitud, pero la regla base alcanza 96% y hay fuga temporal. Proyecto B reduce 18% el error absoluto en periodo posterior y eleva OTIF de 87% a 94% en piloto con control. B ofrece evidencia aplicada más coherente, sujeta a incertidumbre y factores concurrentes.</p></div><div class="practice"><h3>Problema práctico</h3><p>Aplica la rúbrica del proyecto a ambos casos. Explica qué dato faltante podría invertir tu decisión.</p><details><summary>Orientación de resolución</summary><p>Considera costo, tamaño y composición del piloto, intervalo del efecto, cambios simultáneos y capacidad de respuesta. Una mejora porcentual sin denominador puede ser engañosa.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 4.3 como estudiado</button></div>
+            </details>
+            <details class="topic-card" id="tema-4-4" data-topic="4.4">
+              <summary><span>4.4</span><span class="summary-copy"><strong>Presentación de proyectos y resultados</strong><small>Construir una narrativa orientada a una decisión.</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="topic-body"><div class="concept-grid"><div><h3>Estructura</h3><p>Comienza con decisión requerida y CTQ; muestra estado actual, método y calidad del dato; presenta causas sustentadas, piloto e incertidumbre; termina con proceso futuro, control, recursos y siguiente decisión.</p></div><div><h3>Diseño de evidencia</h3><p>Elige la gráfica por la comparación, incorpora denominador, unidad, periodo y fuente, y comunica límites. Una gráfica de control puede mostrar sostenimiento que dos barras antes/después ocultan. La claridad visual incluye contraste, tamaño legible y títulos con mensaje.</p></div></div><div class="practice"><h3>Problema práctico</h3><p>Prepara siete láminas: problema y CTQ; VSM actual; datos y método; causas; piloto; estado futuro y control; recomendación. Ensaya una defensa de cinco minutos y tres preguntas adversas.</p><details><summary>Orientación de resolución</summary><p>Cada lámina debe sostener una afirmación. El cierre especifica quién decide qué, con qué evidencia, costo y riesgo; no repite sólo los resultados.</p></details></div><button class="complete-button" type="button" data-complete>Marcar 4.4 como estudiado</button></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-section section" id="laboratorio" aria-labelledby="laboratorio-title">
+        <div class="shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Laboratorio interactivo</p><h2 id="laboratorio-title">Calcular para interpretar, no sólo para obtener cifras.</h2></div><p>Los cálculos se realizan localmente en el navegador y no envían datos. Cada salida incluye una pregunta de interpretación y los supuestos que limitan la conclusión.</p></div>
+          <div class="lab-grid">
+            <article class="lab-card lab-wide">
+              <header><span>LAB 01</span><h3>Resumen descriptivo e histograma</h3><p>Introduce valores separados por coma, espacio o salto de línea.</p></header>
+              <label for="stats-data">Tiempos de picking (minutos)</label>
+              <textarea id="stats-data" rows="4">22, 24, 24, 25, 25, 26, 27, 28, 29, 70</textarea>
+              <div class="lab-actions"><button type="button" data-calc-stats>Calcular</button><button type="button" class="quiet-button" data-sample-stats>Cargar 24 ciclos</button></div>
+              <div class="lab-output" aria-live="polite" data-stats-output><p>Calcula para ver n, media, mediana, desviación estándar muestral, CV, rango e IQR.</p></div>
+              <div class="histogram" role="img" aria-label="Histograma de los datos introducidos" data-histogram></div>
+              <p class="lab-question"><strong>Interpreta:</strong> si media y mediana se separan, inspecciona forma, extremos y estratos antes de resumir el proceso con una sola cifra.</p>
+            </article>
+
+            <article class="lab-card">
+              <header><span>LAB 02</span><h3>Defectos, oportunidades y DPMO</h3><p>La “oportunidad” debe ser pertinente y definida antes del conteo.</p></header>
+              <div class="field-row"><label>Unidades inspeccionadas<input id="dpmo-units" type="number" min="1" value="12000"></label><label>Oportunidades por unidad<input id="dpmo-opportunities" type="number" min="1" value="3"></label><label>Defectos observados<input id="dpmo-defects" type="number" min="0" value="48"></label></div>
+              <button type="button" data-calc-dpmo>Calcular DPMO</button>
+              <div class="lab-output" aria-live="polite" data-dpmo-output><p>DPMO = defectos ÷ (unidades × oportunidades) × 1 000 000.</p></div>
+              <p class="lab-question"><strong>Límite:</strong> DPMO no se convierte aquí en “nivel sigma”; esa conversión requiere un modelo de distribución y declarar si se aplica desplazamiento de 1.5σ.</p>
+            </article>
+
+            <article class="lab-card lab-wide">
+              <header><span>LAB 03</span><h3>Correlación y regresión lineal</h3><p>Las listas X e Y deben tener igual longitud y al menos tres pares.</p></header>
+              <div class="paired-inputs"><label>Distancia X (km)<textarea id="reg-x" rows="3">5, 8, 10, 12, 15, 18, 20, 22, 25, 30</textarea></label><label>Tiempo Y (min)<textarea id="reg-y" rows="3">18, 25, 29, 34, 38, 45, 49, 52, 58, 67</textarea></label></div>
+              <button type="button" data-calc-regression>Ajustar recta</button>
+              <div class="regression-layout"><div class="lab-output" aria-live="polite" data-regression-output><p>Calcula para estimar intercepto, pendiente, r y R².</p></div><svg class="scatterplot" viewBox="0 0 520 300" role="img" aria-label="Diagrama de dispersión y recta ajustada" data-scatterplot><text x="260" y="150" text-anchor="middle">Aquí aparecerá la gráfica</text></svg></div>
+              <p class="lab-question"><strong>Interpreta:</strong> describe la asociación dentro del rango observado. La calculadora no prueba causalidad ni verifica por sí sola los residuos.</p>
+            </article>
+
+            <article class="lab-card">
+              <header><span>LAB 04</span><h3>Dimensionamiento inicial de Kanban</h3><p>Estima tarjetas o contenedores; valida después los supuestos en operación.</p></header>
+              <div class="field-row"><label>Demanda por periodo<input id="kanban-demand" type="number" min="0" step="any" value="240"></label><label>Reposición (periodos)<input id="kanban-lead" type="number" min="0" step="any" value="0.5"></label><label>Seguridad (%)<input id="kanban-safety" type="number" min="0" step="any" value="10"></label><label>Capacidad por contenedor<input id="kanban-container" type="number" min="0.0001" step="any" value="20"></label></div>
+              <button type="button" data-calc-kanban>Calcular tarjetas</button>
+              <div class="lab-output" aria-live="polite" data-kanban-output><p>n = demanda × tiempo de reposición × (1 + seguridad) ÷ capacidad.</p></div>
+              <p class="lab-question"><strong>Interpreta:</strong> redondear hacia arriba protege el abastecimiento, pero exceso de seguridad oculta variación y eleva inventario.</p>
+            </article>
+
+            <article class="lab-card lab-wide">
+              <header><span>LAB 05</span><h3>Gráfica de control de individuales (I)</h3><p>Explora observaciones individuales ordenadas en el tiempo. Estima sus límites con el rango móvil; no dibuja una segunda carta MR. Los límites preliminares requieren un periodo estable y contexto.</p></header>
+              <label for="control-data">Serie temporal (en orden)</label>
+              <textarea id="control-data" rows="4">10.2, 9.8, 10.5, 10.1, 9.7, 10.4, 9.9, 10.3, 10.0, 9.8, 10.1, 10.2, 9.9, 10.4, 10.0, 14.8, 10.1, 9.7, 10.3, 10.0</textarea>
+              <button type="button" data-calc-control>Construir gráfica I</button>
+              <div class="regression-layout"><div class="lab-output" aria-live="polite" data-control-output><p>Calcula para estimar media, rango móvil medio y límites individuales.</p></div><svg class="controlplot" viewBox="0 0 680 300" role="img" aria-label="Gráfica de control de observaciones individuales" data-controlplot><text x="340" y="150" text-anchor="middle">Aquí aparecerá la serie y sus límites</text></svg></div>
+              <p class="lab-question"><strong>Interpreta:</strong> una señal invita a investigar el contexto; no autoriza a borrar el punto. Los límites de control no son tolerancias del cliente.</p>
+            </article>
+          </div>
+          <div class="download-strip"><div><p class="section-index">Datos para práctica</p><h3>Un conjunto pequeño, legible y reproducible.</h3><p>Treinta y seis órdenes simuladas con turno, líneas, distancia, tiempo y error. No representan resultados de una empresa real.</p></div><a class="button button-secondary" href="/docencia/six-sigma-lean/datos/tiempos-picking.csv" download>Descargar CSV <span aria-hidden="true">↓</span></a></div>
+        </div>
+      </section>
+
+      <section class="activities-section section" id="actividades" aria-labelledby="activities-title">
+        <div class="shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Secuencia de entregas</p><h2 id="activities-title">Diez actividades, un solo hilo DMAIC.</h2></div><p>La secuencia parte de las consignas que integraron el curso histórico Seis Sigma LEM-1205 en 2022 y de las entregas conservadas en el archivo del autor. Aquí se adapta al temario LEG-2503 y a un contexto logístico, con instrucciones, evidencia y criterios explícitos.</p></div>
+          <div class="provenance-note"><span>Distinción de fuentes</span><p><strong>Consigna histórica [H]:</strong> nombre, producto y ponderación local verificados en el curso Seis Sigma LEM-1205. <strong>Adaptación LEG-2503 [A]:</strong> caso logístico, decisiones metodológicas, controles de calidad, reflexión y rúbrica que propone esta aula. Las ponderaciones históricas pertenecían a cada tema; no se suman como porcentaje global ni se presentan como exigencia oficial de LEG-2503.</p></div>
+          <aside class="evidence-audit" aria-labelledby="audit-title">
+            <div class="audit-heading"><p class="source-label">Expediente longitudinal revisado</p><h3 id="audit-title">Seis contrastes para convertir errores plausibles en aprendizaje.</h3><p>Las entregas históricas se usan como un caso anonimizado que debe auditarse y mejorar, no como una solución modelo. Cada contraste reaparece en ejercicios, laboratorios y defensa.</p></div>
+            <div class="audit-grid">
+              <article><span>01</span><h4>3.4 DPMO, no 3.4%</h4><p>La convención Six Sigma expresa defectos por millón de oportunidades y depende de supuestos declarados.</p></article>
+              <article><span>02</span><h4>No rechazar no es aceptar</h4><p>Una prueba aporta evidencia relativa a H₀ bajo un diseño y supuestos; no prueba que H₀ sea verdadera.</p></article>
+              <article><span>03</span><h4>Control no es especificación</h4><p>Los límites de control describen el proceso. Las especificaciones provienen del cliente, diseño o regulación.</p></article>
+              <article><span>04</span><h4>Asociación no es causalidad</h4><p>Correlación y significancia no eliminan confusión, sesgo, temporalidad inversa ni variables omitidas.</p></article>
+              <article><span>05</span><h4>Cp/Cpk requieren condiciones</h4><p>Se justifican especificaciones, estabilidad y modelo; Pp/Ppk describen desempeño global y no son sinónimos.</p></article>
+              <article><span>06</span><h4>Comparar no crea un DOE</h4><p>Un experimento defendible declara factores, niveles, respuesta, réplica, aleatorización y, si procede, bloqueo.</p></article>
+            </div>
+          </aside>
+          <div class="activity-progress"><div><span>Portafolio de evidencias</span><strong><b data-activity-count>0</b>/10 productos</strong></div><progress class="progress-track" aria-label="Avance del portafolio de actividades" max="10" value="0" data-activity-progress>0 de 10</progress></div>
+
+          <div class="activity-list">
+            <details class="activity-card" id="actividad-1" data-activity="1" open>
+              <summary><span class="activity-code">01 · D</span><span class="summary-copy"><strong>Acta del proyecto — Project Charter</strong><small>Antecedente: T1 A1 · 100% del tema 1</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Convertir una situación real en un proyecto delimitado, medible y relevante, sin anticipar causas o soluciones.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Selecciona un proceso autorizado con una brecha repetida.</li><li>Identifica cliente y traduce su necesidad en una CTQ.</li><li>Reúne una línea base mínima y declara la fuente.</li></ol></div><div><h3>Durante</h3><ol><li>Redacta caso de negocio y enunciado del problema con métrica, periodo, lugar y efecto.</li><li>Fija objetivo SMART, alcance, exclusiones, equipo, hitos y riesgos.</li><li>Define Y y su regla de cálculo; evita confundir resultado con causa X.</li><li>Audita que línea base, fórmula, meta, unidad y fecha coincidan en todas las tablas.</li></ol></div><div><h3>Producto</h3><p>Acta de una o dos páginas más ficha de la línea base. Debe ser posible decidir si el proyecto merece recursos.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué afirmación del problema cambiarías si apareciera un dato contrario?</p></div></div><div class="activity-check"><span>Comprobación: problema sin culpa · CTQ operacional · cifras consistentes · meta con restricción · alcance manejable.</span><button type="button" data-activity-complete>Marcar producto 1</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-2" data-activity="2">
+              <summary><span class="activity-code">02 · D</span><span class="summary-copy"><strong>SIPOC y frontera del proceso</strong><small>Antecedente: T2 A1 · 100% del tema 2</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Representar de manera compartida proveedores, entradas, cinco a siete macroetapas, salidas y clientes del proceso donde se produce la Y del acta.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Recupera la misma Y y las fronteras del acta.</li><li>Observa el proceso o valida la secuencia con quienes lo ejecutan.</li></ol></div><div><h3>Durante</h3><ol><li>Empieza por el proceso; añade salidas y clientes, después entradas y proveedores.</li><li>Vincula cada requisito crítico con una salida.</li><li>Señala inicio, fin, propietario y puntos de medición.</li></ol></div><div><h3>Producto</h3><p>SIPOC legible acompañado de una explicación de una página y una inconsistencia detectada entre proceso formal y real.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿quién quedó fuera del mapa y qué cambiaría si se incorporara su perspectiva?</p></div></div><div class="activity-check"><span>Comprobación: continuidad con el acta · 5–7 macroetapas · CTQ ligada a salida · frontera explícita.</span><button type="button" data-activity-complete>Marcar producto 2</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-3" data-activity="3">
+              <summary><span class="activity-code">03 · M/A</span><span class="summary-copy"><strong>Paquete de medición y causas candidatas</strong><small>Antecedente: T3 A1 · 100% del tema 3</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Pasar del mapa general a un sistema de medición defendible y a hipótesis causales priorizadas. El antecedente pedía mapa, Ishikawa, matriz causa–efecto, capacidad, MSA/R&amp;R y AMEF.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Construye mapa detallado con decisiones, esperas y retrabajos.</li><li>Define unidad, especificaciones y plan de muestreo.</li></ol></div><div><h3>Durante</h3><ol><li>Genera causas con Ishikawa y gemba; formula qué dato probaría cada causa.</li><li>Prioriza con matriz causa–efecto sin tratar la puntuación como prueba.</li><li>Evalúa medición: aplica Gage R&amp;R sólo si el diseño lo permite; en sistemas digitales usa repetibilidad, concordancia, resolución y trazabilidad pertinentes.</li><li>Estima estabilidad antes de capacidad y elabora AMEF con controles y acciones.</li></ol></div><div><h3>Producto</h3><p>Informe técnico con mapa, diccionario de datos, validación de medición, análisis preliminar de capacidad, matriz de hipótesis y AMEF.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué parte de tu “causa raíz” sigue siendo sólo una conjetura?</p></div></div><div class="activity-check"><span>Comprobación: instrumento apropiado · estabilidad antes de capacidad · hipótesis verificables · riesgos no reducidos sólo a RPN.</span><button type="button" data-activity-complete>Marcar producto 3</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-4" data-activity="4">
+              <summary><span class="activity-code">04 · A</span><span class="summary-copy"><strong>Ensayo de inferencia estadística</strong><small>Antecedente: T4 A1 · 50% del tema 4</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Explicar con argumento propio qué permiten concluir la distribución muestral, los intervalos y las pruebas de hipótesis. El antecedente solicitaba portada, introducción, desarrollo mínimo de dos páginas y referencias.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Formula una tesis debatible, no un resumen de diapositivas.</li><li>Selecciona dos fuentes metodológicas y una aplicación logística.</li></ol></div><div><h3>Durante</h3><ol><li>Distingue población, muestra, parámetro, estimador y distribución muestral.</li><li>Explica intervalo, nivel de confianza, α, errores I/II, potencia y tamaño del efecto.</li><li>Corrige dos reglas engañosas: <em>n</em> &gt; 30 no resuelve todo supuesto y no rechazar H₀ no equivale a aceptarla.</li><li>Aplica el argumento a una decisión del proyecto y declara sus límites.</li></ol></div><div><h3>Producto</h3><p>Ensayo de 1,200–1,800 palabras con tesis, evidencia, contraargumento, aplicación y conclusión proporcional.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué evidencia te obligaría a abandonar tu explicación preferida?</p></div></div><div class="activity-check"><span>Comprobación: tesis clara · lenguaje inferencial correcto · fuentes identificables · aplicación · límites.</span><button type="button" data-activity-complete>Marcar producto 4</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-5" data-activity="5">
+              <summary><span class="activity-code">05 · A</span><span class="summary-copy"><strong>Problemario de validación causal</strong><small>Antecedente: T4 A2 · 50% del tema 4</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Elegir y ejecutar análisis que respondan preguntas concretas. El antecedente enumeraba tormenta de ideas, causa–efecto, gráficas de control, correlación, Pareto, AMEF, hipótesis y DOE.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Redacta una pregunta por causa candidata.</li><li>Asigna a cada pregunta el método que puede refutarla.</li></ol></div><div><h3>Durante</h3><ol><li>Realiza Pareto y estratificación para enfocar.</li><li>Usa gráfica de control para secuencia, dispersión para relación y prueba/ANOVA para contraste.</li><li>Diseña un experimento sólo cuando factores puedan manipularse con seguridad y asignación defendible.</li><li>Examina supuestos, efecto, intervalo y relevancia práctica.</li></ol></div><div><h3>Producto</h3><p>Cuaderno de cinco problemas resueltos y una matriz “pregunta–método–resultado–decisión–límite”.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué análisis no debió realizarse y por qué?</p></div></div><div class="activity-check"><span>Comprobación: método pertinente · cálculos reproducibles · interpretación · incertidumbre · decisión.</span><button type="button" data-activity-complete>Marcar producto 5</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-6" data-activity="6">
+              <summary><span class="activity-code">06 · M/A</span><span class="summary-copy"><strong>Capacidad, control y desempeño</strong><small>Antecedente: T5 A1 · 50% del tema 5</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Distinguir estabilidad, capacidad frente a especificaciones y desempeño global. El antecedente integró un ensayo y ejercicios de X̄–R, I–MR, <em>p</em>, <em>c</em>, rendimiento y DPMO.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Identifica tipo de dato, secuencia temporal y tamaño de subgrupo.</li><li>Documenta de dónde provienen LSL, USL o la meta de servicio.</li></ol></div><div><h3>Durante</h3><ol><li>Elige la gráfica según dato y subgrupo; en una gráfica <em>p</em> usa el denominador de cada muestra.</li><li>Investiga señales de causa especial antes de estimar capacidad.</li><li>Calcula Cp/Cpk con variación de corto plazo y Pp/Ppk con variación global; usa el límite más cercano.</li><li>No cambies la especificación para mejorar el índice: registra la decisión del cliente o diseño.</li></ol></div><div><h3>Producto</h3><p>Ensayo técnico y cuaderno de ejercicios con fórmula, sustitución, gráfica, supuestos, interpretación y decisión.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿puede un proceso ser estable e incapaz, o capaz en apariencia e inestable?</p></div></div><div class="activity-check"><span>Comprobación: denominador correcto · control ≠ especificación · Cp/Cpk ≠ Pp/Ppk · decisión proporcional.</span><button type="button" data-activity-complete>Marcar producto 6</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-7" data-activity="7">
+              <summary><span class="activity-code">07 · M</span><span class="summary-copy"><strong>Plan de mejora y piloto</strong><small>Antecedente: T5 A2 · 50% del tema 5</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Diseñar, probar y valorar contramedidas. El antecedente pedía AMEF, hipótesis, DOE, simulación, prueba de errores/fallas y costos.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Fija criterio de éxito, tamaño, duración y regla de detención.</li><li>Actualiza AMEF para el cambio propuesto.</li></ol></div><div><h3>Durante</h3><ol><li>Diseña comparación y asignación que reduzcan sesgo.</li><li>Incorpora poka-yoke o control en origen cuando corresponda.</li><li>Estima costo total, ahorro verificable y sensibilidad de supuestos.</li><li>Registra desviaciones y efectos no previstos.</li></ol></div><div><h3>Producto</h3><p>Protocolo y reporte de piloto con datos antes/después o comparación, incertidumbre, decisión de ampliar/ajustar/detener y 5W2H.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué cambio concurrente podría explicar el resultado?</p></div></div><div class="activity-check"><span>Comprobación: piloto acotado · comparación válida · costo y riesgo · criterio previo · conclusión proporcional.</span><button type="button" data-activity-complete>Marcar producto 7</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-8" data-activity="8">
+              <summary><span class="activity-code">08 · A/C</span><span class="summary-copy"><strong>Ensayo de regresión y decisión</strong><small>Antecedente: T6 A1 · 25% del tema 6</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Explicar cómo regresión simple, múltiple, polinómica y superficie de respuesta pueden apoyar una decisión DMAIC sin convertir asociación estadística en causalidad.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Define respuesta Y, predictores X, unidad y ámbito de la población.</li><li>Distingue explicación, predicción y optimización.</li></ol></div><div><h3>Durante</h3><ol><li>Interpreta pendiente en unidades reales, no como porcentaje salvo que el modelo lo justifique.</li><li>Examina residuos, linealidad, varianza, independencia, influencia y riesgo de extrapolación.</li><li>Compara ajuste y validación; discute variables omitidas y selección automática.</li><li>Relaciona el modelo con una decisión, un límite y un plan de verificación.</li></ol></div><div><h3>Producto</h3><p>Ensayo de 1,200–1,800 palabras con un modelo interpretado, diagnóstico de residuos y una conclusión proporcional.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué dato nuevo distinguiría una asociación útil de una explicación causal?</p></div></div><div class="activity-check"><span>Comprobación: unidades · residuos · validación · asociación ≠ causalidad · decisión acotada.</span><button type="button" data-activity-complete>Marcar producto 8</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-9" data-activity="9">
+              <summary><span class="activity-code">09 · A/C</span><span class="summary-copy"><strong>Problemario de regresión</strong><small>Antecedente: T6 A2 · 25% del tema 6</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Estimar, diagnosticar y comparar modelos de regresión con datos industriales antes de utilizarlos para predecir u optimizar.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Traza la respuesta contra cada predictor y revisa el contexto de recolección.</li><li>Reserva datos o define validación cuando el tamaño lo permita.</li></ol></div><div><h3>Durante</h3><ol><li>Ajusta un modelo simple, uno múltiple y uno polinómico sólo si la pregunta los requiere.</li><li>Reporta coeficientes, intervalos, R², R² ajustada y error de predicción.</li><li>Diagnostica residuos, puntos influyentes, colinealidad e independencia.</li><li>Si usas selección <em>stepwise</em>, explica su sesgo y evita presentarla como prueba causal.</li></ol></div><div><h3>Producto</h3><p>Cuatro ejercicios completos con datos, ecuación, gráfica, diagnóstico, predicción con intervalo y decisión.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué modelo más simple conservaría la decisión y reduciría el riesgo de sobreajuste?</p></div></div><div class="activity-check"><span>Comprobación: modelo pertinente · intervalos · residuales · validación · causalidad no sobreafirmada.</span><button type="button" data-activity-complete>Marcar producto 9</button></div></div>
+            </details>
+
+            <details class="activity-card" id="actividad-10" data-activity="10">
+              <summary><span class="activity-code">10 · C</span><span class="summary-copy"><strong>Control y proyecto final</strong><small>Antecedente: T6 A3 · 50% del tema 6</small></span><i aria-hidden="true">＋</i></summary>
+              <div class="activity-body"><div class="activity-purpose"><p class="source-label">Propósito</p><p>Cerrar el ciclo con cuantificación de la mejora, procedimientos, SOP, plan de control, documentación y presentación. La consigna histórica mencionaba proyecto en Word y formato general PDF; la adaptación separa archivo de trabajo y productos finales.</p></div><div class="instruction-grid"><div><h3>Antes</h3><ol><li>Audita la cadena completa desde acta hasta piloto.</li><li>Recalcula la línea base y el resultado con reglas idénticas.</li></ol></div><div><h3>Durante</h3><ol><li>Cuantifica efecto e incertidumbre; separa ahorro observado de proyección.</li><li>Redacta SOP con propósito, alcance, roles, secuencia, excepciones y registros.</li><li>Completa plan de control: variable, método, frecuencia, límite, propietario y reacción.</li><li>Prepara una exposición de siete láminas orientada a decisión.</li></ol></div><div><h3>Producto</h3><p>Fuente editable de trabajo; informe final en PDF; datos y análisis reproducibles; SOP; plan de control; presentación. Ningún documento debe contener datos personales o empresariales sin autorización.</p><p class="reflection-prompt"><strong>Reflexión:</strong> ¿qué aprendiste que permita mejorar el siguiente proyecto, incluso si la meta no se alcanzó?</p></div></div><div class="activity-check"><span>Comprobación: efecto trazable · SOP ejecutable · control con reacción · límites · decisión solicitada.</span><button type="button" data-activity-complete>Marcar producto 10</button></div></div>
+            </details>
+          </div>
+
+          <div class="activity-download"><div><p class="source-label">Cuaderno de trabajo</p><h3>Plantillas conectadas de las diez actividades.</h3><p>Un archivo Markdown editable con preguntas guía, tablas y listas de comprobación para construir el portafolio completo.</p></div><a class="button button-primary" href="/docencia/six-sigma-lean/cuaderno-actividades.md" download>Descargar cuaderno <span aria-hidden="true">↓</span></a></div>
+        </div>
+      </section>
+
+      <section class="project-section section" id="proyecto" aria-labelledby="proyecto-title">
+        <div class="shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Proyecto integrador</p><h2 id="proyecto-title">Un DMAIC logístico con evidencia trazable.</h2></div><p>El proyecto sigue las dos entregas del programa: Definir–Medir (30%) y Analizar–Mejorar–Controlar (70%). Los porcentajes de la rúbrica didáctica siguiente distribuyen la calidad interna del producto.</p></div>
+          <div class="dmaic-roadmap" role="group" aria-label="Fases y productos del proyecto DMAIC">
+            <article><span>D</span><h3>Definir</h3><p>Cliente, CTQ, problema, objetivo, alcance, SIPOC y acta.</p><small>Pregunta: ¿qué decisión y qué brecha justifican el proyecto?</small></article>
+            <article><span>M</span><h3>Medir</h3><p>Definiciones, plan de datos, validación de medición y línea base.</p><small>Pregunta: ¿podemos confiar en el dato y compararlo?</small></article>
+            <article><span>A</span><h3>Analizar</h3><p>VSM, Pareto, hipótesis causales, pruebas y límites del análisis.</p><small>Pregunta: ¿qué causas resisten el contraste con evidencia?</small></article>
+            <article><span>M</span><h3>Mejorar</h3><p>Alternativas, AMEF, piloto, efecto, costo e indicadores de protección.</p><small>Pregunta: ¿qué cambió y qué más pudo producir el cambio?</small></article>
+            <article><span>C</span><h3>Controlar</h3><p>Estándar, propietario, tablero, frecuencia, umbral y plan de reacción.</p><small>Pregunta: ¿cómo sabremos que el resultado se sostiene?</small></article>
+          </div>
+          <div class="project-support">
+            <article><p class="section-index">Caso sugerido</p><h3>Reducir tiempo y errores de surtido</h3><p>Estudia un flujo real autorizado o trabaja con los datos simulados. Formula una mejora que reduzca tiempo sin sacrificar exactitud, seguridad ni carga sostenible.</p><a href="/docencia/six-sigma-lean/plantilla-proyecto-dmaic.md" download>Descargar plantilla de proyecto →</a></article>
+            <article><p class="section-index">Evidencia mínima</p><h3>Cadena de razonamiento</h3><ol><li>Dato fuente y diccionario.</li><li>Análisis reproducible.</li><li>Causa sustentada.</li><li>Piloto y comparación.</li><li>Control y limitaciones.</li></ol></article>
+          </div>
+          <div class="rubric-key" role="group" aria-labelledby="rubric-key-title">
+            <div><p class="source-label">Escala común</p><h3 id="rubric-key-title">Cinco anclas para valorar evidencia, no apariencia.</h3></div>
+            <dl>
+              <div><dt>Sobresaliente</dt><dd>100% del valor</dd></div>
+              <div><dt>Competente</dt><dd>80% del valor</dd></div>
+              <div><dt>En desarrollo</dt><dd>60% del valor</dd></div>
+              <div><dt>Inicial</dt><dd>30% del valor</dd></div>
+              <div><dt>Ausente</dt><dd>0% del valor</dd></div>
+            </dl>
+          </div>
+          <div class="rubric-wrap">
+            <table>
+              <caption>Rúbrica analítica del proyecto · 100 puntos</caption>
+              <thead><tr><th scope="col">Criterio</th><th scope="col">Pts.</th><th scope="col">Sobresaliente</th><th scope="col">Competente</th><th scope="col">En desarrollo</th><th scope="col">Inicial</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Problema, CTQ, objetivo y alcance</th><td>10</td><td>Problema sustentado; CTQ operacional; línea base, meta, plazo y límites coherentes.</td><td>Elementos completos con una imprecisión menor.</td><td>Problema relevante, pero medición, meta o alcance parciales.</td><td>Propone una solución sin definir la brecha ni sus límites.</td></tr>
+                <tr><th scope="row">SIPOC, actores y cambio</th><td>5</td><td>SIPOC consistente; voz del cliente y actores vinculados a una estrategia concreta.</td><td>SIPOC correcto y análisis de actores suficiente.</td><td>Confunde alguna entrada, salida o cliente; estrategia genérica.</td><td>Diagrama decorativo o incongruente con el proceso.</td></tr>
+                <tr><th scope="row">Mapa, VSM, desperdicios y plan de datos</th><td>10</td><td>Flujo validado; desperdicios cuantificados; muestreo y diccionario reproducibles.</td><td>Cobertura completa con justificación limitada en un componente.</td><td>Mapa o datos parciales; desperdicios principalmente intuitivos.</td><td>No hay correspondencia entre proceso, variables y muestra.</td></tr>
+                <tr><th scope="row">Sistema de medición y calidad de datos</th><td>5</td><td>Método adecuado al dato; diseño, cálculos y decisión justificados.</td><td>Evaluación adecuada con limitaciones menores.</td><td>Cálculo presente, pero diseño o interpretación débiles.</td><td>Aplica un MSA improcedente o ignora la confiabilidad del dato.</td></tr>
+                <tr><th scope="row">Línea base, estabilidad y capacidad</th><td>5</td><td>Visualizaciones y métricas correctas; distingue estabilidad, capacidad y desempeño.</td><td>Cálculos correctos con revisión parcial de supuestos.</td><td>Presenta métricas sin validar estabilidad o distribución.</td><td>Calcula capacidad sin especificaciones o interpreta cifras erróneas.</td></tr>
+                <tr><th scope="row">Causas y AMEF</th><td>10</td><td>Triangula proceso, datos y conocimiento experto; priorización y AMEF trazables.</td><td>Causas plausibles y AMEF mayormente consistente.</td><td>Listado amplio con conexión débil con la evidencia.</td><td>Confunde síntomas con causas; AMEF arbitrario.</td></tr>
+                <tr><th scope="row">Análisis estadístico</th><td>10</td><td>Método pertinente; efecto, incertidumbre, supuestos e interpretación operativa.</td><td>Técnica y cálculos correctos; una limitación interpretativa menor.</td><td>Técnica parcialmente pertinente o reporte incompleto.</td><td>Prueba incorrecta, error de cálculo o conclusión basada sólo en <em>p</em>.</td></tr>
+                <tr><th scope="row">Diseño Lean de la solución</th><td>5</td><td>La solución responde a causas verificadas e integra herramientas coherentes.</td><td>Solución razonable con trazabilidad suficiente.</td><td>Vínculo parcial entre causa y solución.</td><td>Selecciona herramientas por preferencia, sin conexión demostrada.</td></tr>
+                <tr><th scope="row">Piloto, DOE o simulación</th><td>10</td><td>Diseño reproducible; comparación válida; incertidumbre y límites explícitos.</td><td>Verificación suficiente con una debilidad menor.</td><td>Prueba pequeña o poco controlada, pero interpretable.</td><td>No verifica o presenta una estimación como resultado observado.</td></tr>
+                <tr><th scope="row">Economía, riesgo y AMEF actualizado</th><td>5</td><td>Costos, beneficios, factibilidad, riesgos y AMEF posterior coherentes.</td><td>Análisis suficiente con un supuesto débil.</td><td>Costeo o riesgo incompletos.</td><td>Afirma beneficios sin cálculo ni revisión de riesgos.</td></tr>
+                <tr><th scope="row">Impacto antes/después</th><td>5</td><td>Comparación equivalente y cuantificada; separa lo observado, estimado y simulado.</td><td>Comparación correcta con una limitación menor.</td><td>Indicadores no totalmente comparables.</td><td>Afirma mejora sin línea base equivalente.</td></tr>
+                <tr><th scope="row">Plan de control, SPC y SOP</th><td>10</td><td>Responsables, frecuencia, límites, reacción, escalamiento y estándar ejecutable.</td><td>Plan operable con una omisión menor.</td><td>Monitorea, pero carece de reacción o responsables claros.</td><td>Plan genérico que no permite sostener la mejora.</td></tr>
+                <tr><th scope="row">Reproducibilidad y comunicación</th><td>5</td><td>Datos, cálculos, versiones y decisiones auditables; comunicación clara y honesta.</td><td>Documentación suficiente y comunicación comprensible.</td><td>Faltan archivos, trazabilidad o explicación de límites.</td><td>Resultado no reproducible o comunicación que sobrestima la evidencia.</td></tr>
+                <tr><th scope="row">Aprendizaje diferencial y reflexión</th><td>5</td><td>Integra pre/post, transferencia, confianza y reflexión con evidencia específica.</td><td>Mide ganancia y explica aprendizajes y límites.</td><td>Presenta pre/post sin análisis profundo.</td><td>Reflexión genérica o ausencia de medición comparable.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside class="defense-rule" aria-labelledby="defense-rule-title"><p class="source-label" id="defense-rule-title">Regla de autoría y defensa</p><p>Los productos colectivos no producen automáticamente la misma valoración individual. Cada integrante defiende un cálculo, una decisión metodológica y una relación causal. Si no puede explicar un componente atribuido al equipo, ese criterio no supera el nivel <strong>en desarrollo</strong> para esa persona. El historial de versiones y la bitácora respaldan la autoría, pero no sustituyen la comprensión.</p></aside>
+        </div>
+      </section>
+
+      <section class="learning-section section" id="aprendizaje" aria-labelledby="learning-title">
+        <div class="shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Aprendizaje diferencial</p><h2 id="learning-title">Comparar el punto de partida con el desempeño de salida.</h2></div><p>Registra el primer intento del cuestionario como diagnóstico y repítelo después de estudiar. El tablero compara porcentajes globales y por unidad, calcula ganancia y propone refuerzo. Es evaluación formativa, no calificación institucional.</p></div>
+          <div class="learning-dashboard" data-learning-dashboard>
+            <article><span>Diagnóstico</span><strong data-diagnostic-score>—</strong><small>primer intento registrado</small></article>
+            <article><span>Salida</span><strong data-post-score>—</strong><small>intento más reciente</small></article>
+            <article><span>Ganancia</span><strong data-gain-score>—</strong><small>puntos porcentuales</small></article>
+            <article><span>Ganancia normalizada</span><strong data-normalized-gain>—</strong><small>(salida − entrada) ÷ (100 − entrada)</small></article>
+          </div>
+          <div class="mastery-panel">
+            <div><p class="source-label">Dominio por unidad</p><div class="unit-mastery" data-unit-mastery><p>Registra el diagnóstico para activar la comparación.</p></div></div>
+            <div><p class="source-label">Ruta de refuerzo</p><div class="adaptive-route" data-adaptive-route><p>La ruta aparecerá después de calificar.</p></div></div>
+          </div>
+          <div class="reflection-panel">
+            <div class="reflection-heading"><div><p class="source-label">Bitácora metacognitiva</p><h3>Explicar cómo cambió tu razonamiento.</h3></div><p>Las notas se conservan en este navegador. El reporte descargable integra avance, resultados y reflexiones.</p></div>
+            <div class="reflection-grid">
+              <label><span>Antes de estudiar</span> ¿Qué creías que explicaba la variación de un proceso?<textarea id="reflection-before" rows="4" data-reflection="before"></textarea></label>
+              <label><span>Después de analizar</span> ¿Qué evidencia cambió o matizó tu hipótesis?<textarea id="reflection-evidence" rows="4" data-reflection="evidence"></textarea></label>
+              <label><span>Transferencia</span> ¿En qué proceso aplicarías una herramienta y qué riesgo vigilarías?<textarea id="reflection-transfer" rows="4" data-reflection="transfer"></textarea></label>
+              <label><span>Pregunta abierta</span> ¿Qué duda relevante permanece y cómo podrías investigarla?<textarea id="reflection-question" rows="4" data-reflection="question"></textarea></label>
+            </div>
+            <div class="reflection-actions"><button type="button" data-save-reflections>Guardar bitácora</button><button type="button" class="quiet-button" data-export-learning>Descargar reporte de aprendizaje</button><p role="status" aria-live="polite" data-reflection-status></p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quiz-section section" id="cuestionario" aria-labelledby="quiz-title">
+        <div class="shell quiz-shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Cuestionario teórico</p><h2 id="quiz-title">Veinte decisiones conceptuales.</h2></div><p>Selecciona una respuesta por reactivo. La revisión explica el criterio, conserva tus selecciones en la sesión y permite repetir sin penalización.</p></div>
+          <form class="quiz-form" data-quiz>
+            <div class="quiz-list">
+              <fieldset data-question data-correct="b"><legend><span>01</span> ¿Qué relación describe mejor Lean Six Sigma?</legend><label><input type="radio" name="q1" value="a"> Lean sustituye la estadística por observación.</label><label><input type="radio" name="q1" value="b"> Lean mejora flujo y valor; Six Sigma estudia y reduce variación.</label><label><input type="radio" name="q1" value="c"> Ambos son sinónimos de auditoría.</label><p class="quiz-feedback" data-feedback>Lean y Six Sigma aportan perspectivas complementarias; ninguna elimina la necesidad de la otra.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>02</span> ¿Qué pertenece a Definir?</legend><label><input type="radio" name="q2" value="a"> Confirmar una causa con una prueba.</label><label><input type="radio" name="q2" value="b"> Estandarizar la solución.</label><label><input type="radio" name="q2" value="c"> Delimitar problema, cliente, CTQ, alcance y objetivo.</label><p class="quiz-feedback" data-feedback>Definir construye el marco del proyecto; las causas se estudian en Analizar y el estándar se sostiene en Controlar.</p></fieldset>
+              <fieldset data-question data-correct="a"><legend><span>03</span> ¿Por qué “falta de atención” es una causa raíz débil?</legend><label><input type="radio" name="q3" value="a"> No especifica una condición verificable ni controlable del sistema.</label><label><input type="radio" name="q3" value="b"> Porque las personas nunca se equivocan.</label><label><input type="radio" name="q3" value="c"> Porque sólo pueden existir causas de equipo.</label><p class="quiz-feedback" data-feedback>Una explicación útil identifica mecanismos y condiciones que pueden contrastarse y rediseñarse.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>04</span> ¿Cuál es un desperdicio de espera?</legend><label><input type="radio" name="q4" value="a"> Escanear una etiqueta necesaria.</label><label><input type="radio" name="q4" value="b"> Embalar el producto conforme al requisito.</label><label><input type="radio" name="q4" value="c"> Un pedido detenido por autorización que no agrega información.</label><p class="quiz-feedback" data-feedback>La cola por autorización consume tiempo total sin transformar lo que recibe el cliente.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>05</span> ¿Qué demuestra por sí solo un Ishikawa?</legend><label><input type="radio" name="q5" value="a"> La causa definitiva.</label><label><input type="radio" name="q5" value="b"> Una estructura de causas candidatas que deben verificarse.</label><label><input type="radio" name="q5" value="c"> El tamaño del efecto.</label><p class="quiz-feedback" data-feedback>El diagrama favorece amplitud y organización de hipótesis, pero la causalidad requiere evidencia.</p></fieldset>
+              <fieldset data-question data-correct="a"><legend><span>06</span> ¿Dónde se consolidó Six Sigma durante la década de 1980?</legend><label><input type="radio" name="q6" value="a"> En Motorola, como enfoque para reducir defectos y variación.</label><label><input type="radio" name="q6" value="b"> En Toyota, como nombre original del kanban.</label><label><input type="radio" name="q6" value="c"> En ISO, como primera norma de calidad.</label><p class="quiz-feedback" data-feedback>Six Sigma se consolidó en Motorola; Lean tiene una genealogía distinta ligada al Sistema de Producción Toyota.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>07</span> ¿Cuál es una CTQ bien operacionalizada?</legend><label><input type="radio" name="q7" value="a"> “Servicio excelente”.</label><label><input type="radio" name="q7" value="b"> “Entregar lo más rápido posible”.</label><label><input type="radio" name="q7" value="c"> “95% de pedidos listos en ≤45 min, desde liberación hasta escaneo en embarque”.</label><p class="quiz-feedback" data-feedback>Una CTQ traduce la voz del cliente en métrica, unidad, frontera, método y requisito verificables.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>08</span> ¿Por qué DPMO depende de definir una oportunidad?</legend><label><input type="radio" name="q8" value="a"> Porque una oportunidad siempre equivale a una unidad.</label><label><input type="radio" name="q8" value="b"> Porque el denominador cambia con los requisitos posibles por unidad.</label><label><input type="radio" name="q8" value="c"> Porque DPMO ignora el número de defectos.</label><p class="quiz-feedback" data-feedback>Sin una definición estable y pertinente de oportunidad, dos DPMO no son comparables.</p></fieldset>
+              <fieldset data-question data-correct="a"><legend><span>09</span> ¿Cuál es una variable cuantitativa continua?</legend><label><input type="radio" name="q9" value="a"> Tiempo de surtido medido en minutos.</label><label><input type="radio" name="q9" value="b"> Nombre del transportista.</label><label><input type="radio" name="q9" value="c"> Prioridad alta, media o baja.</label><p class="quiz-feedback" data-feedback>El tiempo puede tomar valores en un continuo; transportista es nominal y prioridad es ordinal.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>10</span> Ante una distribución muy asimétrica con extremos, ¿qué resumen suele ser más robusto?</legend><label><input type="radio" name="q10" value="a"> Media y rango exclusivamente.</label><label><input type="radio" name="q10" value="b"> Moda y varianza sin gráfica.</label><label><input type="radio" name="q10" value="c"> Mediana e IQR, acompañados por la distribución.</label><p class="quiz-feedback" data-feedback>Mediana e IQR resisten extremos, aunque la elección debe conservar la forma y el contexto del dato.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>11</span> ¿Qué riesgo tiene una muestra sólo del turno matutino?</legend><label><input type="radio" name="q11" value="a"> Sólo aumenta el error de redondeo.</label><label><input type="radio" name="q11" value="b"> Ninguno si incluye muchas órdenes.</label><label><input type="radio" name="q11" value="c"> Sesgo de selección si turnos difieren en carga, mezcla o recursos.</label><p class="quiz-feedback" data-feedback>El tamaño no corrige por sí mismo una cobertura sistemáticamente incompleta.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>12</span> ¿Qué diferencia límites de control y especificación?</legend><label><input type="radio" name="q12" value="a"> Ninguna; son intercambiables.</label><label><input type="radio" name="q12" value="b"> Control describe el proceso; especificación expresa requisitos.</label><label><input type="radio" name="q12" value="c"> La especificación se calcula siempre con la media.</label><p class="quiz-feedback" data-feedback>Confundir ambos límites impide separar estabilidad estadística de capacidad frente a requisitos.</p></fieldset>
+              <fieldset data-question data-correct="a"><legend><span>13</span> ¿Qué significa r=0.90?</legend><label><input type="radio" name="q13" value="a"> Asociación lineal positiva fuerte en los datos observados.</label><label><input type="radio" name="q13" value="b"> X causa 90% de Y.</label><label><input type="radio" name="q13" value="c"> El modelo no tiene error.</label><p class="quiz-feedback" data-feedback>r resume asociación lineal, sin demostrar causalidad, validez externa ni ausencia de valores influyentes.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>14</span> ¿Qué afirma un valor p=0.02 bajo un diseño válido?</legend><label><input type="radio" name="q14" value="a"> H₀ tiene 2% de probabilidad de ser cierta.</label><label><input type="radio" name="q14" value="b"> El efecto es grande y útil.</label><label><input type="radio" name="q14" value="c"> Los datos serían relativamente incompatibles con H₀ bajo sus supuestos.</label><p class="quiz-feedback" data-feedback>El valor p no proporciona probabilidad de hipótesis ni magnitud; necesita contexto, intervalo y efecto.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>15</span> Si ANOVA rechaza H₀, ¿qué concluye?</legend><label><input type="radio" name="q15" value="a"> Todos los pares difieren.</label><label><input type="radio" name="q15" value="b"> Al menos una media difiere; hacen falta comparaciones y diagnóstico.</label><label><input type="radio" name="q15" value="c"> El método con menor media es causalmente superior.</label><p class="quiz-feedback" data-feedback>El contraste global no localiza por sí mismo diferencias ni evalúa consecuencias operativas.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>16</span> ¿Por qué una mejora local puede no reducir el lead time total?</legend><label><input type="radio" name="q16" value="a"> Porque toda mejora local está prohibida.</label><label><input type="radio" name="q16" value="b"> Porque VSM sólo estudia costos.</label><label><input type="radio" name="q16" value="c"> Porque la restricción o las esperas pueden estar en otra etapa del flujo.</label><p class="quiz-feedback" data-feedback>La integración Lean evalúa el sistema extremo a extremo y evita trasladar inventario o espera.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>17</span> ¿Qué hace reproducible un informe de mejora?</legend><label><input type="radio" name="q17" value="a"> Omitir resultados desfavorables.</label><label><input type="radio" name="q17" value="b"> Vincular cifras con datos, periodo, unidad, método y versión.</label><label><input type="radio" name="q17" value="c"> Reemplazar anexos por una conclusión ejecutiva.</label><p class="quiz-feedback" data-feedback>La trazabilidad permite reconstruir el análisis y distinguir evidencia, inferencia y recomendación.</p></fieldset>
+              <fieldset data-question data-correct="a"><legend><span>18</span> ¿Qué añade un piloto a una propuesta?</legend><label><input type="radio" name="q18" value="a"> Evidencia acotada sobre efecto, factibilidad y consecuencias antes de escalar.</label><label><input type="radio" name="q18" value="b"> Garantía de permanencia indefinida.</label><label><input type="radio" name="q18" value="c"> Eliminación de la necesidad de control.</label><p class="quiz-feedback" data-feedback>El piloto reduce exposición y permite aprender; requiere criterios, comparación y seguimiento.</p></fieldset>
+              <fieldset data-question data-correct="c"><legend><span>19</span> ¿Qué proyecto de datos es más sólido?</legend><label><input type="radio" name="q19" value="a"> El de algoritmo más complejo.</label><label><input type="radio" name="q19" value="b"> El de mayor exactitud, aunque sea peor que la regla base.</label><label><input type="radio" name="q19" value="c"> El validado contra una base, conectado a una decisión y con plan de control.</label><p class="quiz-feedback" data-feedback>La utilidad exige validez, comparación, integración operativa y capacidad de respuesta.</p></fieldset>
+              <fieldset data-question data-correct="b"><legend><span>20</span> ¿Qué debe contener una afirmación cuantitativa comunicable?</legend><label><input type="radio" name="q20" value="a"> Sólo un porcentaje llamativo.</label><label><input type="radio" name="q20" value="b"> Métrica, denominador, unidad, periodo, fuente, comparación y límites.</label><label><input type="radio" name="q20" value="c"> Únicamente la conclusión favorable.</label><p class="quiz-feedback" data-feedback>La trazabilidad permite evaluar qué se midió, contra qué y con qué restricciones.</p></fieldset>
+            </div>
+            <div class="quiz-controls"><button class="button button-secondary" type="button" data-save-diagnostic>Registrar como diagnóstico</button><button class="button button-primary" type="submit">Evaluar salida</button><button class="button button-secondary" type="reset" data-quiz-reset>Limpiar selección</button><p class="quiz-result" role="status" aria-live="polite" data-quiz-result>Responde los 20 reactivos; registra primero el diagnóstico y, después del estudio, evalúa la salida.</p></div>
+          </form>
+          <noscript><p class="noscript-note">El cuestionario requiere JavaScript para calificar y mostrar la retroalimentación. Todo el contenido conceptual y los problemas permanecen disponibles sin scripts.</p></noscript>
+        </div>
+      </section>
+
+      <section class="sources-section section" id="bibliografia" aria-labelledby="sources-title">
+        <div class="shell">
+          <div class="section-heading split-heading"><div><p class="section-index">Bibliografía razonada</p><h2 id="sources-title">Fuentes para aprender y para comprobar.</h2></div><p>Se priorizan el programa institucional, normas, organismos profesionales, el manual estadístico de NIST y literatura académica. Los enlaces identifican la obra o permiten consultar su texto.</p></div>
+          <div class="source-note"><strong>Nota bibliográfica.</strong> La sección 11 del PDF LEG-2503 enumera principalmente obras de ingeniería económica, poco relacionadas con sus propios contenidos Lean Six Sigma. Esta bibliografía amplía y corrige esa brecha temática; no modifica el programa oficial.</div>
+          <div class="source-columns">
+            <section><p class="source-label">Base curricular y normas</p><ol>
+              <li><a href="https://losreyes.tecnm.mx/CarrerasTec/pdf/IIND/SEMESTRE%209/9.1%20Lean%20Six%20Sigma.pdf" target="_blank" rel="noopener">TecNM, Instituto Tecnológico de Los Reyes. Lean Six Sigma, LEG-2503</a> (diseño curricular, 2024).</li>
+              <li><a href="https://www.lapaz.tecnm.mx/ingenieria-industrial/" target="_blank" rel="noopener">Instituto Tecnológico de La Paz. Ingeniería Industrial</a> (la especialidad publicada incluye “Six Sigma Lean”).</li>
+              <li><a href="https://www.iso.org/standard/52901.html" target="_blank" rel="noopener">ISO 13053-1:2011</a>. Quantitative methods in process improvement — Six Sigma — Part 1: DMAIC methodology.</li>
+              <li><a href="https://www.iso.org/standard/52902.html" target="_blank" rel="noopener">ISO 13053-2:2011</a>. Tools and techniques.</li>
+              <li><a href="https://www.iso.org/standard/62405.html" target="_blank" rel="noopener">ISO 18404:2015</a>. Competencies for Six Sigma and Lean implementation.</li>
+              <li><a href="https://www.iso.org/quality-management/principles" target="_blank" rel="noopener">ISO. Quality management principles</a>.</li>
+            </ol></section>
+            <section><p class="source-label">Método y herramientas</p><ol start="7">
+              <li><a href="https://asq.org/quality-resources/dmaic" target="_blank" rel="noopener">ASQ. DMAIC Process</a>.</li>
+              <li><a href="https://asq.org/quality-resources/six-sigma" target="_blank" rel="noopener">ASQ. Six Sigma</a>.</li>
+              <li><a href="https://asq.org/quality-resources/fishbone" target="_blank" rel="noopener">ASQ. Fishbone diagram</a>; <a href="https://asq.org/quality-resources/five-whys" target="_blank" rel="noopener">Five whys</a>; <a href="https://asq.org/quality-resources/fmea" target="_blank" rel="noopener">FMEA</a>.</li>
+              <li><a href="https://www.lean.org/lexicon-terms/seven-wastes/" target="_blank" rel="noopener">Lean Enterprise Institute. Seven wastes</a>.</li>
+              <li><a href="https://www.lean.org/lexicon-terms/value-stream-mapping/" target="_blank" rel="noopener">Lean Enterprise Institute. Value-stream mapping</a>; <a href="https://www.lean.org/lexicon-terms/a3-report/" target="_blank" rel="noopener">A3 report</a>.</li>
+              <li>Rother, M. y Shook, J. (2018). <a href="https://www.lean.org/store/book/learning-to-see/" target="_blank" rel="noopener"><em>Learning to See</em></a>. Lean Enterprise Institute.</li>
+              <li>Womack, J. P. y Jones, D. T. (2003). <a href="https://www.simonandschuster.com/books/Lean-Thinking/James-P-Womack/9780743249270" target="_blank" rel="noopener"><em>Lean Thinking</em></a>. Free Press.</li>
+            </ol></section>
+            <section><p class="source-label">Estadística e investigación</p><ol start="14">
+              <li>Heckert, N. A. et al. <a href="https://doi.org/10.18434/M32189" target="_blank" rel="noopener"><em>NIST/SEMATECH e-Handbook of Statistical Methods</em></a>.</li>
+              <li><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda33e.htm" target="_blank" rel="noopener">NIST. Histogram</a> y <a href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc31.htm" target="_blank" rel="noopener">Control charts</a>.</li>
+              <li><a href="https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd141.htm" target="_blank" rel="noopener">NIST. Linear least squares regression</a>.</li>
+              <li><a href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc43.htm" target="_blank" rel="noopener">NIST. One-way ANOVA</a>.</li>
+              <li>Montgomery, D. C. (2019). <a href="https://uat.store.wiley.com/en-us/introduction-to-statistical-quality-control-8th-edition-p-9781119399308" target="_blank" rel="noopener"><em>Introduction to Statistical Quality Control</em></a>, 8.ª ed. Wiley.</li>
+              <li>Shah, R. y Ward, P. T. (2007). <a href="https://doi.org/10.1016/j.jom.2007.01.019" target="_blank" rel="noopener">Defining and developing measures of lean production</a>. <em>Journal of Operations Management, 25</em>(4), 785–805.</li>
+              <li>Snee, R. D. (2010). <a href="https://doi.org/10.1108/20401461011033130" target="_blank" rel="noopener">Lean Six Sigma—getting better all the time</a>. <em>International Journal of Lean Six Sigma, 1</em>(1), 9–29.</li>
+              <li>Abushaikha, I., Salhieh, L. y Towers, N. (2018). <a href="https://doi.org/10.1108/IJRDM-03-2018-0059" target="_blank" rel="noopener">Improving distribution and business performance through lean warehousing</a>. <em>International Journal of Retail &amp; Distribution Management, 46</em>(8), 780–800.</li>
+              <li>Albliwi, S. A., Antony, J. y Lim, S. A. H. (2015). <a href="https://doi.org/10.1108/BPMJ-03-2014-0019" target="_blank" rel="noopener">A systematic review of Lean Six Sigma for the manufacturing industry</a>. <em>Business Process Management Journal, 21</em>(3), 665–691.</li>
+            </ol></section>
+          </div>
+          <aside class="method-note" aria-label="Convenciones metodológicas"><p><strong>Convenciones de esta página.</strong> Los datos numéricos de ejercicios y laboratorios son simulados. Los casos empresariales se interpretan según el diseño y alcance de su fuente. Correlación no implica causalidad; los límites de control no son especificaciones; ANOVA no identifica por sí solo los grupos distintos; el valor p no mide la importancia del efecto; el octavo desperdicio, talento no utilizado, se presenta como extensión de los siete clásicos.</p><p>Última revisión: <time datetime="2026-09-20">20 de septiembre de 2026</time>.</p></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell detail-footer"><p>Dirk Hans Krakaur Floranes · Aula abierta · La Paz, Baja California Sur, México</p><a href="/#recursos-docentes">Volver a recursos docentes</a></div>
+    </footer>
+    <script src="/assets/app.js" defer></script>
+    <script src="/assets/six-sigma-lean.js" defer></script>
+  </body>
+</html>
