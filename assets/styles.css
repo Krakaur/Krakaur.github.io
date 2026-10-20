@@ -1165,6 +1165,12 @@ button {
   border-color: var(--line);
 }
 
+.publication-page .credential-hero h1 {
+  max-width: 30ch;
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  line-height: 1.14;
+}
+
 .featured-publication {
   display: grid;
   grid-template-columns: 1fr auto;

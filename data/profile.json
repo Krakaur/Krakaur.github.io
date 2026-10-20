@@ -97,6 +97,21 @@
       "scope": "Sistema de análisis de vibraciones con Arduino, MATLAB y FFT. Se conservan las contribuciones de autoría declaradas en el artículo y el alcance experimental descrito por sus autores."
     },
     {
+      "title": "Validation of Analytical Methods for Estimating Critical Speeds in Shafts with Concentrated Masses Using Computational Simulation",
+      "year": 2026,
+      "publication": "International Science Journal (TheSci), páginas 489-498",
+      "publication_date": "2026-10-18",
+      "type": "journal-article",
+      "authors": ["Vicente M. Díaz de León Santiago", "José Antonio Garrido Nataren", "Edwin Alejandro Sánchez Martínez", "Dirk Hans Krakaur Floranes", "José Luis Pérez Escobedo", "Alfredo Gutiérrez García", "Erik Noé González Hernández"],
+      "contribution": "Coautor; cuarto de siete autores.",
+      "doi": "https://doi.org/10.64784/362",
+      "url": "https://krakaur.github.io/publicaciones/velocidades-criticas-ejes/",
+      "publisher_url": "https://the-sci.org/revista/index.php/ieee/article/view/99",
+      "published_pdf_url": "https://the-sci.org/revista/index.php/ieee/article/download/99/96/298",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "scope": "Comparación de los métodos de Rayleigh y Dunkerley, soluciones de Euler-Bernoulli y simulación por elementos finitos en SolidWorks para estimar la primera velocidad crítica de flexión en tres configuraciones de ejes con masas concentradas."
+    },
+    {
       "title": "Optimización de Procesos en una Planta Cerámica",
       "year": 2026,
       "publication": "IECCMEXICO, volumen 5, número 2",

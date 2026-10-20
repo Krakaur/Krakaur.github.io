@@ -88,6 +88,8 @@ La ficha de [Optimización de Procesos en una Planta Cerámica](https://krakaur.
 
 La presencia del artículo en un perfil o repositorio no se presenta como una nueva publicación ni como prueba de indexación selectiva. Las fichas y el perfil JSON deben conservar un único registro por DOI, y la validación compara título, autoría, fechas, licencia y enlaces entre ambas representaciones.
 
+Las fichas de [análisis de vibraciones con Arduino, MATLAB y FFT](https://krakaur.github.io/publicaciones/vibraciones-arduino-matlab-fft/) y [velocidades críticas en ejes](https://krakaur.github.io/publicaciones/velocidades-criticas-ejes/) corresponden a dos artículos distintos: AXIOM Research (`10.64784/363`, 19 de octubre de 2026) e International Science Journal, TheSci (`10.64784/362`, 18 de octubre de 2026). Ambas conservan el orden editorial de autoría y enlazan el PDF publicado por su respectiva revista. La referencia de TheSci omite volumen y número porque la ficha editorial y el PDF difieren en esos datos.
+
 ## Ampliación del perfil — 18 de septiembre de 2026
 
 La actualización incorpora administración y ciencias sociales, formación académica en calidad y Lean Six Sigma, y práctica declarada de IA generativa, ingeniería de prompts, agentes y ciclos de verificación humana. No convierte asignaturas en certificaciones Belt ni herramientas aplicadas en certificaciones externas.
