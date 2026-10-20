@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "updated": "2026-09-18",
+  "updated": "2026-10-19",
   "language": "es-MX",
   "person": {
     "name": "Dirk Hans Krakaur Floranes",
@@ -81,6 +81,21 @@
     "Licenciatura en Psicología"
   ],
   "selected_publications": [
+    {
+      "title": "Integración y validación de un sistema de análisis de vibraciones mediante Arduino, MATLAB y la Transformada Rápida de Fourier",
+      "year": 2026,
+      "publication": "AXIOM Research, volumen 2, número 2, páginas 154-167",
+      "publication_date": "2026-10-19",
+      "type": "journal-article",
+      "authors": ["Vicente M. Díaz de León Santiago", "Vicente Díaz de León Eugenio", "José Antonio Garrido Natarén", "Dirk Hans Krakaur Floranes", "Alfredo Gutiérrez García"],
+      "contribution": "Coautor; cuarto de cinco autores. Análisis formal, recursos, validación y redacción: revisión y edición.",
+      "doi": "https://doi.org/10.64784/363",
+      "url": "https://krakaur.github.io/publicaciones/vibraciones-arduino-matlab-fft/",
+      "publisher_url": "https://axiomresearch.org.mx/index.php/axr/article/view/13",
+      "published_pdf_url": "https://axiomresearch.org.mx/index.php/axr/article/download/13/16",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Sistema de análisis de vibraciones con Arduino, MATLAB y FFT. Se conservan las contribuciones de autoría declaradas en el artículo y el alcance experimental descrito por sus autores."
+    },
     {
       "title": "Optimización de Procesos en una Planta Cerámica",
       "year": 2026,
