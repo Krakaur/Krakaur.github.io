@@ -82,6 +82,21 @@
   ],
   "selected_publications": [
     {
+      "title": "Juegos Artesanales Mexicanos en la Educación Superior: Análisis de las Competencias que Favorecen su Desarrollo desde un Enfoque Teórico",
+      "year": 2026,
+      "publication": "AXIOM Research, volumen 2, número 2, páginas 327-343",
+      "publication_date": "2026-11-13",
+      "type": "journal-article",
+      "authors": ["Alfredo Gutiérrez García", "Edith Magali Mejía Rodríguez", "Dirk Hans Krakaur Floranes"],
+      "contribution": "Coautor; tercero de tres autores. Análisis formal, supervisión, validación, redacción del borrador original y redacción: corrección y edición.",
+      "doi": "https://doi.org/10.64784/404",
+      "url": "https://krakaur.github.io/publicaciones/juegos-artesanales-educacion-superior/",
+      "publisher_url": "https://axiomresearch.org.mx/index.php/axr/article/view/20",
+      "published_pdf_url": "https://axiomresearch.org.mx/index.php/axr/article/download/20/23",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Estudio cualitativo, documental y descriptivo-interpretativo que organiza 18 juegos y juguetes artesanales, seis programas educativos y 39 vinculaciones propuestas entre asignaturas, programas y juegos para la planeación didáctica en educación superior tecnológica."
+    },
+    {
       "title": "Integración y validación de un sistema de análisis de vibraciones mediante Arduino, MATLAB y la Transformada Rápida de Fourier",
       "year": 2026,
       "publication": "AXIOM Research, volumen 2, número 2, páginas 154-167",
